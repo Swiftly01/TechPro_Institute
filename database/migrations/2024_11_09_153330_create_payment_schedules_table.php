@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->decimal('amount', 10, 2);
             $table->string('purpose');
+            $table->string('desc');
             $table->timestamps();
         });
     }

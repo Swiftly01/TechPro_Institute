@@ -15,9 +15,12 @@ return new class extends Migration
             $table->id();
             $table->foreignId('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->decimal('amount', 10, 2)->nullable();
+            $table->decimal('amount_due',10,2);
             $table->string('payment_reference')->nullable();
             $table->string('status')->nullable();
-            $table->string('purpose');
+            $table->string('purpose')->nullable();
+            $table->string('receipt_url');
+            $table->integer('schedule_id')->nullable();
             $table->timestamps();
         });
     }

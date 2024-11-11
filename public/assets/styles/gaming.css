@@ -1,0 +1,116 @@
+.links {
+  background-color: #FFFF;
+  margin-left: 30px;
+  margin-top: 60px;
+  margin-right: 180px;
+  border-radius: 15px;
+}
+
+.links ul li a {
+  text-decoration: none; 
+  color: black;
+ 
+}
+.links ul :hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+  color: #0A5098;
+  border-top-left-radius: 4px;
+
+  
+}
+.links ul li {
+  list-style: none;
+  padding: 18px 15px;
+}
+.image {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.consultancy-text {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+
+  .links ul li a {
+  text-decoration: none; 
+  color: black;
+  font-size: small;
+ 
+}
+.links {
+  margin-left: 30px;
+  margin-top: 60px;
+  margin-right: 100px;
+
+}
+
+
+}
+
+
+@media screen and (max-width:483px) {
+
+  .links ul li {
+  list-style: none;
+  padding: 10 10px;
+}
+.links {
+  margin-left: 10px;
+  margin-top: 60px;
+  margin-right: 80px;
+
+}
+.consultancy-text {
+  font-size: 15px;
+}
+
+
+}
+
+.contact-top {
+  margin-top: 4%;
+}
+
+
+.contact-btn {
+  display: inline-block;
+    padding: 10px 50px;
+    background-color:  #E4C939; 
+    color: #0A5098; 
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 50px;
+}
+
+
+@media  screen and (max-width: 726px) {
+
+  .contact-btn {
+    font-size: 10px;
+    margin-top: 30px;
+    
+  }
+
+  .contact-top {
+    margin: 1%
+  }
+  
+  .home {
+    font-size: 25px;
+  }
+
+}
+
+
+h1 a {
+  text-decoration: none;
+   }
+
+.main-color {
+  background-color: #3F5F94;
+}

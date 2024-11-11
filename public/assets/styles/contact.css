@@ -1,0 +1,141 @@
+body{
+  padding-top: 1px; 
+  background-color: #FAFCFD;
+  
+} 
+ 
+ 
+ .navbar {
+  position: fixed; 
+  width: 100%;
+  padding: 6px 0; /* Use padding instead of height */
+  border-radius: 50px;
+  border:  2px solid #ccc;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  z-index: 1000;
+} 
+.navbar-brand img {
+  max-height: 40px;
+  width: 60px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+      padding: 5px 0; /* Adjust padding for smaller screens */
+      border-radius: 0px;
+  }
+}
+
+.navbar .navbar-nav > li > a {
+  
+  font-size: 19px;
+} 
+
+.navbar-nav > li{
+font-weight: bold;
+font-size: 19px;
+}
+
+
+.footer ul li {
+  text-decoration: none;
+  list-style: none;
+}
+.footer  a {
+  text-decoration: none;
+  color: #A8BBF7;
+  padding-top: 10px;
+  display: block; 
+  font-size: 16px;
+} 
+.register{
+  font-size: 14px;
+  padding: 4px 10px 4px 10px;
+  margin-right: 20px;
+  background-color: #E4C939;
+  color:#06539B ;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.follow {
+  color: #FFE30D;
+}
+
+.text {
+ color: #A8BBF7;
+ font-size: 16px;
+}
+
+   .home {
+     font-size: 32px;
+   }
+
+   .main {
+     padding-top: 150px;
+   }
+   h1 a {
+  text-decoration: none;
+   }
+
+   @media screen and (max-width:975px) {
+     .main {
+       padding-top: 100px;
+     }
+     .home {
+       font-size: 25px;
+     }
+     
+
+   }
+
+   .how {
+    color: #FAFCFD;
+    margin-top: 55px;
+    
+
+  }
+  .send {
+    color: #FAFCFD;
+    font-size: 20px;
+  }
+  .email {
+    color: #FAFCFD;
+
+  }
+  .desc {
+    color: #FAFCFD;
+  }
+  .submit-btn {
+font-size: 22px;
+padding: 10px 70px;
+margin-right: 20px;
+background-color: #E4C939;
+color:#06539B ;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+  }
+
+  .submit-btn:hover {
+    background-color: #e6b800;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  @media screen and (max-width:990px) {
+    .image {
+      height: 500px;
+    }
+    .submit-btn {
+      margin-bottom: 50px;
+    }
+  }
+  

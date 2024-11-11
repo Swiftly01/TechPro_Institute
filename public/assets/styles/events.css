@@ -1,0 +1,110 @@
+h1 a {
+  text-decoration: none;
+   }
+
+  .consultancy-text {
+  font-size: 20px;
+}
+
+.upcoming-btn {
+    padding: 10px 50px;
+    background-color:  #E4C939; 
+    color: #0A5098; 
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 50px;
+
+}
+
+.upcoming-btn:hover {
+  background-color: #e6b800;
+}
+
+.event-text {
+  color: #FAFCFD;
+  font-size: 22px;
+}
+
+.view-btn {
+  padding: 10px 50px;
+    background-color:  #E4C939; 
+    color: #0A5098; 
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  
+
+}
+.view-btn:hover {
+  background-color: #e6b800;
+
+}
+
+.up-text {
+  margin-top: 90px;
+}
+
+.main-text {
+  background-color:  #105697;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+@media screen and (max-width:992px) {
+  .event-text {
+    font-size: 18px;
+    
+  }
+  .view-btn {
+    font-size: 20px;
+    padding: 10px 40px;
+  }
+  .up-text {
+    margin-top: 40px;
+  }
+  .event-title {
+    margin-top: -40px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .event-text {
+    font-size: 14px;
+    
+  }
+  .view-btn {
+    font-size: 15px;
+    padding: 10px 20px;
+  
+  }
+
+  .main-text {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width:510px) {
+  .event-text {
+    font-size: 10px;
+    
+  }
+  .view-btn {
+    font-size: 10px;
+    padding: 10px 10px;
+    
+  }
+  .consultancy-text {
+  font-size: 15px;
+}
+
+.upcoming-btn {
+  font-size: 18px;
+}
+}

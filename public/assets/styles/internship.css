@@ -1,0 +1,86 @@
+.consultancy-text {
+  font-size: 20px;
+}
+
+.links ul li {
+  list-style: none;
+  padding: 10px 15px;
+}
+
+.links ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+}
+.links {
+  margin-top: 10px;
+}
+.what-text {
+  font-size: 22px;
+  padding-top: 15px;
+} 
+
+.links ul li:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+  color: #0A5098;
+}
+
+
+.contact-top {
+  margin-top: 4%;
+}
+
+
+.contact-btn {
+  display: inline-block;
+    padding: 10px 50px;
+    background-color:  #E4C939; 
+    color: #0A5098; 
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 50px;
+}
+
+@media screen and (max-width:1043px) {
+  .what {
+    padding-top: 0px;
+  }
+  .links {
+    margin-top: 10px;
+  }
+  .links ul li a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width:803px) {
+  .links {
+    margin-top: 0px;
+  }
+  .consultancy-text {
+  font-size: 17px;
+}
+}
+.text-danger a {
+  text-decoration: none;
+}
+
+
+@media  screen and (max-width: 726px) {
+
+  .contact-btn {
+    font-size: 10px;
+    margin-top: 30px;
+    
+  }
+
+  .contact-top {
+    margin: 1%
+  }
+
+}

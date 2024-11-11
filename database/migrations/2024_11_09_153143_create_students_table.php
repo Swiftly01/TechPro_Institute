@@ -16,9 +16,10 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email')->unique();
-            $table->string('phone_number');
+            $table->string('phone');
             $table->foreignId('course_id')->refrences('id')->on('courses')->onDelete('cascade');
-            $table->string('photo');
+            $table->string('image_url');
+            $table->string('app_no');
             $table->timestamps();
         });
     }

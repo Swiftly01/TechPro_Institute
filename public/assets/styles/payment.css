@@ -1,0 +1,21 @@
+.payment-text {
+  color: #105697;
+  font-size: 50px;
+}
+.input-upload {
+  background-color: whitesmoke;
+  border: none;
+  padding: 40px 80px;;
+}
+.complete-btn {
+  text-align: center;
+  font-size: 22px;
+  padding: 5px 30px;
+  margin-right: 20px;
+  background-color: #E4C939;
+  color:#06539B ;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

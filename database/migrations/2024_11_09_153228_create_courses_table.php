@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('duration');
             $table->string('course_code');
+            $table->string('frequency');
             $table->timestamps();
         });
     }

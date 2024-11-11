@@ -1,0 +1,57 @@
+#search {
+
+  background-image: url(../images/material-symbols-light_upload\ \(2\).png);
+  background-position: 10px;
+  background-repeat: no-repeat;
+  text-indent: 40px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 80%;
+  padding: 10px 20px;
+   }
+
+
+   h1 a {
+    text-decoration: none;
+     }
+  
+     .about {
+      color: #355B7D;
+      font-size: 32px;
+      margin-top: 20px;
+     }
+     .label-name {
+      color: #355B7D;
+      font-size: 20px;
+  
+     }
+  
+     .submit-btn {
+      padding: 5px 60px;
+      background-color:  #E4C939; 
+      color: #0A5098; 
+      font-size: 25px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 50px;
+  
+  
+     }
+  
+     .submit-btn:hover {
+      background-color: #e6b800;
+     }
+  
+     @media screen and (max-width:600px) {
+      .submit-btn {
+        font-size: 18px;
+      }
+     }
+  
+    
+  
+     
