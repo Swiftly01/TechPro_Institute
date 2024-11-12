@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use App\Mail\ApplicationMailNotification;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Course;
+use App\Models\Payment;
+use App\Models\PaymentSchedule;
 use App\Models\Student;
 use Illuminate\Http\Request;
+
+use function PHPUnit\Framework\isEmpty;
 
 class StudentController extends Controller
 {
@@ -94,13 +98,62 @@ class StudentController extends Controller
 
         return view('application.message', compact('student'));
 
+    }
+
+    public function studentDetails(Request $request) {
+
+        $validate = $request->validate([
+            'app_no' => 'required'
+
+        ]);
 
 
+        $student = Student::with('course')->where('app_no', $request->input('app_no'))->first();
+
+        if(!$student) {
+
+            return redirect()->back()->with('error', 'Invalid Application Number');
+
+        }
 
 
+        $payments = Payment::with('schedule')->where('student_id', $student->id)->get();
+
+        if($payments->isEmpty()) {
+
+            return view('admin.students.details', compact('student'));
+        }
+
+        $schedule_id = $student->course_id;
+
+        $schedule  = PaymentSchedule::where('course_id', $schedule_id)->first();
+
+        $amountDue = $schedule->amount;
+
+        $paid = 0;
+    
+
+        foreach($payments as $payment ) {
+
+    
+
+            $paid += $payment->amount;
 
 
+        }
 
+        $balanceDue = $amountDue - $paid;
+
+        return view('admin.students.details', ['student' => $student,
+                                                'paid' => $paid,
+                                                 'balanceDue' => $balanceDue,
+                                                 'amountDue' => $amountDue,
+                                                 'payments' => $payments
+                                                 
+                                        
+                                                
+                                                ]);
+    
 
     }
 
@@ -122,7 +175,7 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Student $student)
+    public function edit(Student $student )
     {
         //
     }
@@ -130,16 +183,77 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Student $student)
-    {
-        //
+    public function update(Request $request,  $id)
+    {     
+         $validate = $request->validate([
+            'firstname' => 'required|string',
+            'lastname' => 'required|string',
+            'email' => 'required|email|unique:students',
+            'phone' => 'required', 
+
+         ]);
+
+        
+
+
+         if($request->hasFile('image_url')) {
+
+            $passport = $request->File('image_url');
+            $rad = mt_rand(1000, 9999);
+
+            $passportName = md5($passport->getClientOriginalName()) . $rad . '.' .  $passport->getClientOriginalExtension();
+
+            $passport->move(public_path('upload/'), $passportName);
+            $upload = 'upload/' . $passportName;
+
+            if ($upload) {
+                $validate['image_url'] = $passportName;
+            } else {
+                return redirect()->back()->with('error', 'passport upload failed');
+            }
+
+        }
+
+
+        $student =  Student::where('id', $id)->first();
+
+        $student->update($validate);
+
+
+        if($student) {
+ 
+         return redirect()->back()->with('success', 'Student Record Updated succesfully');
+ 
+ 
+        }
+ 
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Student $student)
+    public function destroy(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'student_id' => 'required|exists:students,id',
+        ]);
+
+        $id = $request->input('student_id');
+        $student = Student::find($id);
+
+        $student->delete(); 
+
+        if($student) {
+            return redirect()->back()->with('success', 'Student Record Deleted Successfully');
+        }
+
+        return redirect()->back()->with('error', 'Something went wrong!!');
+
+
+
+
+
+
     }
 }

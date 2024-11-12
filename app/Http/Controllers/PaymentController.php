@@ -22,9 +22,12 @@ class PaymentController extends Controller
 
    }
 
-    public function index()
-    {
-        
+    public function index(Request $request)
+    {   
+        $status = null;
+        $payments = Payment::with('student')->where('status', $status )->get();
+        $user = $request->user();
+        return  view('admin.payments.view', ['payments' => $payments, 'user' => $user]);
     }
 
     /**
@@ -109,10 +112,56 @@ class PaymentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Payment $payment)
+    public function show(Request $request, $id)
     {
-        //
+        $paymentId = $id;
+        $user = $request->user();
+        $payment  = Payment::find($paymentId);
+        $student = Student::with('course')->where('id', $paymentId)->first();
+
+        if($payment) {
+
+          return view('admin.payments.details', ['payment' => $payment, 'user' => $user, 'student' => $student]);
+        }
     }
+
+    public function approvePayment(Request $request) {
+
+      $validate = $request->validate([
+        'payment_id' => 'required|exists:payments,id',
+        'amount' => 'required|numeric',
+        'reference' => 'required',
+
+      ]);
+
+
+      $id = $request->input('payment_id');
+
+      $payment = Payment::find($id);
+
+      if($payment) {
+
+       $status = 'success';
+
+      $payment->amount = $request->input('amount');
+      $payment->payment_reference = $request->input('reference');
+      $payment->status = $status;
+
+      $payment->save();
+
+
+      return redirect()->back()->with('success', 'Payment Record Updated Successfully');
+
+      }
+
+
+      return redirect()->back()->with('error', 'Payment Update Failed!!');
+
+
+    }
+
+
+    
 
     /**
      * Show the form for editing the specified resource.
