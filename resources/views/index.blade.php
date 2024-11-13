@@ -19,7 +19,7 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand ps-4" href="index.html">
+        <a class="navbar-brand ps-4" href="{{ url('/') }}">
             <img width="80px" height="50px" class="img-fluid" src="{{ asset('assets/images/techpro_img.png') }}" alt="Techpro Logo">
         </a>
         
@@ -42,14 +42,14 @@
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item d-lg-none">
-                    <a href="form.html" class="nav-link">
+                    <a href="{{ route('application.form') }}" class="nav-link">
                         <button class="register">Register Now</button>
                     </a>
                 </li>
             </ul>
         </div>
 
-        <a href="form.html" class="me-4 d-none d-lg-block">
+        <a href="{{ route('application.form') }}" class="me-4 d-none d-lg-block">
             <button class="register">Register Now</button>
         </a>
     </div>
@@ -171,7 +171,7 @@
                     </div>
                   </div>
                   <div class="reg">
-                    <a href="form.html"><button class="register-card">Register Now</button></a>
+                    <a href="{{ route('application.form') }}"><button class="register-card">Register Now</button></a>
                   </div>
                 </div>
               </div>
@@ -193,7 +193,7 @@
                   </div>
                 </div>
                 <div class="reg">
-                  <a href="form.html"> <button class="register-card">Register Now</button></a>
+                  <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
                  
                 </div>
                 
@@ -217,7 +217,7 @@
                   </div>
                 </div>
                 <div class="reg">
-                  <a href="form.html"> <button class="register-card">Register Now</button></a>
+                  <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
                  
                 </div>
                 
@@ -241,7 +241,7 @@
                     </div>
                   </div>
                   <div class="reg">
-                    <a href="form.html"><button class="register-card">Register Now</button></a>
+                    <a href="{{ route('application.form') }}"><button class="register-card">Register Now</button></a>
                   </div>
                 </div>
               </div>
@@ -263,7 +263,7 @@
                   </div>
                 </div>
                 <div class="reg">
-                  <a href="form.html"> <button class="register-card">Register Now</button></a>
+                  <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
                  
                 </div>
                 
@@ -287,7 +287,7 @@
                   </div>
                 </div>
                 <div class="reg">
-                  <a href="form.html"> <button class="register-card">Register Now</button></a>
+                  <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
                  
                 </div>
                 
@@ -406,7 +406,7 @@
 
     <div style="margin-top: 8%;" class="row">
       <div class="col text-center">
-        <a class="register-btn" href="form.html" >Register Now</a>
+        <a class="register-btn" href="{{ route('application.form') }}" >Register Now</a>
       </div>
     </div>
     
