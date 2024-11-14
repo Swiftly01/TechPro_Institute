@@ -8,7 +8,7 @@
   <div  class="row main">
     <div class="col">
       <!-- <h1  class="text-danger home">Home/Services</h1> -->
-      <h1 ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home">Application</a><a class=" text-danger home" href="{{ url('/outstanding') }}">/outstanding Payment</a></h1>
+      <h1 ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home">Application</a><a class=" text- home" href="{{ url('/outstanding') }}">/Outstanding Payment</a></h1>
     </div>
   </div>
  </div> 

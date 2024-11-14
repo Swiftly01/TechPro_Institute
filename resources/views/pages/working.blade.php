@@ -132,12 +132,16 @@
         </ul>
       </div>
       
-      <!-- Resources Section -->
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
-        <h4 class="fw-bold follow">Events</h4>
+        <h4 class="fw-bold follow">Links</h4>
         <ul class="list-unstyled">
-          <li><a class="fs-6 fw-light  text" href="#">Webinar</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Tech Talk</a></li>
+          <li><a class="fs-6 fw-light  text" href="gaming.html"></a>Gaming</li>
+          <li><a class="fs-6 fw-light text" href="events.html">Events</a></li>
+          <li><a class="fs-6 fw-light  text" href="">Tech-A-Child</a></li>
+          <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
+          <li><a class="fs-6 fw-light  text" href="internship.html">Internship</a></li>
+          <li><a class="fs-6 fw-light text" href="hostel.html">Hostel Facilities</a></li>
+          
           <!-- <li><a class="fs-6 fw-light text" href="#">TechPro Consultancy</a></li>
           <li><a class="fs-6 fw-light text" href="#">Frika Xchange</a></li>
           <li><a class="fs-6 fw-light text" href="#">Osun State Government</a></li> -->

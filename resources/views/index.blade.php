@@ -68,13 +68,13 @@
         </div>
         
         <div class="carousel-item">
-          <img src="{{ asset('assets/images/DSC_4921.jpg') }}" class="d-block w-100 img-fluid" alt="Techpro Training 2">
+          <img src="{{ asset('assets/images/DSC_4932.jpg') }}" class="d-block w-100 img-fluid" alt="Techpro Training 2">
           <div class="carousel-caption">
             <h1 class="carousel-text">TechPro Institute<br> <span style="color: orange">Nigeria</span></h1>
           </div> 
         </div>
         <div class="carousel-item">
-          <img src="{{ asset('assets/images/DSC_4896.jpg') }}" class="d-block w-100 img-fluid" alt="Techpro Training 3">
+          <img src="{{ asset('assets/images/DSC_4921.jpg') }}" class="d-block w-100 img-fluid" alt="Techpro Training 3">
           <div class="carousel-caption">
             <h1 class="carousel-text">TechPro Institute<br> <span style="color: orange">Nigeria</span></h1>
           </div>
@@ -511,7 +511,7 @@
           <ul class="list-unstyled">
             <li><a class="fs-6 fw-light  text" href="gaming.html">Gaming</a></li>
             <li><a class="fs-6 fw-light text" href="events.html">Events</a></li>
-            <li><a class="fs-6 fw-light  text" href="">Texh-A-Child</a></li>
+            <li><a class="fs-6 fw-light  text" href="">Tech-A-Child</a></li>
             <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
             <li><a class="fs-6 fw-light  text" href="internship.html">Internship</a></li>
             <li><a class="fs-6 fw-light text" href="hostel.html">Hostel Facilities</a></li>
@@ -524,7 +524,7 @@
         
         <!-- Legal Section -->
         <div class="col-lg-3 col-md-6 col-sm-12 footer">
-          <h4 class="fw-bold follow">Links</h4>
+          <h4 class="fw-bold follow">Legal</h4>
           <ul class="list-unstyled ">
             <li><a class="fs-6 fw-light  text" href="#">Terms Of Use</a></li>
             <li><a class="fs-6 fw-light text" href="#">Privacy Policy</a></li>

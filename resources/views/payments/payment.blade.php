@@ -40,7 +40,7 @@
           <div class="row">
             <div class="col text-center">
               <div class="mb-3">
-                <label for="image_url" class="form-label label-name">Upload Pitch Deck</label>
+                <label for="image_url" class="form-label label-name"></label>
                 <input style="width: 30%;" type="file" class="form-control mt-2 mx-auto" name="receipt_url">
                 <input name="app_no" value="{{ $app_no }}" type="text" hidden>
                 <span class="text-danger">
