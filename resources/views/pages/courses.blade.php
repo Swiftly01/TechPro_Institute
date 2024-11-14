@@ -79,7 +79,7 @@
                 <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
                 <div class="price pt-3">
                   <p class="me-2">Price</p>
-                  <p>#120, 000</p>
+                  <p>#130, 000</p>
                 </div>
                 <div class="duration">
                   <p class="ms-1">Duration</p>
@@ -101,7 +101,7 @@
               <p class="desc">Learn how to prepare and clean data, perform  in-depth data analysis and utilize advance data visualization techniques</p>
               <div class="price pt-4">
                 <p class="me-2">Price</p>
-                <p>#120, 000</p>
+                <p>#130, 000</p>
               </div>
               <div class="duration">
                 <p class="ms-1">Duration</p>
@@ -125,7 +125,7 @@
               <p class="desc">Learn to design User-friendly interfaces with tools like Figma, Adobe XD, focusing on user experience</p>
               <div class="price pt-3">
                 <p class="me-2">Price</p>
-                <p>#120, 000</p>
+                <p>#100, 000</p>
               </div>
               <div class="duration">
                 <p class="ms-1">Duration</p>
@@ -142,14 +142,14 @@
         </div>
         <div class="col">
           <div class="card shadow-lg rounded-lg border card-rad">
-            <p class="text-center pt-2 title">Front-End Development</p>
+            <p class="text-center pt-2 title">Cyber Security</p>
             <div style="margin-top: -10px;" class="container">
               <img src="images/Group 27 (1).png" class="card-img-top" alt="...">
               <div>
                 <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
                 <div class="price pt-3">
                   <p class="me-2">Price</p>
-                  <p>#120, 000</p>
+                  <p>#130, 000</p>
                 </div>
                 <div class="duration">
                   <p class="ms-1">Duration</p>
@@ -164,14 +164,14 @@
         </div>
         <div class="col">
           <div class="card shadow-lg rounded-lg border card-rad">
-            <p  class="text-center pt-3 title">Front-End Development</p>
+            <p  class="text-center pt-3 title">Back-End Development</p>
             <div style="margin-top: -10px;" class="container">
               <img src="images/image 7.png" class="card-img-top" alt="...">
             <div>
               <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End  Development  Course</p>
               <div class="price pt-4">
                 <p class="me-2">Price</p>
-                <p>#120, 000</p>
+                <p>#150, 000</p>
               </div>
               <div class="duration">
                 <p class="ms-1">Duration</p>
@@ -188,14 +188,14 @@
         </div>
         <div class="col">
           <div class="card shadow-lg rounded-lg border card-rad">
-            <p  class="text-center pt-2 title">Front-End Development</p>
+            <p  class="text-center pt-2 title">Full-Stack Development</p>
             <div style="margin-top: -10px;" class="container">
               <img src="images/Group 27 (1).png" class="card-img-top" alt="...">
             <div>
               <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End  Development  Course</p>
               <div class="price pt-3">
                 <p class="me-2">Price</p>
-                <p>#120, 000</p>
+                <p>#250, 000</p>
               </div>
               <div class="duration">
                 <p class="ms-1">Duration</p>
@@ -209,6 +209,7 @@
             
             </div>
           </div>
+          
         </div>
       </div>
     </div>

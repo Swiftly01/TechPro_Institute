@@ -46,11 +46,14 @@
                         <button class="register">Register Now</button>
                     </a>
                 </li>
-            </ul>
+                <li class="nav-item d-lg-none">
         </div>
 
         <a href="{{ route('application.form') }}" class="me-4 d-none d-lg-block">
             <button class="register">Register Now</button>
+        </a>
+        <a href="{{ route('application.form') }}" class="me-4 d-none d-lg-block">
+            <button class="register">Login</button>
         </a>
     </div>
 </nav>
@@ -156,14 +159,14 @@
           <div class="row  row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4 mt-5"> 
             <div class="col">
               <div class="card shadow-lg rounded-lg border card-rad">
-                <p class="text-center pt-2 title">Business Analysis</p>
+                <p class="text-center pt-2 title">Front-End Development</p>
                 <div style="margin-top: -10px;" class="container">
                   <img height="200px" src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
                   <div>
                     <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
                     <div class="price pt-3">
                       <p class="me-2">Price</p>
-                      <p>#120, 000</p>
+                      <p>#130, 000</p>
                     </div>
                     <div class="duration">
                       <p class="ms-1">Duration</p>
@@ -178,14 +181,14 @@
             </div>
             <div class="col">
               <div class="card shadow-lg rounded-lg border card-rad">
-                <p  class="text-center pt-2 title">Data Analytics</p>
+                <p  class="text-center pt-2 title">Back-End Development</p>
                 <div style="margin-top: -10px;" class="container">
                   <img height="200px" src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">Learn how to prepare and clean data, perform  in-depth data analysis and utilize advance data visualization techniques</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
-                    <p>#120, 000</p>
+                    <p>#150, 000</p>
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
@@ -209,7 +212,7 @@
                   <p class="desc">Learn to design User-friendly interfaces with tools like Figma, Adobe XD, focusing on user experience</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
-                    <p>#120, 000</p>
+                    <p>#100, 000</p>
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
@@ -226,14 +229,14 @@
             </div>
             <div class="col">
               <div class="card shadow-lg rounded-lg border card-rad">
-                <p class="text-center pt-2 title">Artificial Intelligence</p>
+                <p class="text-center pt-2 title">Cyber Security</p>
                 <div style="margin-top: -10px;" class="container">
                   <img src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
                   <div>
                     <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
                     <div class="price pt-3">
                       <p class="me-2">Price</p>
-                      <p>#120, 000</p>
+                      <p>#130, 000</p>
                     </div>
                     <div class="duration">
                       <p class="ms-1">Duration</p>
@@ -255,7 +258,7 @@
                   <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End  Development  Course</p>
                   <div class="price pt-4">
                     <p class="me-2">Price</p>
-                    <p>#120, 000</p>
+                    <p>#250, 000</p>
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
@@ -272,14 +275,14 @@
             </div>
             <div class="col">
               <div class="card shadow-lg rounded-lg border card-rad">
-                <p  class="text-center pt-2 title">Cyber Security</p>
+                <p  class="text-center pt-2 title">Data Analytics</p>
                 <div style="margin-top: -10px;" class="container">
                   <img src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End  Development  Course</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
-                    <p>#120, 000</p>
+                    <p>#130, 000</p>
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
