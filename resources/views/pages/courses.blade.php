@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Techpro Institute Nigeria</title>
-  <link rel="icon" href="images/techpro_img.png" type="image/x-icon">
+  <link rel="icon" href="{{ asset('assets/images/techpro_img.png') }}" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-   <link rel="stylesheet" href="styles/courses.css">
-  <link rel="stylesheet" href="styles/nav.css">
+   <link rel="stylesheet" href="{{ asset('assets/styles/courses.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles/nav.css') }}">
   
   <style>
   </style>
@@ -18,8 +18,8 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand ps-4" href="index.html">
-            <img width="80px" height="50px" class="img-fluid" src="images/techpro_img.png" alt="Techpro Logo">
+        <a class="navbar-brand ps-4" href="{{ url('/') }}">
+            <img width="80px" height="50px" class="img-fluid" src="{{ asset('assets/images/techpro_img.png') }}" alt="Techpro Logo">
         </a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,27 +28,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 mt-2">
                 <li class="nav-item me-5">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item me-5">
-                  <a class="nav-link" href="services.html">Services</a>
+                  <a class="nav-link" href="{{ url('/services') }}">Services</a>
               </li>
                
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="courses.html">Courses</a>
+                    <a class="nav-link" href="{{ route('application.form') }}">Courses</a>
                 </li>
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
                 </li>
                 <li class="nav-item d-lg-none">
-                    <a href="form.html" class="nav-link">
+                    <a href="{{ route('application.form') }}" class="nav-link">
                         <button class="register">Register Now</button>
                     </a>
                 </li>
             </ul>
         </div>
 
-        <a href="form.html" class="me-4 d-none d-lg-block">
+        <a href="{{ route('application.form') }}" class="me-4 d-none d-lg-block">
             <button class="register">Register Now</button>
         </a>
     </div>
@@ -60,7 +60,7 @@
   <div  class="row main">
     <div class="col">
       <!-- <h1  class="text-danger home">Home/Services</h1> -->
-      <h1 ><a class=" text-danger home" href="index.html">Home/</a><a class=" text-danger home" href="courses.html">Courses</a></h1>
+      <h1 ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home" href="{{ route('application.form') }}">Courses</a></h1>
     </div>
   </div>
  </div> 
@@ -74,7 +74,7 @@
           <div class="card shadow-lg rounded-lg border card-rad">
             <p class="text-center pt-2 title">Front-End Development</p>
             <div style="margin-top: -10px;" class="container">
-              <img height="200px" src="images/Group 27 (1).png" class="card-img-top" alt="...">
+              <img height="200px" src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
               <div>
                 <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
                 <div class="price pt-3">
@@ -87,7 +87,7 @@
                 </div>
               </div>
               <div class="reg">
-                <a href="form.html"><button class="register-card">Register Now</button></a>
+                <a href="{{ route('application.form') }}"><button class="register-card">Register Now</button></a>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@
           <div class="card shadow-lg rounded-lg border card-rad">
             <p  class="text-center pt-3 title">Data Analytics</p>
             <div style="margin-top: -10px;" class="container">
-              <img height="200px" src="images/image 7.png" class="card-img-top" alt="...">
+              <img height="200px" src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
             <div>
               <p class="desc">Learn how to prepare and clean data, perform  in-depth data analysis and utilize advance data visualization techniques</p>
               <div class="price pt-4">
@@ -109,7 +109,7 @@
               </div>
             </div>
             <div class="reg">
-              <a href="form.html"> <button class="register-card">Register Now</button></a>
+              <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
              
             </div>
             
@@ -120,7 +120,7 @@
           <div class="card shadow-lg rounded-lg border card-rad">
             <p  class="text-center pt-2 title">UI/UX  Design</p>
             <div style="margin-top: -10px;" class="container">
-              <img src="images/Rectangle 7.png" class="card-img-top" alt="...">
+              <img src="{{ asset('assets/images/Rectangle 7.png') }}" class="card-img-top" alt="...">
             <div>
               <p class="desc">Learn to design User-friendly interfaces with tools like Figma, Adobe XD, focusing on user experience</p>
               <div class="price pt-3">
@@ -133,7 +133,7 @@
               </div>
             </div>
             <div class="reg">
-              <a href="form.html"> <button class="register-card">Register Now</button></a>
+              <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
              
             </div>
             
@@ -144,7 +144,7 @@
           <div class="card shadow-lg rounded-lg border card-rad">
             <p class="text-center pt-2 title">Cyber Security</p>
             <div style="margin-top: -10px;" class="container">
-              <img src="images/Group 27 (1).png" class="card-img-top" alt="...">
+              <img src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
               <div>
                 <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
                 <div class="price pt-3">
@@ -157,7 +157,7 @@
                 </div>
               </div>
               <div class="reg">
-                <a href="form.html"><button class="register-card">Register Now</button></a>
+                <a href="{{ route('application.form') }}"><button class="register-card">Register Now</button></a>
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@
           <div class="card shadow-lg rounded-lg border card-rad">
             <p  class="text-center pt-3 title">Back-End Development</p>
             <div style="margin-top: -10px;" class="container">
-              <img src="images/image 7.png" class="card-img-top" alt="...">
+              <img src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
             <div>
               <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End  Development  Course</p>
               <div class="price pt-4">
@@ -179,7 +179,7 @@
               </div>
             </div>
             <div class="reg">
-              <a href="form.html"> <button class="register-card">Register Now</button></a>
+              <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
              
             </div>
             
@@ -190,7 +190,7 @@
           <div class="card shadow-lg rounded-lg border card-rad">
             <p  class="text-center pt-2 title">Full-Stack Development</p>
             <div style="margin-top: -10px;" class="container">
-              <img src="images/Group 27 (1).png" class="card-img-top" alt="...">
+              <img src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
             <div>
               <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End  Development  Course</p>
               <div class="price pt-3">
@@ -203,7 +203,7 @@
               </div>
             </div>
             <div class="reg">
-              <a href="form.html"> <button class="register-card">Register Now</button></a>
+              <a href="{{ route('application.form') }}form.html"> <button class="register-card">Register Now</button></a>
              
             </div>
             
@@ -251,12 +251,12 @@
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Courses</h4> 
         <ul class="list-unstyled">
-          <li><a class="fs-6 fw-light text" href="courses.html" >Web Development</a></li>
-          <li><a class="fs-6 fw-light text" href="courses.html">Data analysis</a></li>
-          <li><a class="fs-6 fw-light text" href="courses.html">Cyber Security</a></li>
-          <li><a class="fs-6 fw-light text" href="courses.html">UI/UX Design</a></li>
-          <li><a class="fs-6 fw-light text" href="courses.html">Graphic Design</a></li>
-          <li><a class="fs-6 fw-light text" href="courses.html">Full Stack Development</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}" >Web Development</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Data analysis</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Cyber Security</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">UI/UX Design</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Graphic Design</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Full Stack Development</a></li>
         </ul>
       </div>
       
@@ -264,12 +264,12 @@
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Links</h4>
         <ul class="list-unstyled">
-          <li><a class="fs-6 fw-light  text" href="gaming.html"></a>Gaming</li>
-          <li><a class="fs-6 fw-light text" href="events.html">Events</a></li>
+          <li><a class="fs-6 fw-light  text" href="{{ url('/gaming') }}">Gaming</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ url('/events') }}">Events</a></li>
           <li><a class="fs-6 fw-light  text" href="">Tech-A-Child</a></li>
           <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
-          <li><a class="fs-6 fw-light  text" href="internship.html">Internship</a></li>
-          <li><a class="fs-6 fw-light text" href="hostel.html">Hostel Facilities</a></li>
+          <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
           
           <!-- <li><a class="fs-6 fw-light text" href="#">TechPro Consultancy</a></li>
           <li><a class="fs-6 fw-light text" href="#">Frika Xchange</a></li>
@@ -286,11 +286,12 @@
           <li><a class="fs-6 fw-light text" href="#">Legal Notice</a></li>
         </ul>
       </div>
+      
       <!-- Contact Section -->
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Contact</h4>
         <p class="fs-6 fw-light text">103 Gbodofon Street, Ibadan Road, Osogbo.</p>
-        <p class="fs-6 fw-light text">Phone: 08086478810</p>
+        <p class="fs-6 fw-light text">Phone: +2348086478810</p>
         <p class="fs-6 fw-light text">E-mail: contact@techprong.com</p>
       </div>
     </div>

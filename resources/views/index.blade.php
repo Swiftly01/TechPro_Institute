@@ -32,14 +32,14 @@
                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item me-5">
-                  <a class="nav-link" href="services.html">Services</a>
+                  <a class="nav-link" href="{{ url('/services') }}">Services</a>
               </li>
                
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="courses.html">Courses</a>
+                    <a class="nav-link" href="{{ route('application.form') }}">Courses</a>
                 </li>
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
                 </li>
                 <li class="nav-item d-lg-none">
                     <a href="{{ route('application.form') }}" class="nav-link">
@@ -342,7 +342,7 @@
           <h1 class="incubate-header">Incubation</h1>
           <p class="empowering">Empowering entrepreneurs in Osun State to drive tech innovation and transform the region into a tech hub</p>
           <p class="foster">Tech Pro Nigeria is committed to fostering entrepreneurship and supporting startups within Osun State by providing an incubating platform and essential resources.</p>
-          <a href="incubation.html" class="explore-btn-new">Explore Our Incubation Programs</a>
+          <a href="{{ url('/incubation') }}" class="explore-btn-new">Explore Our Incubation Programs</a>
         </div>
       
       </div>
@@ -362,7 +362,7 @@
       <img class="gallery-img" src="{{ asset('assets/images/DSC_4906.jpg') }}" alt="">
       <div style="background-color: #0A5098; width: 30%;">
           <div class="gallery-btn-layout">
-            <a href="gallery.html" class="gallery-btn">View Our Gallery</a> 
+            <a href="{{ url('/gallery') }}" class="gallery-btn">View Our Gallery</a> 
           </div>
         
       </div>
@@ -499,12 +499,12 @@
         <div class="col-lg-2 col-md-6 col-sm-12 footer">
           <h4 class="fw-bold follow">Courses</h4> 
           <ul class="list-unstyled">
-            <li><a class="fs-6 fw-light text" href="courses.html" >Web Development</a></li>
-            <li><a class="fs-6 fw-light text" href="courses.html">Data analysis</a></li>
-            <li><a class="fs-6 fw-light text" href="courses.html">Cyber Security</a></li>
-            <li><a class="fs-6 fw-light text" href="courses.html">UI/UX Design</a></li>
-            <li><a class="fs-6 fw-light text" href="courses.html">Graphic Design</a></li>
-            <li><a class="fs-6 fw-light text" href="courses.html">Full Stack Development</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}" >Web Development</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Data analysis</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Cyber Security</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">UI/UX Design</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Graphic Design</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Full Stack Development</a></li>
           </ul>
         </div>
         
@@ -512,12 +512,12 @@
         <div class="col-lg-2 col-md-6 col-sm-12 footer">
           <h4 class="fw-bold follow">Links</h4>
           <ul class="list-unstyled">
-            <li><a class="fs-6 fw-light  text" href="gaming.html">Gaming</a></li>
-            <li><a class="fs-6 fw-light text" href="events.html">Events</a></li>
+            <li><a class="fs-6 fw-light  text" href="{{ url('/gaming') }}">Gaming</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ url('/events') }}">Events</a></li>
             <li><a class="fs-6 fw-light  text" href="">Tech-A-Child</a></li>
             <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
-            <li><a class="fs-6 fw-light  text" href="internship.html">Internship</a></li>
-            <li><a class="fs-6 fw-light text" href="hostel.html">Hostel Facilities</a></li>
+            <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
             
             <!-- <li><a class="fs-6 fw-light text" href="#">TechPro Consultancy</a></li>
             <li><a class="fs-6 fw-light text" href="#">Frika Xchange</a></li>

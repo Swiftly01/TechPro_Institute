@@ -39,8 +39,8 @@
         <p class="fs-4">Your Payment reference no <span class="text-danger fs-4">Kabirakinola234567FTD</span></p>
         <p class="fs-5">Make direct payment to the bank details below:</p>
         <p class="fs-5">Bank Name: UBA</p>
-        <p class="fs-5">Account Number: 123456789</p>
-        <p class="fs-5">Account Name: Tech Pro Institute</p>
+        <p class="fs-5">Account Number: 1025989215</p>
+        <p class="fs-5">Account Name: Tech-Pro Edutech</p>
         
         @if(session('error'))
         <div class="alert alert-danger">
@@ -85,6 +85,7 @@
           <div class="row">
             <div class="col mx-auto mt-4">
               <button type="submit" class="complete-btn">Complete Registration</button>
+             <a href="{{ url('/') }}"><button style="background-color: #105697;" type="button" class="btn  pt-2 pb-2 ms-3 mb-1">Home</button></a> 
             </div>
           </div>
         </form>

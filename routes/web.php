@@ -63,6 +63,72 @@ Route::middleware(['auth', 'verified'])->prefix('/admin')->group(function() {
 
 });
 
+//Pages Route
+Route::get('/about-u', function() {
+    return view('pages.about-u');
+});
+
+Route::get('/consultancy', function() {
+    return view('pages.consultancy');
+});
+
+Route::get('/contact', function() {
+    return view('pages.contact');
+});
+
+Route::get('/courses', function() {
+    return view('pages.courses');
+});
+
+Route::get('/events', function() {
+    return view('pages.events');
+});
+
+Route::get('/gallery', function() {
+    return view('pages.gallery');
+});
+
+Route::get('/gaming', function() {
+    return view('pages.gaming');
+});
+
+Route::get('/hostel', function() {
+    return view('pages.hostel');
+});
+
+Route::get('/incubation', function() {
+    return view('pages.incubation');
+});
+
+Route::get('/internship', function() {
+    return view('pages.internship');
+});
+
+Route::get('/mentor', function() {
+    return view('pages.mentor');
+});
+
+Route::get('/services', function() {
+    return view('pages.services');
+});
+
+Route::get('/working', function() {
+    return view('pages.working');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
