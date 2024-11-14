@@ -15,11 +15,11 @@
         <div class="card-header bg-success text-white">Application :: Details </div>
         <div class="card-body">
 
-          <p>Hi {{ ucfirst(strtolower($student->firstname))}} {{ $student->surname }} you have registered succesfully</p>
+           <p>Hi {{ ucfirst(strtolower($student->firstname))}} {{ $student->surname }} you have registered succesfully</p>
           <p>Your application details have been sent to your email</p>
 
-          <a href="{{ route('payment.show') }}?app_no={{ urlencode($student->app_no) }}">
-            <button type="button" class="btn btn-success">Proceed to make payments</button>
+          <a href="{{ url('/') }}">
+            <button type="button" class="btn btn-success">home</button>
           </a>
 
     

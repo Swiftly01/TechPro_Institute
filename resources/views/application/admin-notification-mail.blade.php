@@ -12,18 +12,17 @@
 
   <div class="container">
     <div class="card mt-2">
-        <div class="card-header bg-success text-white">Application :: Details </div>
+        <div class="card-header bg-success text-white">Student :: Application </div>
         <div class="card-body">
 
-        <p>Hi {{ucfirst(strtolower($firstName))}}  </p>
-        <p>Your application has been completed Successfully.</p>
-        <p>The following are your application details:</p>
-        <h6>Name: {{ucfirst(strtolower($firstName))}}  {{ ucfirst(strtolower($lastName))}}</h6>
-        <h6>Course applied:  {{$course}} </h6>
-        
-        
+        <p>Dear {{ucfirst(strtolower($adminName))}}  </p>
+        <p>A student has registered which is now awaiting your approval</p>
+        <p>Please review and apporve at your earliest convinience</p>
 
-            
+        <a href="{{ route('dashboard') }}">
+          <button type="button" class="btn btn-success">Proceed to admin dashboard</button>
+        </a>
+          
         </div>
     </div>
   </div>

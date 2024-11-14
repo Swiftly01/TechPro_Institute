@@ -10,7 +10,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ApplicationMailNotification extends Mailable
+class AdminPaymentNotification extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,21 +18,12 @@ class ApplicationMailNotification extends Mailable
      * Create a new message instance.
      */
 
-     public $firstName;
-     public $lastName;
-     public $course;
-     public $phone;
-     
-    
+     public $adminName;
 
-    public function __construct($firstName, $lastName, $course, $phone, )
+    public function __construct($adminName)
     {
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
-        $this->course = $course;
-        $this->phone = $phone;
         
-        
+        $this->adminName = $adminName;
     }
 
     /**
@@ -41,8 +32,10 @@ class ApplicationMailNotification extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from:new Address(env('MAIL_FROM_ADDRESS')),
-             subject: 'Application :: Notification',
+    
+                from:new Address(env('MAIL_FROM_ADDRESS')),
+                subject: 'Payment :: Notification',
+            
         );
     }
 
@@ -52,14 +45,10 @@ class ApplicationMailNotification extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'application.mail',
+            view: 'application.paymentnotification',
             with: [
-                'firstName' => $this->firstName,
-                'lastName' => $this->lastName,
-                'email' => $this->course,
-                'phone' => $this->phone,
-                
-            ],
+                'adminName' => $this->adminName,
+            ]
         );
     }
 

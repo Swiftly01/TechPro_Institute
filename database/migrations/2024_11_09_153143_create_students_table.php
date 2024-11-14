@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('phone');
             $table->foreignId('course_id')->refrences('id')->on('courses')->onDelete('cascade');
             $table->string('image_url');
-            $table->string('app_no');
+            $table->string('app_no')->nullable();
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

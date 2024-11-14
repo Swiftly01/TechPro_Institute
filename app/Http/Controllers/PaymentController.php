@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AdminPaymentNotification;
 use App\Models\Payment;
+use App\Models\User;
 use App\Models\PaymentSchedule;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PaymentController extends Controller
 {
@@ -97,6 +100,15 @@ class PaymentController extends Controller
           ]);
 
 
+          $admin = User::first();
+
+          $adminEmail = $admin->email;
+          $adminName = $admin->name;
+    
+      
+        Mail::to($adminEmail)->send(new AdminPaymentNotification ($adminName));
+
+
           return redirect()->back()->with('success', 'Payment Receipt Uploaded Successfully');
     
      }
@@ -119,7 +131,7 @@ class PaymentController extends Controller
         $payment  = Payment::find($paymentId);
         $student = Student::with('course')->where('id', $paymentId)->first();
 
-        if($payment) {
+        if($payment || $student) {
 
           return view('admin.payments.details', ['payment' => $payment, 'user' => $user, 'student' => $student]);
         }
@@ -149,7 +161,7 @@ class PaymentController extends Controller
 
       $payment->save();
 
-
+    
       return redirect()->back()->with('success', 'Payment Record Updated Successfully');
 
       }
@@ -158,6 +170,16 @@ class PaymentController extends Controller
       return redirect()->back()->with('error', 'Payment Update Failed!!');
 
 
+    }
+
+
+    public function showPayment(Request  $request) {
+
+      $payment = Payment::with('student')->where('status','success')->get();
+
+      $user = $request->user();
+
+      return view('admin.payments.approvedpayments', ['payments' => $payment, 'user' => $user]);
     }
 
 

@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AdminApplicationNotification;
+use App\Mail\AdminRejectionNotification;
+use App\Mail\ApplicationApprovalMail;
 use App\Mail\ApplicationMailNotification;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Course;
 use App\Models\Payment;
 use App\Models\PaymentSchedule;
 use App\Models\Student;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 use function PHPUnit\Framework\isEmpty;
@@ -65,10 +69,6 @@ class StudentController extends Controller
 
         }
 
-          $year = date('Y');
-
-          $app_no = Student::genAppNo($year);
-          $validate['app_no'] = $app_no;
 
        $student =  Student::create($validate);
 
@@ -91,9 +91,14 @@ class StudentController extends Controller
         $course =  $student->course->name;
         $phone = $student->phone;
         $email = $student->email;
-        $app_no = $student->app_no;
 
-        Mail::to($email)->send(new ApplicationMailNotification($firstName, $lastName, $course, $phone, $app_no));
+        $adminUser = User::first();
+        $adminEmail = $adminUser->email;
+        $adminName = $adminUser->name;
+
+        Mail::to($adminEmail)->send(new AdminApplicationNotification($adminName));
+
+        Mail::to($email)->send(new ApplicationMailNotification($firstName, $lastName, $course, $phone));
 
 
         return view('application.message', compact('student'));
@@ -117,7 +122,10 @@ class StudentController extends Controller
         }
 
 
-        $payments = Payment::with('schedule')->where('student_id', $student->id)->get();
+        $payments = Payment::with('schedule')
+                            ->where('student_id', $student->id)
+                            ->where('status', 'success')
+                            ->get();
 
         if($payments->isEmpty()) {
 
@@ -170,6 +178,102 @@ class StudentController extends Controller
 
             return view('admin.students.view', ['students' => $students, 'user' => $user]);
         }
+    }
+
+
+
+    public function pending(Request $request) {
+
+        $pendingStudents = Student::where('status', 0)->get();
+        $approvedStudents = Student::where('status', 1)->get();
+        $rejectedStudents = Student::where('status', -1)->get();
+
+        $adminUser = $request->user();
+
+        return view('admin.students.approve', [
+            'pendingStudents' => $pendingStudents,
+            'approvedStudents' => $approvedStudents,
+            'rejectedStudents' => $rejectedStudents,
+             'user' => $adminUser,
+            
+            ]);
+
+
+
+            
+    }
+
+    public function approve(Request $request) {
+
+        $student_id = $request->input('student_id');
+
+       $student = Student::find($student_id);
+
+       if($student) {
+
+
+       $year = date('Y');
+
+       $app_no = Student::genAppNo($year);
+
+       $status = 1;
+
+       $student->status = $status;
+       $student->app_no = $app_no;    
+
+       $student->save();
+
+       
+       $firstName = $student->firstname;
+       $lastName = $student->lastname;
+       $email = $student->email;
+       $course = $student->course->name;
+       $phone = $student->phone;
+       $app_no = $student->app_no;
+
+
+
+
+       Mail::to($email)->send(new ApplicationApprovalMail ($firstName, $lastName, $email, $course, $phone, $app_no));
+
+       return redirect()->back()->with('success', 'Student Application Approved Successfully');
+
+       }
+
+       return redirect()->back()->with('error', 'Student Application Approval Failed');
+
+    }
+
+
+    public function reject(Request $request) {
+
+        $student_id = $request->input('student_id');
+        $reason = $request->input('reject-reason');
+
+        $student = Student::find($student_id);
+
+        if($student) {
+
+            $firstName = $student->firstname;
+            $lastName = $student->lastname;
+            $email = $student->email;
+            $course = $student->course->name;
+            $phone = $student->phone;
+
+            $status = 0;
+
+            $student->status = $status;
+
+            $student->save();
+
+            Mail::to($email)->send(new AdminRejectionNotification ($firstName, $lastName, $email, $course, $phone, $reason));
+
+            return redirect()->back()->with('success', 'Student Application Rejected Successfully');
+
+        }
+
+        return redirect()->back()->with('error', 'Student Application Approval Failed');
+
     }
 
     /**
@@ -229,6 +333,8 @@ class StudentController extends Controller
  
 
     }
+
+   
 
     /**
      * Remove the specified resource from storage.

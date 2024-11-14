@@ -10,29 +10,18 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ApplicationMailNotification extends Mailable
+class AdminApplicationNotification extends Mailable
 {
     use Queueable, SerializesModels;
+
+    public $adminName;
 
     /**
      * Create a new message instance.
      */
-
-     public $firstName;
-     public $lastName;
-     public $course;
-     public $phone;
-     
-    
-
-    public function __construct($firstName, $lastName, $course, $phone, )
+    public function __construct($adminName)
     {
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
-        $this->course = $course;
-        $this->phone = $phone;
-        
-        
+        $this->adminName = $adminName;
     }
 
     /**
@@ -42,7 +31,7 @@ class ApplicationMailNotification extends Mailable
     {
         return new Envelope(
             from:new Address(env('MAIL_FROM_ADDRESS')),
-             subject: 'Application :: Notification',
+            subject: 'Admin :: Notification',
         );
     }
 
@@ -52,14 +41,10 @@ class ApplicationMailNotification extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'application.mail',
+            view: 'application.admin-notification-mail',
             with: [
-                'firstName' => $this->firstName,
-                'lastName' => $this->lastName,
-                'email' => $this->course,
-                'phone' => $this->phone,
-                
-            ],
+                'adminName' => $this->adminName,
+            ]
         );
     }
 

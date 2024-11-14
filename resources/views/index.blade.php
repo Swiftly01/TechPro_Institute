@@ -52,7 +52,7 @@
         <a href="{{ route('application.form') }}" class="me-4 d-none d-lg-block">
             <button class="register">Register Now</button>
         </a>
-        <a href="{{ route('application.form') }}" class="me-4 d-none d-lg-block">
+        <a href="{{ url('/outstanding') }}" class="me-4 d-none d-lg-block">
             <button class="register">Login</button>
         </a>
     </div>

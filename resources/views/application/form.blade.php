@@ -80,7 +80,7 @@
          </span>
         
         <div class="mb-3">
-            <label for="image_url" class="form-label  ms-5 label-name">Upload Passport</label>
+            <label for="image_url" class="form-label  ms-5 label-name">Upload Passport Photograph </label>
             <input style="width: 80%;" type="file" class="form-control mt-2 ms-5"  name="image_url" >
             <span class="text-danger ms-5">
               @error('image_url')

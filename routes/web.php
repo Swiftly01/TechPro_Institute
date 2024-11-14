@@ -3,6 +3,8 @@
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
+use App\Models\Payment;
+use App\Models\Student;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,12 +48,17 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['auth', 'verified'])->prefix('/admin')->group(function() {
     Route::get('/students', [StudentController::class, 'show'])->name('show.students');
+    Route::get('/pending/view', [StudentController::class, 'pending'])->name('application.pending');
+    Route::post('/approve', [StudentController::class, 'approve'])->name('application.approve');
+    Route::post('/reject', [StudentController::class, 'reject'])->name('application.reject');
     Route::post('/student/edit/{id}', [StudentController::class, 'update'])->name('student.edit');
     Route::post('/student/delete', [StudentController::class, 'destroy'])->name('student.delete');
-
+    Route::get('/approved/view', [StudentController::class, 'showApproved'])->name('show.approved');
+    Route::get('/rejected/view', [StudentController::class, 'showRejected'])->name('show.rejected');
     Route::get('/payments', [PaymentController::class, 'index'])->name('student.payments');
     Route::get('/payment/details/{id}', [PaymentController::class, 'show'])->name('details.show');
     Route::post('/payment/approve', [PaymentController::class, 'approvePayment'])->name('payment.approval');
+    Route::get('payment/view',[PaymentController::class, 'showPayment'])->name('view.payments');
 
 
 });

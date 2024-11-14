@@ -6,6 +6,7 @@
   <title>Techpro Institute Nigeria</title>
   <link rel="icon" href="{{asset('assets/images/techpro_img.png')}}" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
   <style>
     .payment-text {
       font-size: 2rem;
@@ -58,7 +59,7 @@
           <div class="row">
             <div class="col text-center">
               <div class="mb-3">
-                <label for="image_url" class="form-label label-name"></label>
+                <label for="image_url" class="form-label label-name fs-5 text-danger">Upload Payment Receipts</label>
                 <input style="width: 30%;" type="file" class="form-control mt-2 mx-auto" name="receipt_url" placeholder="Upload Payment Receipt" required>
                 <input name="app_no" value="{{ $app_no }}" type="text" hidden>
                 <span class="text-danger">

@@ -16,7 +16,6 @@ class Payment_ScheduleSeeder extends Seeder
         DB::table('payment_schedules')->insert([
 
             [ 'course_id'=>1,
-
               'amount'=>120000.00,
               'purpose' => 'sch_fee',
               'desc' => 'School fees payment for graphic design',
@@ -31,7 +30,7 @@ class Payment_ScheduleSeeder extends Seeder
             [
             'course_id'=>3,
 
-              'amount'=>120000.00,
+              'amount'=>100000.00,
               'purpose' => 'sch_fee',
               'desc' => 'School fees payment for UI/UX',
             ],
@@ -59,7 +58,7 @@ class Payment_ScheduleSeeder extends Seeder
             [
             'course_id'=>7,
 
-              'amount' => 120000.00,
+              'amount' => 250000.00,
               'purpose' => 'sch_fee',
                'desc' => 'School fees payment for Website development',
               
@@ -67,7 +66,7 @@ class Payment_ScheduleSeeder extends Seeder
             ],
             [
             'course_id'=>8,
-            'amount' => 120000.00,
+            'amount' => 130000.00,
             'purpose' => 'sch_fee',
             'desc' =>  'School fees payment for Cyber security',
             ],
@@ -114,14 +113,14 @@ class Payment_ScheduleSeeder extends Seeder
 
             [
             'course_id'=>15,
-            'amount' => 120000.00,
+            'amount' => 150000.00,
             'purpose' => 'sch_fee',
             'desc' =>  'School fees payment for Advanced Backend programming',
             ],
 
             [
             'course_id'=>16,
-            'amount' => 120000.00,
+            'amount' => 130000.00,
             'purpose' => ' Sch Fee',
             'desc' =>  'School fees payment for Advanced frontend programming',
             ],
@@ -135,7 +134,7 @@ class Payment_ScheduleSeeder extends Seeder
 
             [
             'course_id'=>18,
-            'amount' => 120000.00,
+            'amount' => 130000.00,
             'purpose' => ' Sch Fee',
             'desc' =>  'School fees payment for Data science/analysis',
             ],
