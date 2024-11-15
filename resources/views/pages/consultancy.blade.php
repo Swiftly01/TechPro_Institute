@@ -14,7 +14,7 @@
 
   <!-- Navigation Bar -->
                                                                  
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand ps-4" href="{{ url('/') }}">
             <img width="80px" height="50px" class="img-fluid" src="{{ asset('assets/images/techpro_img.png') }}" alt="Techpro Logo">
@@ -33,7 +33,7 @@
               </li>
                
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="{{ route('application.form') }}">Courses</a>
+                    <a class="nav-link" href="{{ url('/courses') }}">Courses</a>
                 </li>
                 <li class="nav-item me-5">
                     <a class="nav-link" href="{{ url('/contact') }}">Contact</a>

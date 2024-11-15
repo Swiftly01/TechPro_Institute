@@ -1,4 +1,5 @@
  
+ 
 <footer style="background-color: #0A5098; padding: 40px 0; margin-top: 6%;">
   <div class="container">
     <div class="row gy-4">
@@ -18,12 +19,12 @@
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Courses</h4> 
         <ul class="list-unstyled">
-          <li><a class="fs-6 fw-light text" href="courses.html" >Web Development</a></li>
-          <li><a class="fs-6 fw-light text" href="courses.html">Data analysis</a></li>
-          <li><a class="fs-6 fw-light text" href="courses.html">Cyber Security</a></li>
-          <li><a class="fs-6 fw-light text" href="courses.html">UI/UX Design</a></li>
-          <li><a class="fs-6 fw-light text" href="courses.html">Graphic Design</a></li>
-          <li><a class="fs-6 fw-light text" href="courses.html">Full Stack Development</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}" >Web Development</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Data analysis</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Cyber Security</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">UI/UX Design</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Graphic Design</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Full Stack Development</a></li>
         </ul>
       </div>
       
@@ -31,12 +32,12 @@
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Links</h4>
         <ul class="list-unstyled">
-          <li><a class="fs-6 fw-light  text" href="gaming.html"></a>Gaming</li>
-          <li><a class="fs-6 fw-light text" href="events.html">Events</a></li>
-          <li><a class="fs-6 fw-light  text" href="">Texh-A-Child</a></li>
+          <li><a class="fs-6 fw-light  text" href="{{ url('/gaming') }}">Gaming</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ url('/events') }}">Events</a></li>
+          <li><a class="fs-6 fw-light  text" href="">Tech-A-Child</a></li>
           <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
-          <li><a class="fs-6 fw-light  text" href="internship.html">Internship</a></li>
-          <li><a class="fs-6 fw-light text" href="hostel.html">Hostel Facilities</a></li>
+          <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
           
           <!-- <li><a class="fs-6 fw-light text" href="#">TechPro Consultancy</a></li>
           <li><a class="fs-6 fw-light text" href="#">Frika Xchange</a></li>
@@ -46,7 +47,7 @@
       
       <!-- Legal Section -->
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
-        <h4 class="fw-bold follow">Links</h4>
+        <h4 class="fw-bold follow">Legal</h4>
         <ul class="list-unstyled ">
           <li><a class="fs-6 fw-light  text" href="#">Terms Of Use</a></li>
           <li><a class="fs-6 fw-light text" href="#">Privacy Policy</a></li>
@@ -58,7 +59,8 @@
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Contact</h4>
         <p class="fs-6 fw-light text">103 Gbodofon Street, Ibadan Road, Osogbo.</p>
-        <p class="fs-6 fw-light text">Phone: 08086478810</p>
+        <p class="fs-6 fw-light text">Phone: +2348086478810</p>
+        <p class="fs-6 fw-light text">E-mail: contact@techprong.com</p>
       </div>
     </div>
   </div>

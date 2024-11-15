@@ -40,7 +40,7 @@
               </li>
                
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="{{ route('application.form') }}">Courses</a>
+                    <a class="nav-link" href="{{ url('/courses') }}">Courses</a>
                 </li>
                 <li class="nav-item me-5">
                     <a class="nav-link" href="{{ url('/contact') }}">Contact</a>

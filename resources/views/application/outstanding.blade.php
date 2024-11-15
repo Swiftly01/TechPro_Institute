@@ -46,7 +46,7 @@
               </div>   
               @endif
               <h1 class="payment-text">Payment Details</h1>
-              <p class="fs-4">Your Payment reference no <span class="text-danger fs-4">Kabirakinola234567FTD</span></p>
+              {{-- <p class="fs-4">Your Payment reference no <span class="text-danger fs-4">Kabirakinola234567FTD</span></p> --}}
               <p class="fs-5">Make direct payment to the below bank details</p>
               <p class="fs-5">Bank Name: UBA</p>
               <p class="fs-5">Account Number: 1025989215</p>

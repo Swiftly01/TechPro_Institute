@@ -37,7 +37,7 @@
                   <li><a href="./chart-peity.html">Peity</a></li> --}}
               </ul>
           </li>
-          <li class="nav-label">Components</li>
+          {{-- <li class="nav-label">Components</li>
           <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                       class="icon icon-world-2"></i><span class="nav-text">Bootstrap</span></a>
               <ul aria-expanded="false">
@@ -112,7 +112,7 @@
                   </li>
                   <li><a href="./page-lock-screen.html">Lock Screen</a></li>
               </ul>
-          </li>
+          </li> --}}
       </ul>
   </div>
 
