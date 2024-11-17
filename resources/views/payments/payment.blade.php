@@ -111,7 +111,7 @@
           <div class="row">
               <div class="col mx-auto mt-4">
                   <button type="submit" class="complete-btn">Complete Registration</button>
-                  <a href="{{ url('/') }}"><button style="background-color: #105697;" type="button" class="btn  pt-2 pb-2 ms-3 mb-1">Home</button></a> 
+                  <a href="{{ url('/') }}"><button style="background-color: #105697;" type="button" class="btn  pt-2 pb-2 ms-3 mb-1 text-white">Home</button></a> 
               </div>
           </div>
       </form>

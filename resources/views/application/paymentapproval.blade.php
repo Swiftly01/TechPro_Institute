@@ -12,7 +12,7 @@
 
   <div class="container">
     <div class="card mt-2">
-        <div class="card-header bg-success text-white">Application :: Details </div>
+        <div style="background-color: #105697;" class="card-header text-white">Application :: Details </div>
         <div class="card-body">
         <p> Congratulations! Your payment to TechPro institute has been successfully approved by our admin team</p>
         <p>The following are your application and payment details:</p>
@@ -25,7 +25,7 @@
         <h6>Amount Paid: {{ $amount }}</h6>
 
         <a href="{{ url('/outstanding') }}">
-          <button type="button" class="btn btn-success">Proceed to check your Details</button>
+          <button style="background-color: #105697;" type="button" class="btn text-white">Proceed to check your Details</button>
         </a>
             
         </div>

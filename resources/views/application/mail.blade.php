@@ -12,7 +12,7 @@
 
   <div class="container">
     <div class="card mt-2">
-      <div class="card-header bg-success text-white">Application :: Details </div>
+      <div style="background-color: #105697;" class="card-header  text-white">Application :: Details </div>
         <div class="card-body">
         <p>Your application to TechPro institute has been successfully completed</p>
         <p>The following are your application details:</p>
@@ -23,7 +23,7 @@
         {{-- <h6>Application Number: {{ $app_no }}</h6> --}}
         
         <a href="{{ route('payment.show', ['id' => $id])}}">
-          <button type="button" class="btn btn-success">Proceed to make payments</button>
+          <button style="background-color: #105697;" type="button" class="btn ">Proceed to make payments</button>
         </a>  
       </div>
     </div>

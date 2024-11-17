@@ -12,7 +12,7 @@
 
   <div class="container">
     <div class="card mt-2">
-        <div class="card-header bg-success text-white">Student :: Application </div>
+        <div style="background-color: #105697;" class="card-header  text-white">Student :: Application </div>
         <div class="card-body">
 
         <p>Dear {{ucfirst(strtolower($adminName))}}  </p>
@@ -20,7 +20,7 @@
         <p>Please review and apporve at your earliest convinience</p>
 
         <a href="{{ route('dashboard') }}">
-          <button type="button" class="btn btn-success">Proceed to admin dashboard</button>
+          <button style="background-color: #105697;" type="button" class="btn text-white">Proceed to admin dashboard</button>
         </a>
           
         </div>
