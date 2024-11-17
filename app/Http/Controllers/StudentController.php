@@ -91,14 +91,15 @@ class StudentController extends Controller
         $course =  $student->course->name;
         $phone = $student->phone;
         $email = $student->email;
+        $id = $student->id;
 
         $adminUser = User::first();
         $adminEmail = $adminUser->email;
         $adminName = $adminUser->name;
 
-        Mail::to($adminEmail)->send(new AdminApplicationNotification($adminName));
+       // Mail::to($adminEmail)->send(new AdminApplicationNotification($adminName));
 
-        Mail::to($email)->send(new ApplicationMailNotification($firstName, $lastName, $course, $phone));
+        Mail::to($email)->send(new ApplicationMailNotification($firstName, $lastName, $course, $phone, $email, $id));
 
 
         return view('application.message', compact('student'));
@@ -180,7 +181,7 @@ class StudentController extends Controller
         }
     }
 
-
+/*
 
     public function pending(Request $request) {
 
@@ -196,16 +197,19 @@ class StudentController extends Controller
             'rejectedStudents' => $rejectedStudents,
              'user' => $adminUser,
             
-            ]);
+        ]);
 
 
 
             
     }
 
+    */
+
+    /*
     public function approve(Request $request) {
 
-        $student_id = $request->input('student_id');
+       $student_id = $request->input('student_id');
 
        $student = Student::find($student_id);
 
@@ -243,7 +247,9 @@ class StudentController extends Controller
        return redirect()->back()->with('error', 'Student Application Approval Failed');
 
     }
+    */
 
+    /*
 
     public function reject(Request $request) {
 
@@ -275,6 +281,8 @@ class StudentController extends Controller
         return redirect()->back()->with('error', 'Student Application Approval Failed');
 
     }
+
+    */
 
     /**
      * Show the form for editing the specified resource.

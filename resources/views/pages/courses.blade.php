@@ -199,7 +199,7 @@
               </div>
               <div class="duration">
                 <p class="ms-1">Duration</p>
-                <p class="me-2">3 Months</p>
+                <p class="me-2">6 Months</p>
               </div>
             </div>
             <div class="reg">

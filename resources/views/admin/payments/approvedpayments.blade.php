@@ -49,22 +49,24 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>App No</th>
+                            <th>Fullname</th>
+                            <th>Payment Reference</th>
+                            <th>Status</th>
+                            <th>Amount Paid</th>
                             <th>Amount_due</th>
                             <th>purpose</th>
                             <th>Receipt</th>
                         </tr>
                     </thead>
-                    @foreach ($payments as $index => $payment )
+                    @foreach ($approvedPayments as $index => $payment )
                     <tbody>
                       <tr>
                           <td>{{ $index + 1 }}</td>
-                          <td>{{ $payment->student->firstname }}</td>
-                          <td>{{ $payment->student->lastname }}</td>
-                          <td>{{ $payment->student->app_no }}</td>
-                          <td>{{ $payment->amount_due }}</td>
+                          <td>{{ $payment->student->firstname }}  {{ $payment->student->lastname }}</td>
+                          <td> {{ $payment->payment_reference }}</td>
+                          <td>{{ $payment->status}}</td>
+                          <td>&#8358;{{number_format($payment->amount)}}</td>
+                          <td>&#8358;{{number_format($payment->amount_due)}}</td>
                           <td>{{ $payment->purpose}}</td>
                           <td> <a href="{{ asset('upload/'.$payment->receipt_url) }}" target="_blank">
                             <img style="height: 100px" src="{{ asset('upload/'.$payment->receipt_url) }}" alt="">
@@ -79,9 +81,10 @@
                     <tfoot>
                         <tr>
                           <th>#</th>
-                          <th>Firstname</th>
-                          <th>Lastname</th>
-                          <th>App No</th>
+                          <th>Fullname</th>
+                          <th>Payment Reference</th>
+                          <th>Amount Paid</th>
+                          <th>Status</th>
                           <th>Amount_due</th>
                           <th>purpose</th>
                           <th>Receipt</th>

@@ -14,8 +14,8 @@
                       class="icon icon-app-store"></i><span class="nav-text">Student Menu</span></a>
               <ul aria-expanded="false">
                   <li><a href="{{ route('show.students') }}">View</a></li>
-                  <li><a href="{{ route('application.pending') }}">Approval Menu</a></li>
-                   {{-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Show</a>
+                  {{-- <li><a href="{{ route('application.pending') }}">Approval Menu</a></li>
+                   <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Show</a>
                       <ul aria-expanded="false">
                           <li><a href="">Pending</a></li>
                            <li><a href="./email-inbox.html">Inbox</a></li>
@@ -28,8 +28,9 @@
           <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                       class="icon icon-chart-bar-33"></i><span class="nav-text">Payment Menu</span></a>
               <ul aria-expanded="false">
-                  <li><a href="{{ route('student.payments') }}">Approve Payments</a></li>
-                  <li><a href="{{ route('view.payments') }}">All Payments</a></li>
+                  <li><a href="{{ route('student.payments') }}">Appove Payments</a></li>
+                  <li><a href="{{ route('view.active.payments') }}">Active Payments</a></li>
+                  <li><a href="{{ route('view.failed.payments') }}">Failed Payments</a></li>
                   {{-- <li><a href="./chart-morris.html">Morris</a></li>
                   <li><a href="./chart-chartjs.html">Chartjs</a></li>
                   <li><a href="./chart-chartist.html">Chartist</a></li>

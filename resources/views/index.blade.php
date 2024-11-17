@@ -53,7 +53,7 @@
             <button class="register">Register Now</button>
         </a>
         <a href="{{ url('/outstanding') }}" class="me-4 d-none d-lg-block">
-            <button class="register">Login</button>
+            <button class="register">verify Payment</button>
         </a>
     </div>
 </nav>
@@ -262,7 +262,7 @@
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
-                    <p class="me-2">3 Months</p>
+                    <p class="me-2">6 Months</p>
                   </div>
                 </div>
                 <div class="reg">
@@ -339,10 +339,10 @@
     <div style="background-color: #0A5098;" class="row">
       <div class="col-lg-6">
         <div class="mt-5">
-          <h1 class="incubate-header">Incubation</h1>
+          <h1 class="incubate-header">Development Team</h1>
           <p class="empowering">Empowering entrepreneurs in Osun State to drive tech innovation and transform the region into a tech hub</p>
           <p class="foster">Tech Pro Nigeria is committed to fostering entrepreneurship and supporting startups within Osun State by providing an incubating platform and essential resources.</p>
-          <a href="{{ url('/incubation') }}" class="explore-btn-new">Explore Our Incubation Programs</a>
+          <a href="{{ url('/incubation') }}" class="explore-btn-new">Explore Our Programs</a>
         </div>
       
       </div>

@@ -12,15 +12,21 @@
 
   <div class="container">
     <div class="card mt-2">
-        <div class="card-header bg-danger text-white">Application :: Rejection </div>
+        <div class="card-header bg-success text-white">Application :: Details </div>
         <div class="card-body">
-        <p> We regret to inform you that your application to TechPro institute has been rejected  by our admin team</p>
-        <p>The following are your application details:</p>
+        <p> Congratulations! Your payment to TechPro institute has been successfully approved by our admin team</p>
+        <p>The following are your application and payment details:</p>
         <h6>Name: {{ucfirst(strtolower($firstName))}}  {{ ucfirst(strtolower($lastName))}}</h6>
         <h6>Email Address: {{ $email }}</h6>
         <h6>Course applied:  {{$course}} </h6>
         <h6>Phone Number: {{ $phone }}</h6>
-        <h6>Rejection Reason: {{ $reason }}</h6>
+        <h6>Application Number: {{ $app_no }}</h6>
+        <h6>Payment Reference: {{ $payment_reference }}</h6>
+        <h6>Amount Paid: {{ $amount }}</h6>
+
+        <a href="{{ url('/outstanding') }}">
+          <button type="button" class="btn btn-success">Proceed to check your Details</button>
+        </a>
             
         </div>
     </div>

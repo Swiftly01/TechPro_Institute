@@ -89,6 +89,17 @@
         <input style="width: 80%;" type="number" class="form-control mt-2 ms-5" id="phone" name="phone" placeholder="1234567890" required>
     </div>
     <div class="mb-3">
+      <select  name="payment_option" style="width: 80%;" class="form-select ms-5 mt-5" id="payment-option" aria-label="Default select example">
+        <option selected="">Choose Incubation Program</option>
+        <option value="one_time">Access to Work Stations</option>
+        <option value="installments">Workshop</option>
+        <option value="installments">Development Team</option>
+        <option value="installments">Funding Oppurtunities</option>
+    </select>
+
+    </div>
+
+    <div class="mb-3">
         <label for="summary" class="form-label mt-2 ms-5 label-name">Summary of your idea</label>
         <textarea style="width: 80%;" class="form-control mt-2 ms-5" id="summary" name="summary" placeholder="Write a brief summary about your idea" rows="3" required></textarea>
     </div>

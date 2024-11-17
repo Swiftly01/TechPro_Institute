@@ -18,10 +18,9 @@
  <div class="container mt-5">
   <div class="row">
     <div class="col text-center mt-5">
-      <h1 class="payment-text">Successful Registration</h1>
-      <p class="fs-4">Your registration is successfull</p>
-      <p class="fs-5">A memeber of staff  will be in touch  soon for your onboarding You can also visit  our office to collect your onboarding materials</p>
-    
+      <h1 class="payment-text text-success">Success</h1>
+      <p class="fs-4">Your registration is completed and payments made successfully</p>
+      {{-- <p class="fs-5">A memeber of staff  will be in touch  soon for your onboarding You can also visit  our office to collect your onboarding materials</p> --}}  
     </div>
   </div>
  </div>

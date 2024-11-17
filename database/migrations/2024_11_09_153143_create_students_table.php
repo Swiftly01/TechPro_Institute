@@ -20,7 +20,8 @@ return new class extends Migration
             $table->foreignId('course_id')->refrences('id')->on('courses')->onDelete('cascade');
             $table->string('image_url');
             $table->string('app_no')->nullable();
-            $table->integer('status')->default(0);
+            $table->enum('payment_option', ['one_time', 'installments'])->nullable();
+            $table->string('terms')->nullable();
             $table->timestamps();
         });
     }

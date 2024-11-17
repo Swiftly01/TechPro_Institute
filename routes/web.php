@@ -37,9 +37,14 @@ Route::get('/outstanding', function() {
     return view('application.outstanding');
 });
 
+Route::get('/payment/success', function() {
+    return view ('payments.success');
 
-Route::get('/payment', [PaymentController::class, 'loadPage'])->name('payment.show');
-Route::post('/payment/upload/', [PaymentController::class, 'store'])->name('payment.upload');
+})->name('payments.success');
+
+
+Route::get('/payment/{id}', [PaymentController::class, 'loadPage'])->name('payment.show');
+Route::post('/payment/upload', [PaymentController::class, 'store'])->name('payment.upload');
 
 
 Route::get('/dashboard', function () {
@@ -48,17 +53,19 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['auth', 'verified'])->prefix('/admin')->group(function() {
     Route::get('/students', [StudentController::class, 'show'])->name('show.students');
-    Route::get('/pending/view', [StudentController::class, 'pending'])->name('application.pending');
-    Route::post('/approve', [StudentController::class, 'approve'])->name('application.approve');
-    Route::post('/reject', [StudentController::class, 'reject'])->name('application.reject');
+   // Route::get('/pending/view', [StudentController::class, 'pending'])->name('application.pending');
+  //  Route::post('/approve', [StudentController::class, 'approve'])->name('application.approve');
     Route::post('/student/edit/{id}', [StudentController::class, 'update'])->name('student.edit');
     Route::post('/student/delete', [StudentController::class, 'destroy'])->name('student.delete');
-    Route::get('/approved/view', [StudentController::class, 'showApproved'])->name('show.approved');
-    Route::get('/rejected/view', [StudentController::class, 'showRejected'])->name('show.rejected');
+   // Route::get('/approved/view', [StudentController::class, 'showApproved'])->name('show.approved');
+   // Route::get('/rejected/view', [StudentController::class, 'showRejected'])->name('show.rejected');
     Route::get('/payments', [PaymentController::class, 'index'])->name('student.payments');
     Route::get('/payment/details/{id}', [PaymentController::class, 'show'])->name('details.show');
     Route::post('/payment/approve', [PaymentController::class, 'approvePayment'])->name('payment.approval');
-    Route::get('payment/view',[PaymentController::class, 'showPayment'])->name('view.payments');
+    Route::post('/reject', [PaymentController::class, 'rejectPayment'])->name('payment.reject');
+    Route::get('payment/active',[PaymentController::class, 'showApprovedPayment'])->name('view.active.payments');
+    Route::get('payment/failed',[PaymentController::class, 'showRejectedPayment'])->name('view.failed.payments');
+
 
 
 });

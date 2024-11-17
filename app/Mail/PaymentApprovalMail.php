@@ -10,7 +10,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ApplicationApprovalMail extends Mailable
+class PaymentApprovalMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -26,9 +26,11 @@ class ApplicationApprovalMail extends Mailable
      public $course;
      public $phone;
      public $app_no;
+     public $payment_reference;
+     public $amount;
     
 
-    public function __construct($firstName, $lastName, $email, $course, $phone, $app_no, )
+    public function __construct($firstName, $lastName, $email, $course, $phone, $app_no, $payment_reference, $amount )
     {
         
         $this->firstName = $firstName;
@@ -37,11 +39,10 @@ class ApplicationApprovalMail extends Mailable
         $this->course = $course;
         $this->phone = $phone;
         $this->app_no = $app_no;
+        $this->payment_reference =$payment_reference;
+        $this->amount = $amount;
 
 
-        //dd($email);
-
-        return;
         
     }
 
@@ -52,7 +53,7 @@ class ApplicationApprovalMail extends Mailable
     {
         return new Envelope(
             from:new Address(env('MAIL_FROM_ADDRESS')),
-            subject: 'Application :: Approval',
+            subject: 'Payment :: Approval',
         );
     }
 
@@ -62,7 +63,7 @@ class ApplicationApprovalMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'application.approval',
+            view: 'application.paymentapproval',
             with: [
                 'firstName' => $this->firstName,
                 'lastName' => $this->lastName,
@@ -70,6 +71,8 @@ class ApplicationApprovalMail extends Mailable
                 'course' => $this->course,
                 'phone' => $this->phone,
                 'app_no' => $this->app_no,
+                'payment_reference' => $this->payment_reference,
+                'amount' => $this->amount,
                 
                 
             ],

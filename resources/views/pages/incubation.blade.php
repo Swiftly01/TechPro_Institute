@@ -59,7 +59,7 @@
  <div  class="container">
   <div  class="row main">
     <div class="col">
-      <h1  class="text-danger"><a class="text-danger" href="{{ url('/') }}">Home</a><a class="text-danger" href="{{ url('/services') }}">/Services</a><a class="text-danger" href="incubation.html">/Incubation</a></h1>
+      <h1  class="text-danger"><a class="text-danger" href="{{ url('/') }}">Home</a><a class="text-danger" href="{{ url('/services') }}">/Services</a></h1>
     </div>
   </div> 
   <div class="row">
@@ -78,7 +78,7 @@
           <li><a href=""> <h1 class="ps-5 what-text" >What we do</h1></a></li>
           <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Access to workstations</a></li>
           <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Workshop</a></li>
-          <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Development Learn</a></li>
+          <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Development Team</a></li>
           <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Founding Oppurtunities</a></li>
           <li>
             <button onclick="window.location.href='/about-u'" class="contact-btn" style="font-size: 14px;">Click here to tell us which incubation program you are interested in</button>

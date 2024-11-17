@@ -14,7 +14,7 @@
       <div class="mb-3">
       <form action="{{ route('applicant.details') }}" method="post">
         @csrf
-        <label for="app_no" class="form-label mt-2 label-name">View Application Details</label>
+        <label for="app_no" class="form-label mt-2 label-name">View Application Details / Verify Payments</label>
         <input style="width: 50%"  type="text" class="form-control" value="{{ old('lastname') }}" name="app_no" placeholder="App/2024/123456" required>
         <span class="text-danger">
           @error('app_no')

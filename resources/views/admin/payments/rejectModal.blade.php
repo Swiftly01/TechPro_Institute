@@ -1,6 +1,6 @@
-<form action="{{ route('application.reject') }}" method="POST">
+<form action="{{ route('payment.reject') }}" method="POST">
   @csrf
-  <div class="modal fade" id="basicModalReject{{ $student->id }}">
+  <div class="modal fade" id="basicModalReject{{ $payment->id }}">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -8,11 +8,11 @@
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                 </button>
             </div>
-            <div class="modal-body">Are you sure you want to Reject {{ ucfirst(strtolower($student->firstname)) }} {{ ucfirst(strtolower($student->lastname))  }}</div>
-            <input type="hidden"  name="student_id" type="text" value="{{ $student->id }}">
+            <div class="modal-body">Are you sure you want to Reject {{ ucfirst(strtolower($payment->student->firstname)) }} {{ ucfirst(strtolower($payment->student->lastname))  }} Payment</div>
+            <input type="hidden"  name="payment_id" type="text" value="{{ $payment->id }}">
             <input type="text" class="form-control  " value="" name="reject-reason" required> 
             <span class="text-danger">
-              @error('student_id')
+              @error('payment_id')
               {{ $message }}
                 
               @enderror

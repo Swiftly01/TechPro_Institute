@@ -10,7 +10,7 @@ use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class AdminRejectionNotification extends Mailable
+class PaymentRejectionNotification extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -45,7 +45,7 @@ class AdminRejectionNotification extends Mailable
     {
         return new Envelope(
             from:new Address(env('MAIL_FROM_ADDRESS')),
-            subject: 'Application :: Rejection',
+            subject: 'Payment :: Approval Failed',
         );
     }
 
@@ -55,7 +55,7 @@ class AdminRejectionNotification extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'application.adminReject',
+            view: 'application.paymentReject',
             with: [
                 'firstName' => $this->firstName,
                 'lastName' => $this->lastName,

@@ -12,19 +12,20 @@
 
   <div class="container">
     <div class="card mt-2">
-        <div class="card-header bg-success text-white">Application :: Details </div>
+      <div class="card-header bg-success text-white">Application :: Details </div>
         <div class="card-body">
-
-        <p>Hi {{ucfirst(strtolower($firstName))}}  </p>
-        <p>Your application has been completed Successfully.</p>
+        <p>Your application to TechPro institute has been successfully completed</p>
         <p>The following are your application details:</p>
         <h6>Name: {{ucfirst(strtolower($firstName))}}  {{ ucfirst(strtolower($lastName))}}</h6>
+        <h6>Email Address: {{ $email }}</h6>
         <h6>Course applied:  {{$course}} </h6>
+        <h6>Phone Number: {{ $phone }}</h6>
+        {{-- <h6>Application Number: {{ $app_no }}</h6> --}}
         
-        
-
-            
-        </div>
+        <a href="{{ route('payment.show', ['id' => $id])}}">
+          <button type="button" class="btn btn-success">Proceed to make payments</button>
+        </a>  
+      </div>
     </div>
   </div>
   
