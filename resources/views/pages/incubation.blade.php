@@ -81,7 +81,7 @@
           <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Development Team</a></li>
           <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Founding Oppurtunities</a></li>
           <li>
-            <button onclick="window.location.href='/about-u'" class="contact-btn" style="font-size: 14px;">Click here to tell us which incubation program you are interested in</button>
+            <button onclick="window.location.href='/about-u'" class="contact-btn" style="font-size: 14px;">Click here to tell us the program you are interested in</button>
           </li>
         </ul>
       </div>
@@ -96,9 +96,9 @@
   </div>
 
   <div   class="row contact-top">
-    <div class="col text-center">
+    {{-- <div class="col text-center">
       <a href="{{ url('/contact') }}" class="contact-btn">Contact Us</a>
-    </div>
+    </div> --}}
   </div>
 </div>
   

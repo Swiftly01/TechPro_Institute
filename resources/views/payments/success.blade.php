@@ -20,22 +20,11 @@
     <div class="col text-center mt-5">
       <h1 class="payment-text text-success">Success</h1>
       <p class="fs-4">Your registration is completed and payments made successfully</p>
-      {{-- <p class="fs-5">A memeber of staff  will be in touch  soon for your onboarding You can also visit  our office to collect your onboarding materials</p> --}}  
+      <p class="fs-5">Kindly check your email for your application number</p> 
     </div>
   </div>
  </div>
 
-  
-
-
-
-   
-   
-
- 
-
-
- 
   
   
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

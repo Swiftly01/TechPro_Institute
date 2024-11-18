@@ -53,7 +53,7 @@
             <button class="register">Register Now</button>
         </a>
         <a href="{{ url('/outstanding') }}" class="me-4 d-none d-lg-block">
-            <button class="register">verify Payment</button>
+            <button class="register">Verify Payment</button>
         </a>
     </div>
 </nav>
@@ -340,8 +340,8 @@
       <div class="col-lg-6">
         <div class="mt-5">
           <h1 class="incubate-header">Development Team</h1>
-          <p class="empowering">Empowering entrepreneurs in Osun State to drive tech innovation and transform the region into a tech hub</p>
-          <p class="foster">Tech Pro Nigeria is committed to fostering entrepreneurship and supporting startups within Osun State by providing an incubating platform and essential resources.</p>
+          <p class="empowering">Our development team builds innovative and reliable solutions</p>
+          <p class="foster">Skilled in the latest tools, Tech Pro Nigeria works with top professional  software engineers to create impactful technology,driven by passion and agility, we turn ideas into reality.</p>
           <a href="{{ url('/incubation') }}" class="explore-btn-new">Explore Our Programs</a>
         </div>
       

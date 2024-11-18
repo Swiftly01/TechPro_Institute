@@ -71,7 +71,7 @@
   <div style="background-color: whitesmoke;" class="row">
     <div class="col-lg-6 col-md-12">
       <form action="payment.html" method="POST">
-    <h1 class="about ms-5">Incubation</h1>
+    {{-- <h1 class="about ms-5">Incubation</h1> --}}
     <div class="mb-3">
         <label for="firstName" class="form-label mt-2 ms-5 label-name">FirstName</label>
         <input style="width: 80%;" type="text" class="form-control mt-2 ms-5" id="firstName" name="firstName" placeholder="John" required>

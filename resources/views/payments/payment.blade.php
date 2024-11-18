@@ -74,6 +74,13 @@
                       <option value="one_time">Full Payment</option>
                       <option value="installments">Installments</option>
                   </select>
+                  <span class="text-danger">
+                    @error('terms')
+                    {{ $message }}
+                      
+                    @enderror
+
+                  </span>
                   <div id="installment-details" class="mt-3" style="display: none;">
                       <p class="fs-5 text-success">60% of the course price: <span id="sixty-percent"></span></p>
                   </div>
@@ -93,17 +100,11 @@
           <div class="row">
               <div class="col text-center">
                   <div id="agreement-section" class="form-check mt-3" style="display: none;">
-                      <input class="form-check-input" type="checkbox" id="agreement" name="terms" required>
+                      <input class="form-check-input" type="checkbox" id="agreement" name="terms" >
                       <label class="form-check-label fs-5 agreement-msg" for="agreement">
                           I acknowledge that only 60% of the payment will be approved by the admin, and I agree to complete the remaining balance within one month of resumption.
                       </label>
-                      <span class="text-danger">
-                        @error('terms')
-                        {{ $message }}
-                          
-                        @enderror
-
-                      </span>
+                     
                   </div>
               </div>
           </div>

@@ -66,12 +66,18 @@ class PaymentController extends Controller
         return  redirect()->back()->with('error', 'Invalid Student Details');
       }
 
-
+    
       $validate = $request->validate([
         'receipt_url' => 'required|image|max:1024',
         'payment_option' => 'required|in:one_time,installments',
-        'terms' => 'required_if:payment_option,installments|accepted'
+        
       ]);
+
+      if ($request->payment_option === 'installments' && !$request->has('terms')) {
+        return redirect()->back()->withErrors(['terms' => 'You must accept the terms for installments.']);
+    }
+    
+
 
   
 
@@ -200,7 +206,7 @@ class PaymentController extends Controller
      
       $payment->save();
 
-      Mail::to($student->email)->send( new PaymentApprovalMail ($student->firstname, $student->lastname, $student->email, $student->course, $student->phone, $student->app_no, $payment->payment_reference, $payment->amount));
+      Mail::to($student->email)->send( new PaymentApprovalMail ($student->firstname, $student->lastname, $student->email, $student->course->name, $student->phone, $student->app_no, $payment->payment_reference, $payment->amount));
 
 
       return redirect()->back()->with('success', 'Payment Record Updated Successfully');
