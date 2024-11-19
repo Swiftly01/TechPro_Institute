@@ -29,6 +29,16 @@
     .agreement-msg {
       color: #007BFF; /* Changed the color of the agreement message */
     }
+
+    .input-size {
+      width: 30%
+    }
+
+    @media screen and (max-width:997px) {
+      .input-size {
+        width: 100%
+      }
+    }
   </style>
 </head>
 <body>
@@ -67,13 +77,22 @@
               <div class="col text-center">
                   <div class="mb-3">
                       <label for="amount-due" class="form-label"><strong>Course Price</strong></label>
-                      <input style="width: 30%;" value="&#8358;{{number_format($amount_due) }}" class="form-control mx-auto" id="amount-due" readonly>
+                      <input  value="&#8358;{{number_format($amount_due) }}" class="form-control mx-auto input-size" id="amount-due" readonly>
                   </div>
-                  <select  name="payment_option" style="width: 30%;" class="form-select mx-auto" id="payment-option" aria-label="Default select example">
+                  <label for="amount-due" class="form-label text-danger"><strong>* compulsory</strong></label>
+                  <select  name="payment_option"  class="form-select mx-auto input-size" id="payment-option" aria-label="Default select example">
                       <option selected="">Payment Option</option>
                       <option value="one_time">Full Payment</option>
                       <option value="installments">Installments</option>
                   </select>
+                  <span class="text-danger">
+                    @error('payment_option')
+                    {{ $message }}
+                      
+                    @enderror
+
+                  </span>
+                  
                   <span class="text-danger">
                     @error('terms')
                     {{ $message }}
@@ -86,7 +105,7 @@
                   </div>
                   <div class="mb-3">
                       <label for="receipt_url" class="form-label label-name fs-5 text-danger">Upload Payment Receipts</label>
-                      <input style="width: 30%;" type="file" class="form-control mt-2 mx-auto" name="receipt_url" placeholder="Upload Payment Receipt" required>
+                      <input  type="file" class="form-control mt-2 mx-auto input-size" name="receipt_url" placeholder="Upload Payment Receipt" required>
                       <input name="id" value="{{ $id }}" type="text" hidden>
                       <span class="text-danger">
                         @error('receipt_url')

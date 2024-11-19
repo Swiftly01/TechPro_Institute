@@ -37,6 +37,12 @@ Route::get('/outstanding', function() {
     return view('application.outstanding');
 });
 
+Route::get('/verify/details', function() {
+
+    return view('application.checkpayment');
+
+});
+
 Route::get('/payment/success', function() {
     return view ('payments.success');
 

@@ -29,32 +29,29 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 mt-2">
                 <li class="nav-item me-5">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item me-5">
                   <a class="nav-link" href="{{ url('/services') }}">Services</a>
               </li>
                
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="{{ route('application.form') }}">Courses</a>
+                    <a class="nav-link" href="{{ url('/courses') }}">Courses</a>
                 </li>
                 <li class="nav-item me-5">
                     <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
                 </li>
-                <li class="nav-item d-lg-none">
-                    <a href="{{ route('application.form') }}" class="nav-link">
-                        <button class="register">Register Now</button>
+                 <li class="nav-item d-lg-none">
+                    <a href="{{ url('/verify/details') }}" class="nav-link">
+                        <button class="register">Login</button>
                     </a>
-                </li>
-                <li class="nav-item d-lg-none">
+                </li> 
+            </ul>
         </div>
 
-        <a href="{{ route('application.form') }}" class="me-4 d-none d-lg-block">
-            <button class="register">Register Now</button>
-        </a>
-        <a href="{{ url('/outstanding') }}" class="me-4 d-none d-lg-block">
-            <button class="register">Verify Payment</button>
-        </a>
+        <a href="{{ url('/verify/details') }}" class="me-4 d-none d-lg-block">
+            <button class="register">Login</button>
+        </a> 
     </div>
 </nav>
 

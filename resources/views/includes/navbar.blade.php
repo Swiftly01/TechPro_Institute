@@ -23,16 +23,16 @@
                 <li class="nav-item me-5">
                     <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
                 </li>
-                <li class="nav-item d-lg-none">
-                    <a href="{{ route('application.form') }}" class="nav-link">
-                        <button class="register">Register Now</button>
+                 <li class="nav-item d-lg-none">
+                    <a href="{{ url('/verify/details') }}" class="nav-link">
+                        <button class="register">Login</button>
                     </a>
-                </li>
+                </li> 
             </ul>
         </div>
 
-        <a href="{{ route('application.form') }}" class="me-4 d-none d-lg-block">
-            <button class="register">Register Now</button>
-        </a>
+        <a href="{{ url('/verify/details') }}" class="me-4 d-none d-lg-block">
+            <button class="register">Login</button>
+        </a> 
     </div>
 </nav>

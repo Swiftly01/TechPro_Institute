@@ -24,7 +24,7 @@
         <h6>Payment Reference: {{ $payment_reference }}</h6>
         <h6>Amount Paid: {{ $amount }}</h6>
 
-        <a href="{{ url('/outstanding') }}">
+        <a href="{{ url('/verify/details') }}">
           <button style="background-color: #105697;" type="button" class="btn text-white">Proceed to check your Details</button>
         </a>
             
