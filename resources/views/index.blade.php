@@ -338,7 +338,7 @@
         <div class="mt-5">
           <h1 class="incubate-header">Development Team</h1>
           <p class="empowering">Our development team builds innovative and reliable solutions</p>
-          <p class="foster">Skilled in the latest tools, Tech Pro Nigeria works with top professional  software engineers to create impactful technology,driven by passion and agility, we turn ideas into reality.</p>
+          <p class="foster">Skilled in the latest tools, Tech Pro Nigeria works with top professional  software engineers to create impactful technology, driven by passion and agility, we turn ideas into reality.</p>
           <a href="{{ url('/incubation') }}" class="explore-btn-new">Explore Our Programs</a>
         </div>
       
