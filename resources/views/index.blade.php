@@ -254,7 +254,7 @@
                 <div style="margin-top: -5px;" class="container">
                   <img src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Build web applications with our full-stack program. Master front-end and back-end technologies for dynamic, responsive solutions.</p>
+                  <p class="desc">Build web applications with our full-stack program. Master Front-end and Back-end technologies for dynamic, responsive solutions.</p>
                   <div class="price pt-4">
                     <p class="me-2">Price</p>
                     <p>#250, 000</p>
