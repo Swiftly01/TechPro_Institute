@@ -60,7 +60,14 @@ class CourseSeeder extends Seeder
             'duration'=>'12 weeks', 
             'frequency'=>'Thrice a week'
           
-         ],       
+         ], 
+         [
+            'name'=>'Tech A Teen',
+            'course_code'=>'TT',
+            'duration'=>'Monthly', 
+            'frequency'=>'Thrice a week', 
+         ], 
+          
         ]);
     }
 }

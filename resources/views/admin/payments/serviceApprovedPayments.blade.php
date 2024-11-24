@@ -41,7 +41,7 @@
   <div class="col-12">
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Basic Datatable</h4>
+            <h4 class="card-title">Approved :: Payment</h4>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -49,41 +49,29 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>App No</th>
+                            <th>Fullname</th>
+                            <th>Payment Reference</th>
+                            <th>Status</th>
+                            <th>Amount Paid</th>
                             <th>Amount_due</th>
                             <th>purpose</th>
                             <th>Receipt</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
-                    @foreach ($payments as $index => $payment )
+                    @foreach ($approvedPayments as $index => $payment )
                     <tbody>
                       <tr>
                           <td>{{ $index + 1 }}</td>
-                          <td>{{ $payment->student->firstname }}</td>
-                          <td>{{ $payment->student->lastname }}</td>
-                          <td>{{ $payment->student->app_no }}</td>
-                          <td>{{ $payment->amount_due }}</td>
+                          <td>{{ $payment->client->firstname }}  {{ $payment->client->lastname }}</td>
+                          <td> {{ $payment->payment_reference }}</td>
+                          <td>{{ $payment->status}}</td>
+                          <td>&#8358;{{number_format($payment->amount)}}</td>
+                          <td>&#8358;{{number_format($payment->amount_due)}}</td>
                           <td>{{ $payment->purpose}}</td>
                           <td> <a href="{{ asset('upload/'.$payment->receipt_url) }}" target="_blank">
                             <img style="height: 100px" src="{{ asset('upload/'.$payment->receipt_url) }}" alt="">
                           </a></td>
-                          <td>
-                            @include('admin.payments.approval')
-                              <div style="display: flex;gap:5px">
-                              <a href="{{ route('details.show',['id' => $payment->student->id]) }}" class="btn btn-primary" >View Details</a>
-                              
-                              <button class="btn btn-success"data-toggle="modal" data-target="#basicModalapprove{{ $payment->id }}" >Approve</button>
-
-                              @include('admin.payments.rejectModal')
-                              <button class="btn btn-danger"  data-toggle="modal" data-target="#basicModalReject{{ $payment->id }}" >Reject</button>
-                              </div>
-                              
-                            
-
-                          </td>
+                       
                       </tr>
                       
                   </tbody>
@@ -93,13 +81,14 @@
                     <tfoot>
                         <tr>
                           <th>#</th>
-                          <th>Firstname</th>
-                          <th>Lastname</th>
-                          <th>App No</th>
+                          <th>Fullname</th>
+                          <th>Payment Reference</th>
+                          <th>Amount Paid</th>
+                          <th>Status</th>
                           <th>Amount_due</th>
                           <th>purpose</th>
                           <th>Receipt</th>
-                          <th>Action</th>
+                
                         </tr>
                     </tfoot>
                 </table>

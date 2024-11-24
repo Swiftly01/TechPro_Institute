@@ -31,4 +31,17 @@ class Student extends Model
     }
 
 
+    static public function genServiceNo($year){
+    
+        $uniq = substr(hexdec(uniqid()), -4);
+        $num =   strval(rand(1000, 9999));   // Generate a random 4-digit number
+        $str =  str_shuffle($num . $uniq);
+    
+
+      return   'INV/' . $year . '/' . $str;
+
+    }
+
+
+
 }

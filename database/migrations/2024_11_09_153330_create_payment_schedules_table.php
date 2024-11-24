@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('payment_schedules', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('course_id')->references('id')->on('courses')->onDelete('cascade');
+           // $table->foreignId('course_id')->references('id')->on('courses')->onDelete('cascade');
+           $table->unsignedBigInteger('course_id');
             $table->decimal('amount', 10, 2);
             $table->string('purpose');
+            $table->string('type');
             $table->string('desc');
             $table->timestamps();
         });
+
     }
 
     /**

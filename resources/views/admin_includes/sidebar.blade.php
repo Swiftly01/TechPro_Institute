@@ -28,16 +28,21 @@
           <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                       class="icon icon-chart-bar-33"></i><span class="nav-text">Payment Menu</span></a>
               <ul aria-expanded="false">
-                  <li><a href="{{ route('student.payments') }}">Appove Payments</a></li>
+                  <li><a href="{{ route('student.payments') }}"> Approve Payments</a></li>
                   <li><a href="{{ route('view.active.payments') }}">Active Payments</a></li>
                   <li><a href="{{ route('view.failed.payments') }}">Failed Payments</a></li>
-                  {{-- <li><a href="./chart-morris.html">Morris</a></li>
-                  <li><a href="./chart-chartjs.html">Chartjs</a></li>
-                  <li><a href="./chart-chartist.html">Chartist</a></li>
-                  <li><a href="./chart-sparkline.html">Sparkline</a></li>
-                  <li><a href="./chart-peity.html">Peity</a></li> --}}
+                  <li><a href="{{ route('view.service.payments') }}">Service Payments</a></li>
+
               </ul>
           </li>
+          <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+            class="icon icon-chart-bar-33"></i><span class="nav-text">Services Menu</span></a>
+            <ul aria-expanded="false">
+                <li><a href="{{ route('view.active.servicePayments') }}">Active Service Payments</a></li>
+                <li><a href="{{ route('view.failed.servicePayments') }}">Failed  Service Payments</a></li>
+            
+                </ul>
+            </li>
           {{-- <li class="nav-label">Components</li>
           <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                       class="icon icon-world-2"></i><span class="nav-text">Bootstrap</span></a>
@@ -63,7 +68,7 @@
               </ul>
           </li>
 
-          <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+            {{-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                       class="icon icon-plug"></i><span class="nav-text">Plugins</span></a>
               <ul aria-expanded="false">
                   <li><a href="./uc-select2.html">Select 2</a></li>

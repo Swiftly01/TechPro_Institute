@@ -12,6 +12,7 @@
     </div>
   </div>
  </div> 
+ 
 
  <div class="container mt-5">
   <div style="background-color: whitesmoke;" class="row">
@@ -64,9 +65,9 @@
 
             </span>
         </div>
-        <label for="phone" class="form-label mt-2 ms-5 label-name">Courses</label>
+        <label for="phone" class="form-label mt-2 ms-5 label-name">Available Programs</label>
         <select style="width: 80%;" class="form-select ms-5 mb-3" name="course_id" aria-label="Default select example">
-          <option value = ''>Choose Course</option>
+          <option value = ''>Choose A Program</option>
           @foreach ($courses as $course )
           <option value="{{ $course->id }}" {{ old('course_id') == $course->id ? 'selected' : '' }}>{{ $course->name }}</option>
           @endforeach

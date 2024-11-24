@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\StudentController;
+use App\Models\Client;
 use App\Models\Payment;
 use App\Models\Student;
 use Illuminate\Support\Facades\Route;
@@ -31,7 +34,7 @@ Route::prefix('/application')->name('application.')->group(function() {
 });
 
 Route::post('/details',[StudentController::class, 'studentDetails'])->name('applicant.details');
-Route::post('/outstanding/payment', [PaymentController::class, 'store'])->name('outstanding.upload');
+Route::post('/outstanding/payment', [PaymentController::class, 'updateOutstandingPayment'])->name('outstanding.upload');
 
 Route::get('/outstanding', function() {
     return view('application.outstanding');
@@ -52,6 +55,11 @@ Route::get('/payment/success', function() {
 Route::get('/payment/{id}', [PaymentController::class, 'loadPage'])->name('payment.show');
 Route::post('/payment/upload', [PaymentController::class, 'store'])->name('payment.upload');
 
+Route::get('/services/application', [ClientController::class, 'index'])->name('sevices.register');
+Route::post('/services/register', [ClientController::class, 'create'])->name('services.store');
+Route::get('/services/payment/{id}', [ClientController::class, 'loadSevicePayments'])->name('services.payment');
+Route::post('/services/payment/upload', [PaymentController::class, 'uploadServicePayments'])->name('service.upload');
+
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
@@ -67,19 +75,29 @@ Route::middleware(['auth', 'verified'])->prefix('/admin')->group(function() {
    // Route::get('/rejected/view', [StudentController::class, 'showRejected'])->name('show.rejected');
     Route::get('/payments', [PaymentController::class, 'index'])->name('student.payments');
     Route::get('/payment/details/{id}', [PaymentController::class, 'show'])->name('details.show');
+    Route::get('/payment/services/details/{id}', [PaymentController::class, 'showServiceDetails'])->name('services.show');
     Route::post('/payment/approve', [PaymentController::class, 'approvePayment'])->name('payment.approval');
+    Route::post('/payment/services/approve', [PaymentController::class, 'serviceApprovePayment'])->name('servicespayment.approval');
+    Route::post('/payment/services/reject', [PaymentController::class, 'serviceRejectPayment'])->name('servicespayment.reject');
     Route::post('/reject', [PaymentController::class, 'rejectPayment'])->name('payment.reject');
     Route::get('payment/active',[PaymentController::class, 'showApprovedPayment'])->name('view.active.payments');
     Route::get('payment/failed',[PaymentController::class, 'showRejectedPayment'])->name('view.failed.payments');
+    Route::get('payment/service/active',[PaymentController::class, 'showApprovedServicePayment'])->name('view.active.servicePayments');
+    Route::get('payment/service/failed',[PaymentController::class, 'showRejectedServicePayment'])->name('view.failed.servicePayments');
+    Route::get('/payment/service', [PaymentController::class, 'showServicePayment'])->name('view.service.payments');
 
 
 
-});
+}); 
 
 //Pages Route
 Route::get('/about-u', function() {
     return view('pages.about-u');
 });
+
+// Route::get('/services/register', function() {
+//     return view('application.services');
+// });
 
 Route::get('/consultancy', function() {
     return view('pages.consultancy');

@@ -147,6 +147,8 @@
     </div>
    </section>
 
+   
+
    <section>
     <div class="container about ">
       <div class="row">
@@ -299,17 +301,107 @@
     
         </div>
       </div>
-      
+
+      <div class="row">
+        <div class="mt-5">
+          <h1  class="text-center text-danger mt-3">Our Services</h1>
+
+          <div class="row  row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4 mt-3"> 
+            <div class="col">
+              <div class="card shadow-lg rounded-lg border card-rad">
+                <p class="text-center pt-2 title">Tech-A-Teen</p>
+                <div style="margin-top: -10px;" class="container">
+                  <img height="200px" src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
+                  <div>
+                    <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
+                    <div class="price pt-3">
+                      <p class="me-2">Price</p>
+                      <p>#20, 000</p>
+                    </div>
+                    <div class="duration">
+                      <p class="ms-1">Duration</p>
+                      <p class="me-2">Monthly</p>
+                    </div>
+                  </div>
+                  <div class="reg">
+                    <a href="{{ route('application.form') }}"><button class="register-card">Register Now</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg rounded-lg border card-rad">
+                <p  class="text-center pt-2 title">Work Station</p>
+                <div style="margin-top: -10px;" class="container">
+                  <img height="200px" src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
+                <div>
+                  <p class="desc">Learn how to prepare and clean data, perform  in-depth data analysis and utilize advance data visualization techniques</p>
+                  <div class="price pt-3">
+                    <p class="me-2">Price</p>
+                    <p>#2, 000</p>
+                  </div>
+                  <div class="duration">
+                    <p class="ms-1">Duration</p>
+                    <p class="me-2">Daily</p>
+                  </div>
+                </div>
+                <div class="reg">
+                  <a href="{{ route('sevices.register') }}"> <button class="register-card">Register Now</button></a>
+                 
+                </div>
+                
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg rounded-lg border card-rad">
+                <p  class="text-center pt-2 title">Conference Room</p>
+                <div style="margin-top: -10px;" class="container">
+                  <img src="{{ asset('assets/images/Rectangle 7.png') }}" class="card-img-top" alt="...">
+                <div>
+                  <p class="desc">Learn to design User-friendly interfaces with tools like Figma, Adobe XD, focusing on user experience</p>
+                  <div class="price pt-3">
+                    <p class="me-2">Price</p>
+                    <p>#100, 000</p>
+                  </div>
+                  <div class="duration">
+                    <p class="ms-1">Duration</p>
+                    <p class="me-2">3 Months</p>
+                  </div>
+                </div>
+                <div class="reg">
+                  <a href="{{ route('sevices.register') }}"> <button class="register-card">Register Now</button></a>
+                 
+                </div>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+  
+    
+        </div>
+      </div>
+
       <div class="row mt-5">
         <div class="col">
           <div class="container">
-            <p style="font-weight: bold; font-size: 36px;" class="text-center text-danger card-title">How We  Support Start-ups and Entrepreneurs</p>
+            <p style="font-weight: bold; font-size: 36px;" class="text-center text-danger card-title mt-5">How We  Support Start-ups and Entrepreneurs</p>
           <p class="fw-light text-center" style="font-size: 18px;">Our Goal is to drive social innovation and empower local talents to create sustainable tech solutions through mentorship, access to cutting edge tools
              and a collaborative environment, we aim to nurture the next generation of innovators and position Osun state as a leading tech state.
           </p>
           </div>
         </div> 
       </div>
+
+      
+
+      
+
+      
+
+
+
       <div class="row mt-5">
         <div class="col-lg-6">
           <div class="text-center mt-5">
@@ -328,6 +420,8 @@
       </div>
     </div>
    </section>
+
+   
 
    
    

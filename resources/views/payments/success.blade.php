@@ -19,8 +19,8 @@
   <div class="row">
     <div class="col text-center mt-5">
       <h1 class="payment-text text-success">Success</h1>
-      <p class="fs-4">Your registration is completed and payments made successfully</p>
-      <p class="fs-5">Kindly check your email for your application number</p> 
+      <p class="fs-4">Your registration is completed and payments Receipts uploaded successfully</p>
+      <p class="fs-5">Kindly check your email for your application number </p> 
       <a href="{{ url('/') }}"><button style="background-color: #105697;" type="button" class="btn  pt-2 pb-2 ms-3 mb-1 text-white">Home</button></a> 
     </div>
   </div>

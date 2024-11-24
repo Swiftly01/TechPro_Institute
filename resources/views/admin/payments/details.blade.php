@@ -23,21 +23,50 @@
   <div class="col-12">
     <div class="card">
         <div class="card-header ">
-            <h4 class="card-title ">Student :: Details</h4>
+            <h4 class="card-title ">Applicant :: Details</h4>
         </div>
         <div class="card-body">
           <div style="display: flex; justify-content:space-between; align-item:center">
           <div>
+
+            @if(isset($student))
+
             <h4>Firstname : {{ $student->firstname  }}</h4>
-            <h4>lastname : {{ $student->lastname }}</h4>
-            <h4>Email Address : {{ $student->email  }}</h4>
+            <h4>lastname : {{ $student->lastname  }}</h4>
+            <h4>Email Address : {{ $student->email }}</h4>
             <h4>Phone Number : {{ $student->phone  }}</h4>
             <h4>App No : {{ $student->app_no  }}</h4>
             <h4>Course : {{ $student->course->name  }}</h4>
           </div>
           <div>
-            <img style="height: 200px; width:200px" src="{{ asset('upload/'. $student->image_url) }}" alt="">
+            <img style="height: 200px; width:200px" 
+            src="{{ asset('upload/' . $student->image_url ) }}" 
+            alt="">
+       
           </div>
+
+           @elseif(isset($payment))
+
+           <h4>Firstname : {{ $payment->client->firstname  }}</h4>
+            <h4>lastname : {{ $payment->client->lastname  }}</h4>
+            <h4>Email Address : {{ $payment->client->email }}</h4>
+            <h4>Phone Number : {{ $payment->client->phone  }}</h4>
+            <h4>Service Requested : {{ $payment->client->service_type  }}</h4>
+          </div>
+          <div>
+            <img style="height: 200px; width:200px" 
+            src="{{ asset('upload/' . $payment->client->image_url ) }}" 
+            alt="">
+       
+          </div>
+
+
+
+
+              
+            @endif
+            
+            
         
 
           </div>

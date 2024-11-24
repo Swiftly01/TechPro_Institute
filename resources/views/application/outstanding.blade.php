@@ -43,10 +43,10 @@
                 @csrf
                 <div class="row">
                       <div class="mb-3">
-                        <label for="app_no" class="form-label mt-2 label-name">Aplication Number</label>
-                        <input style="width: 50%"  type="text" class="form-control mx-auto " value="{{ old('lastname') }}" name="app_no" required>
+                        <label for="app_no" class="form-label mt-2 label-name">Aplication Number/ Invoice Number</label>
+                        <input style="width: 50%"  type="text" class="form-control mx-auto " value="{{ old('input') }}" name="input" required>
                         <span class="text-danger">
-                          @error('app_no')
+                          @error('input')
                           {{ $message }}
                             
                           @enderror

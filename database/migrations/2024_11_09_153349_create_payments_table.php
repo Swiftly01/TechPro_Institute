@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('student_id')->references('id')->on('students')->onDelete('cascade');
+           // $table->foreignId('student_id')->references('id')->on('students')->onDelete('cascade');
+           $table->unsignedBigInteger('student_id')->nullable();
+           $table->unsignedBigInteger('client_id')->nullable();
             $table->decimal('amount', 10, 2)->nullable();
             $table->decimal('amount_due',10,2);
             $table->string('payment_reference')->nullable();

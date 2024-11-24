@@ -15,12 +15,31 @@
         <div style="background-color: #105697;" class="card-header  text-white">Application :: Details </div>
         <div class="card-body">
 
-           <p>Hi {{ ucfirst(strtolower($student->firstname))}} {{ $student->surname }} you have registered succesfully</p>
+          @if(isset($student))
+
+          <p>Hi {{ ucfirst(strtolower($student->firstname))}} {{ $student->surname }} you have registered succesfully</p>
           <p>Your application details have been sent to your email</p>
 
           <a href="{{ route('payment.show', ['id' => $student->id]) }}">
             <button style="background-color: #105697;" type="button" class="btn text-white">proceed to make payments</button>
           </a>
+
+          @elseif (isset($client))
+
+          <p>Hi {{ ucfirst(strtolower($client->firstname))}} {{ $client->surname }} you have registered succesfully</p>
+        
+          <a href="{{ route('services.payment', ['id' => $client->id,]) }}">
+            <button style="background-color: #105697;" type="button" class="btn text-white">proceed to make payments</button>
+          </a>
+
+  
+          @endif
+      
+          
+
+         
+
+          
 
     
         </div>

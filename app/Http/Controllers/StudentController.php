@@ -6,12 +6,14 @@ use App\Mail\AdminApplicationNotification;
 use App\Mail\AdminRejectionNotification;
 use App\Mail\ApplicationApprovalMail;
 use App\Mail\ApplicationMailNotification;
+use App\Models\Client;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Course;
 use App\Models\Payment;
 use App\Models\PaymentSchedule;
 use App\Models\Student;
 use App\Models\User;
+use App\Models\UserService;
 use Illuminate\Http\Request;
 
 use function PHPUnit\Framework\isEmpty;
@@ -85,24 +87,38 @@ class StudentController extends Controller
 
     public function applicationMailNotification($id) {
 
-        $student = Student::with('course')->find($id);
+        $adminUser = User::first();
+        $adminEmail = $adminUser->email;
+        $adminName = $adminUser->name;
+
+
+        $student = Student::with('course')->whereNull('app_no')->find($id);
+
+        if($student) {
+
         $firstName = $student->firstname;
         $lastName  = $student->lastname;
         $course =  $student->course->name;
         $phone = $student->phone;
         $email = $student->email;
         $id = $student->id;
-
-        $adminUser = User::first();
-        $adminEmail = $adminUser->email;
-        $adminName = $adminUser->name;
-
-       // Mail::to($adminEmail)->send(new AdminApplicationNotification($adminName));
-
+       
         Mail::to($email)->send(new ApplicationMailNotification($firstName, $lastName, $course, $phone, $email, $id));
 
 
         return view('application.message', compact('student'));
+
+        } else {
+
+
+            $client = Client::find($id);
+
+            if($client) {
+
+                return view('application.message', compact('client'));
+            }
+        }
+        
 
     }
 
@@ -115,7 +131,7 @@ class StudentController extends Controller
 
 
         $student = Student::with('course')->where('app_no', $request->input('app_no'))->first();
-
+    
         if(!$student) {
 
             return redirect()->back()->with('error', 'Invalid Application Number');

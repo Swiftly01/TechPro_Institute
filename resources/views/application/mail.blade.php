@@ -12,22 +12,26 @@
 
   <div class="container">
     <div class="card mt-2">
-      <div style="background-color: #105697;" class="card-header  text-white">Application :: Details </div>
+        <div style="background-color: #105697;" class="card-header text-white">
+            Application :: Details
+        </div>
         <div class="card-body">
-        <p>Your application to TechPro institute has been successfully completed</p>
-        <p>The following are your application details:</p>
-        <h6>Name: {{ucfirst(strtolower($firstName))}}  {{ ucfirst(strtolower($lastName))}}</h6>
-        <h6>Email Address: {{ $email }}</h6>
-        <h6>Course applied:  {{$course}} </h6>
-        <h6>Phone Number: {{ $phone }}</h6>
-        {{-- <h6>Application Number: {{ $app_no }}</h6> --}}
+            
+                <p>Your application to TechPro Institute has been successfully completed</p>
+                <p>The following are your application details:</p>
+                <h6>Name: {{ ucfirst(strtolower($firstName)) }} {{ ucfirst(strtolower($lastName)) }}</h6>
+                <h6>Email Address: {{ $email }}</h6>
+                <h6>Course applied: {{ $course }}</h6>
+                <h6>Phone Number: {{ $phone }}</h6>
+                
+                <a href="{{ route('payment.show', ['id' => $id]) }}">
+                    <button style="background-color: #105697;" type="button" class="btn">Proceed to make payments</button>
+                </a>
         
-        <a href="{{ route('payment.show', ['id' => $id])}}">
-          <button style="background-color: #105697;" type="button" class="btn ">Proceed to make payments</button>
-        </a>  
-      </div>
+        </div>
     </div>
-  </div>
+</div>
+
   
 </body>
 </html>

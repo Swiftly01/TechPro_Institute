@@ -13,10 +13,13 @@ class Payment_ScheduleSeeder extends Seeder
      */
     public function run(): void
     {
+
+
         DB::table('payment_schedules')->insert([
             [ 'course_id'=>1,
               'amount'=>130000.00,
               'purpose' =>'sch_fee',
+              'type' => 0,
               'desc' => 'School fees payment for front-end development',
             ],
             [
@@ -24,38 +27,71 @@ class Payment_ScheduleSeeder extends Seeder
              'amount' => 150000.00,
               'course_id'=>2,
               'purpose' => 'sch_fee',
+              'type' => 0,
               'desc' => 'School fees payment for Back-end Development',
             ],
             [
              'course_id'=>3,
               'amount'=>250000.00,
               'purpose' => 'sch_fee',
+              'type' => 0,
               'desc' => 'School fees payment for full stack development',
             ],
             [
              'course_id'=>4,
               'amount' => 130000.00,
               'purpose' => 'sch_fee',
+              'type' => 0,
               'desc' => 'School fees payment for Data Analytics',
             ],
             [
              'course_id'=>5,
               'amount' => 100000.00,
               'purpose' => 'sch_fee',
+              'type' => 0,
               'desc' =>  'School fees payment for UI/UX',
             ],
             [
               'course_id'=>6,
               'amount'=>130000.00,
               'purpose' => 'sch_fee',
+              'type' => 0,
                'desc' => 'School fees payment for Cyber Security',
             ],
             [
              'course_id'=>7,
               'amount' => 80000.00,
               'purpose' => 'sch_fee',
+              'type' => 0,
                'desc' => 'School fees payment for Graphics Design',
             ],
+
+            [
+              'course_id'=>8,
+               'amount' => 20000.00,
+               'purpose' => 'sch_fee',
+               'type' => 0,
+              'desc' => 'School fees payment for Tech A Teen',
+             ],
+
+             [
+               'course_id'=>0,
+               'amount' => 2000.00,
+               'type' => 'work station',
+               'purpose' => 'services',
+               'desc' => 'payment for work station',
+             ],
+             [
+               'course_id'=>0,
+               'amount' => 0,
+               'type' => 'conference room',
+               'purpose' => 'services',
+               'desc' => 'payment for conference room',
+             ],
+            
+            
         ]);
+
+      
     }
 }
