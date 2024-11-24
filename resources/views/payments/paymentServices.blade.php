@@ -66,15 +66,26 @@
                     @csrf
                     <div class="row">
                         <div class="col text-center">
-                            <div class="mb-3">
-                                <label for="amount-due" class="form-label"><strong>Service Price</strong></label>
-                                <input 
-                                    value="₦{{ number_format($schedule->amount) }}" 
-                                    class="form-control mx-auto input-size" 
-                                    id="amount-due" 
-                                    readonly
-                                >
-                            </div>
+                          <div class="mb-3">
+                            <label for="service-price" class="form-label"><strong>Service Price</strong></label>
+                            <input 
+                                value="₦0" 
+                                class="form-control mx-auto input-size" 
+                                id="service-price" 
+                                readonly
+                            >
+                        </div>
+                        <div class="mb-3">
+                            <label for="no-of-days" class="form-label"><strong>No of Days</strong></label>
+                            <input 
+                                type="number" 
+                                value="" 
+                                class="form-control mx-auto input-size"  
+                                id="no-of-days" 
+                                placeholder="Enter the number of days"
+                            >
+                        </div>
+
 
                             <div class="mb-3">
                                 <label for="receipt_url" class="form-label label-name fs-5 text-danger">Upload Payment Receipts</label>
@@ -123,7 +134,17 @@
     </div>
 </div>
 
-
+<script>
+  // JavaScript to handle the price calculation
+  document.getElementById('no-of-days').addEventListener('input', function () {
+      const dailyPrice = 2000; // Daily price
+      const days = parseInt(this.value) || 0; // Get number of days; default to 0 if invalid
+      const totalPrice = dailyPrice * days; // Calculate total price
+      
+      // Update the service price input field
+      document.getElementById('service-price').value = `₦${totalPrice.toLocaleString()}`;
+  });
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

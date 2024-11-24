@@ -313,7 +313,7 @@
                 <div style="margin-top: -10px;" class="container">
                   <img height="200px" src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
                   <div>
-                    <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
+                    <p class="desc">Empowers teenagers with practical tech skills and prepare young minds for future tech careers in a supportive learning environment</p>
                     <div class="price pt-3">
                       <p class="me-2">Price</p>
                       <p>#20, 000</p>
@@ -335,7 +335,7 @@
                 <div style="margin-top: -10px;" class="container">
                   <img height="200px" src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Learn how to prepare and clean data, perform  in-depth data analysis and utilize advance data visualization techniques</p>
+                  <p class="desc">Our workstation provides a productive environment for professionals and learners alike.Equiiped with high speed internet and top notch facilities</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#2, 000</p>
@@ -357,20 +357,25 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Conference Room</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img src="{{ asset('assets/images/Rectangle 7.png') }}" class="card-img-top" alt="...">
+                  <img height="195px" src="{{ asset('assets/images/Rectangle 7.png') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Learn to design User-friendly interfaces with tools like Figma, Adobe XD, focusing on user experience</p>
-                  <div class="price pt-3">
+                  <p class="desc">
+                    The seminar room at techpro institute offers a modern,fully-equipped space for workshops, training sessions and events.With the state-of-the-art technology and a comfortable setup.it's designed to foster collaboration and inspire learning.
+                    </p>
+                  {{-- <p class="desc">Learn to design User-friendly interfaces with tools like Figma, Adobe XD, focusing on user experience.
+                  Our confrence room is fully-equiped with state-of-the-art techonology designed to foster collaboration and inspire learning  
+                  </p> --}}
+                  {{-- <div class="price pt-3">
                     <p class="me-2">Price</p>
-                    <p>#100, 000</p>
+                    <p>#100, 000</p> 
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
                     <p class="me-2">3 Months</p>
-                  </div>
+                  </div> --}}
                 </div>
-                <div class="reg">
-                  <a href="{{ route('sevices.register') }}"> <button class="register-card">Register Now</button></a>
+                <div class="reg mt-4">
+                  <a href="{{ route('sevices.register') }}"> <button class="register-card mt-3">Register Now</button></a>
                  
                 </div>
                 
