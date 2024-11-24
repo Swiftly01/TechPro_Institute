@@ -435,7 +435,7 @@ class PaymentController extends Controller
         $studentId = $id;
         $user = $request->user();
         
-        $student = Student::with('course')->where('id', $studentId)->first();
+        $student = Student::with('course')->where('id', $studentId)->fgiirst();
 
         
         if($student) {
