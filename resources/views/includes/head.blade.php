@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="{{asset('assets/styles/about-u.css')}}">
   <link rel="stylesheet" href="{{asset('assets/styles/nav.css')}}">
   <link rel="stylesheet" href="{{asset('assets/styles/payment.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/styles/workstation.css')}}">
   
 
 </head>

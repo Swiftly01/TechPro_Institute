@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+ .gallery-btn{
+    padding: 15px 50px;
+    background-color:  #E4C939; 
+    color: #0A5098; 
+    font-size: 25px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+} 
+
+ .explore-btn:hover {
+    background-color: #e6b800;
+} 
+
+
+.gallery-layout {
+  display: flex;
+   justify-content: space-between;
+}
+.gallery-img {
+  width: 70%;
+}
+.gallery-btn-layout {
+
+  text-align: center;
+   margin-top: 70%;
+}
+
+@media screen and (max-width: 1163px) {
+  .gallery-btn{
+    padding: 15px 40px; 
+    font-size: 20px;
+   
+} 
+
+}
+@media screen and (max-width: 975px) {
+  .gallery-btn{
+    padding: 15px 30px; 
+    font-size: 18px;
+   
+} 
+
+}
+
+@media screen and (max-width: 837px) {
+  .gallery-btn{
+    padding: 15px 25px; 
+    font-size: small;
+   
+} 
+
+}
+@media screen and (max-width: 665px) {
+  .gallery-btn{
+    padding: 8px 10px; 
+    font-size: x-small;
+   
+} 
+
+}
+/* 
+.register-btn {
+    padding: 15px 50px;
+    background-color:  #E4C939; 
+    color: #0A5098; 
+    font-size: 25px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+
+}
+
+@media screen and (max-width:508px) {
+
+  .img{
+    width: 100px;
+  }
+}
+.follow {
+   color: #FFE30D;
+}
+
+.text {
+  color: #A8BBF7;
+  font-size: 16px;
+}
+.explore-btn-new {
+
+    display: inline-block;
+    padding: 10px 50px;
+    background-color:  #E4C939; 
+    color: #0A5098; 
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 7%;
+
+}
+
+
+.incubate-header {
+  font-size: 40px; color: #FAFCFD;
+}
+.empowering {
+  font-size: 26px; color: #A8BBF7;
+}
+.foster {
+  font-size: 20px; color: #A8BBF7;
+}
+
+@media screen and (max-width:1294px) {
+  .empowering {
+    font-size: 20px;
+  }
+  .foster {
+    font-size: 17px;
+  }
+
+  .explore-btn-new {
+      padding: 10px 40px;
+      background-color:  #E4C939; 
+      font-size: 20px;
+      
+
+    }
+}
+
+@media screen and (max-width:960px) {
+
+  .explore-btn-new {
+    margin-top: 4%;
+
+  }
+
+
+}
+@media screen and (max-width:600px) {
+
+.explore-btn-new {
+  padding: 10px 35px;
+  background-color:  #E4C939; 
+  font-size: small;
+  
+
+}
+
+
+} */

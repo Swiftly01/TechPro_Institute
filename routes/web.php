@@ -51,11 +51,17 @@ Route::get('/payment/success', function() {
 
 })->name('payments.success');
 
+Route::get('/workstation',  function() {
+
+    return view('pages.workstation');
+
+})->name('view.more');
+
 
 Route::get('/payment/{id}', [PaymentController::class, 'loadPage'])->name('payment.show');
 Route::post('/payment/upload', [PaymentController::class, 'store'])->name('payment.upload');
 
-Route::get('/services/application', [ClientController::class, 'index'])->name('sevices.register');
+Route::get('/services/application', [ClientController::class, 'index'])->name('services.register');
 Route::post('/services/register', [ClientController::class, 'create'])->name('services.store');
 Route::get('/services/payment/{id}', [ClientController::class, 'loadSevicePayments'])->name('services.payment');
 Route::post('/services/payment/upload', [PaymentController::class, 'uploadServicePayments'])->name('service.upload');

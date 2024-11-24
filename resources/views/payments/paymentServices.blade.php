@@ -62,65 +62,91 @@
             @endif
 
             @if($schedule->type ==  'Work Station')
-                <form action="{{ route('service.upload') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="row">
-                        <div class="col text-center">
-                          <div class="mb-3">
-                            <label for="service-price" class="form-label"><strong>Service Price</strong></label>
-                            <input 
-                                value="₦0" 
-                                class="form-control mx-auto input-size" 
-                                id="service-price" 
-                                readonly
-                            >
-                        </div>
-                        <div class="mb-3">
-                            <label for="no-of-days" class="form-label"><strong>No of Days</strong></label>
-                            <input 
-                                type="number" 
-                                value="" 
-                                class="form-control mx-auto input-size"  
-                                id="no-of-days" 
-                                placeholder="Enter the number of days"
-                            >
-                        </div>
-
-
-                            <div class="mb-3">
-                                <label for="receipt_url" class="form-label label-name fs-5 text-danger">Upload Payment Receipts</label>
-                                <input 
-                                    type="file" 
-                                    class="form-control mt-2 mx-auto input-size" 
-                                    name="receipt_url" 
-                                    placeholder="Upload Payment Receipt" 
-                                    required
-                                >
-                                <input name="id" value="{{ $client->id }}" type="hidden">
-                                <span class="text-danger">
-                                    @error('receipt_url')
-                                        {{ $message }}
-                                    @enderror
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col mx-auto mt-4">
-                            <button type="submit" class="complete-btn">Complete Registration</button>
-                            <a href="{{ url('/') }}">
-                                <button 
-                                    style="background-color: #105697;" 
-                                    type="button" 
-                                    class="btn pt-2 pb-2 ms-3 mb-1 text-white"
-                                >
-                                    Home
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </form>
+            <form action="{{ route('service.upload') }}" method="POST" enctype="multipart/form-data">
+              @csrf
+              <div class="row">
+                  <div class="col text-center">
+                      <!-- Service Price Display -->
+                      <div class="mb-3">
+                          <label for="service-price" class="form-label"><strong>Service Price</strong></label>
+                          <input 
+                              value="₦0" 
+                              class="form-control mx-auto input-size" 
+                              id="service-price" 
+                              name="service_price"
+                              readonly
+                          >
+                      </div>
+          
+                      <!-- Date Selection -->
+                      <div class="mb-3" id="date-section">
+                          <label for="start-date" class="form-label"><strong>Select Start Date</strong></label>
+                          <input 
+                              type="date" 
+                              id="start-date" 
+                              class="form-control mx-auto input-size" 
+                              name="start_date" 
+                              required
+                          >
+                          <label for="end-date" class="form-label mt-3"><strong>Select End Date</strong></label>
+                          <input 
+                              type="date" 
+                              id="end-date" 
+                              class="form-control mx-auto input-size" 
+                              name="end_date" 
+                              required
+                          >
+                      </div>
+          
+                      <!-- Number of People -->
+                      <div class="mb-3" id="people-section">
+                          <label for="people" class="form-label"><strong>Number of People</strong></label>
+                          <input 
+                              type="number" 
+                              id="people" 
+                              class="form-control mx-auto input-size" 
+                              name="number_of_people" 
+                              placeholder="Enter number of people" 
+                              min="1" 
+                              required
+                          >
+                      </div>
+          
+                      <!-- Upload Payment Receipt -->
+                      <div class="mb-3">
+                          <label for="receipt_url" class="form-label label-name fs-5 text-danger">Upload Payment Receipts</label>
+                          <input 
+                              type="file" 
+                              class="form-control mt-2 mx-auto input-size" 
+                              name="receipt_url" 
+                              placeholder="Upload Payment Receipt" 
+                              required
+                          >
+                          <input name="id" value="{{ $client->id }}" type="hidden">
+                          <span class="text-danger">
+                              @error('receipt_url')
+                                  {{ $message }}
+                              @enderror
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="row">
+                  <div class="col mx-auto mt-4">
+                      <button type="submit" class="complete-btn">Complete Registration</button>
+                      <a href="{{ url('/') }}">
+                          <button 
+                              style="background-color: #105697;" 
+                              type="button" 
+                              class="btn pt-2 pb-2 ms-3 mb-1 text-white"
+                          >
+                              Home
+                          </button>
+                      </a>
+                  </div>
+              </div>
+          </form>
             @else
             <div class="container">
               <p class="text-success fs-4">
@@ -134,16 +160,42 @@
     </div>
 </div>
 
+
+
 <script>
-  // JavaScript to handle the price calculation
-  document.getElementById('no-of-days').addEventListener('input', function () {
-      const dailyPrice = 2000; // Daily price
-      const days = parseInt(this.value) || 0; // Get number of days; default to 0 if invalid
-      const totalPrice = dailyPrice * days; // Calculate total price
-      
-      // Update the service price input field
-      document.getElementById('service-price').value = `₦${totalPrice.toLocaleString()}`;
-  });
+    // JavaScript for dynamic service price calculation
+    const servicePriceInput = document.getElementById('service-price');
+    const startDateInput = document.getElementById('start-date');
+    const endDateInput = document.getElementById('end-date');
+    const peopleInput = document.getElementById('people');
+
+    const dailyRate = 2000; // Define the daily price per person
+
+    // Calculate the total price
+    function calculateTotal() {
+        const startDate = new Date(startDateInput.value);
+        const endDate = new Date(endDateInput.value);
+        const numberOfPeople = parseInt(peopleInput.value) || 0;
+
+        // Calculate number of days
+        const diffTime = endDate - startDate;
+        const numberOfDays = diffTime > 0 ? Math.ceil(diffTime / (1000 * 60 * 60 * 24)) : 0;
+
+        // Calculate total price
+        const totalPrice = dailyRate * numberOfDays * numberOfPeople;
+
+        // Update the service price input
+        servicePriceInput.value = `₦${totalPrice.toLocaleString()}`;
+    }
+
+    // Attach event listeners to inputs
+    startDateInput.addEventListener('change', calculateTotal);
+    endDateInput.addEventListener('change', calculateTotal);
+    peopleInput.addEventListener('input', calculateTotal);
+</script>
+
+  
+
 </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

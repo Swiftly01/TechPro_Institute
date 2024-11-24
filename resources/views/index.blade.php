@@ -346,7 +346,7 @@
                   </div>
                 </div>
                 <div class="reg">
-                  <a href="{{ route('sevices.register') }}"> <button class="register-card">Register Now</button></a>
+                  <a href="{{ route('view.more') }}"> <button class="register-card">View More</button></a>
                  
                 </div>
                 
@@ -362,20 +362,10 @@
                   <p class="desc">
                     The seminar room at techpro institute offers a modern,fully-equipped space for workshops, training sessions and events.With the state-of-the-art technology and a comfortable setup.it's designed to foster collaboration and inspire learning.
                     </p>
-                  {{-- <p class="desc">Learn to design User-friendly interfaces with tools like Figma, Adobe XD, focusing on user experience.
-                  Our confrence room is fully-equiped with state-of-the-art techonology designed to foster collaboration and inspire learning  
-                  </p> --}}
-                  {{-- <div class="price pt-3">
-                    <p class="me-2">Price</p>
-                    <p>#100, 000</p> 
-                  </div>
-                  <div class="duration">
-                    <p class="ms-1">Duration</p>
-                    <p class="me-2">3 Months</p>
-                  </div> --}}
+                 
                 </div>
                 <div class="reg mt-4">
-                  <a href="{{ route('sevices.register') }}"> <button class="register-card mt-3">Register Now</button></a>
+                  <a href="{{ route('services.register') }}"> <button class="register-card mt-3">Contact Us</button></a>
                  
                 </div>
                 
