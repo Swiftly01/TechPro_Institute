@@ -49,9 +49,9 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>App No</th>
+                            <th>Name</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
                             <th>Amount_due</th>
                             <th>purpose</th>
                             <th>Receipt</th>
@@ -62,10 +62,10 @@
                     <tbody>
                       <tr>
                           <td>{{ $index + 1 }}</td>
-                          <td>{{ $payment->client->firstname }}</td>
-                          <td>{{ $payment->client->lastname }}</td>
-                          <td>{{ $payment->client->app_no }}</td>
-                          <td>{{ $payment->amount_due }}</td>
+                          <td>{{ $payment->client->firstname }}  {{ $payment->client->lastname }}</td>
+                          <td> {{ $payment->start_date }}</td>
+                          <td>{{ $payment->end_date }}</td>
+                          <td>{{ $payment->amount_due}}</td>
                           <td>{{ $payment->purpose}}</td>
                           <td> <a href="{{ asset('upload/'.$payment->receipt_url) }}" target="_blank">
                             <img style="height: 100px" src="{{ asset('upload/'.$payment->receipt_url) }}" alt="">
@@ -93,9 +93,9 @@
                     <tfoot>
                         <tr>
                           <th>#</th>
-                          <th>Firstname</th>
-                          <th>Lastname</th>
-                          <th>App No</th>
+                          <th>Name</th>
+                          <th>Start Date</th>
+                          <th>End Date</th>
                           <th>Amount_due</th>
                           <th>purpose</th>
                           <th>Receipt</th>

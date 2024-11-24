@@ -21,6 +21,9 @@ return new class extends Migration
             $table->string('payment_reference')->nullable();
             $table->string('status')->nullable();
             $table->string('purpose')->nullable();
+            $table->integer('number_of_people')->nullable();
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->string('receipt_url');
             $table->integer('schedule_id')->nullable();
             $table->timestamps();

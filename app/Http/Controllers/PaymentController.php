@@ -76,9 +76,9 @@ class PaymentController extends Controller
       $input = $request->input('input');
       
       $student = Student::where('app_no', $input)->first();
-      $client = Client::where('service_no', $input)->first();
+   //   $client = Client::where('service_no', $input)->first();
   
-      if (!$student && !$client) {
+      if (!$student) {
           return redirect()->back()->with('error', 'Invalid details provided.');
       }
 
@@ -102,20 +102,6 @@ class PaymentController extends Controller
 
       }
   
-      
-      // if ($request->hasFile('receipt_url')) {
-      //     $receipt = $request->file('receipt_url');
-      //     $receiptName = md5($receipt->getClientOriginalName() . mt_rand(1000, 9999)) . '.' . $receipt->getClientOriginalExtension();
-  
-      //     if (!$receipt->move(public_path('upload/'), $receiptName)) {
-      //         return redirect()->back()->with('error', 'Receipt upload failed.');
-      //     }
-      // } else {
-      //     return redirect()->back()->with('error', 'No receipt file uploaded.');
-      // }
-  
-      // $receiptUrl = 'upload/' . $receiptName;
-
   
       
       if ($student) {
@@ -149,32 +135,118 @@ class PaymentController extends Controller
           return redirect()->route('payments.success');
       }
   
-      if ($client) {
-          $serviceType = $client->service_type;
-          $paymentSchedule = PaymentSchedule::where('type', $serviceType)->first();
+      // if ($client) {
+      //     $serviceType = $client->service_type;
+      //     $paymentSchedule = PaymentSchedule::where('type', $serviceType)->first();
   
-          if (!$paymentSchedule) {
-              return redirect()->back()->with('error', 'No payment schedule found for the service.');
-          }
+      //     if (!$paymentSchedule) {
+      //         return redirect()->back()->with('error', 'No payment schedule found for the service.');
+      //     }
   
-          Payment::create([
-              'receipt_url' => $receiptName,
-              'client_id' => $client->id,
-              'amount_due' => $paymentSchedule->amount,
-              'purpose' => $paymentSchedule->purpose,
-          ]);
+      //     Payment::create([
+      //         'receipt_url' => $receiptName,
+      //         'client_id' => $client->id,
+      //         'amount_due' => $paymentSchedule->amount,
+      //         'purpose' => $paymentSchedule->purpose,
+      //     ]);
   
-          $admin = User::first();
+      //     $admin = User::first();
     
-          $adminEmail = $admin->email;
-          $adminName = $admin->name;
+      //     $adminEmail = $admin->email;
+      //     $adminName = $admin->name;
     
       
-        Mail::to($adminEmail)->send(new AdminPaymentNotification ($adminName));
-          return redirect()->route('payments.success');
-      }
+      //   Mail::to($adminEmail)->send(new AdminPaymentNotification ($adminName));
+      //     return redirect()->route('payments.success');
+      // }
   
       return redirect()->back()->with('error', 'Failed to process payment.');
+  }
+
+
+  public function uploadRevalidatePayments(Request $request) {
+
+    $inv = $request->input('inv');
+
+    $client = Client::where('service_no', $inv)->first();
+    
+    if(!$client) {
+
+      return redirect()->back()->with('error', 'No previous payment or Invalid Service No');
+    }
+
+    $validate = $request->validate([
+      'receipt_url' => 'required|file|mimes:jpg,jpeg,png,pdf|max:1024',
+      'start_date' => 'required|date|after_or_equal:today',
+      'end_date' => 'required|date|after:start_date',
+      'number_of_people' => 'required|integer|min:1',
+      'amount_due' => 'required|numeric|min:0'
+      
+    ]);
+
+    if($request->hasFile('receipt_url')) {
+
+      $receipt = $request->File('receipt_url');
+      $rad =  mt_rand(1000, 9999);
+
+       
+      $receiptName =  md5($receipt->getClientOriginalName()) . $rad . '.' . $receipt->getClientOriginalExtension();
+
+
+      $receipt->move(public_path('upload/'), $receiptName);
+      $upload = 'upload/' . $receiptName;
+
+      if ($upload) {
+          $validate['receipt_url'] = $receiptName;
+      } else {
+          return redirect()->back()->with('error', 'Receipt Upload Failed');
+      }
+
+    }
+
+     
+    $service_type = $client->service_type;
+
+    $schedule = PaymentSchedule::where('type', $service_type)->first();
+
+    if($schedule) {
+
+     $payment =  Payment::create([
+       'receipt_url' => $receiptName,
+       'amount_due' => $request->input('amount_due'),
+       'start_date' => $request->input('start_date'),
+       'end_date' => $request->input('end_date'),
+       'number_of_people' => $request->input('number_of_people'),
+      // 'amount' => $schedule->amount,
+       'client_id' => $client->id,
+       'purpose' => $schedule->purpose
+     ]);
+
+     $admin = User::first();
+
+     $adminEmail = $admin->email;
+     $adminName = $admin->name;
+
+   
+
+ 
+       Mail::to($adminEmail)->send(new AdminPaymentNotification ($adminName));
+
+       return redirect()->route('payments.success');
+
+
+
+       }
+
+
+
+      
+
+
+
+
+
+
   }
   
 
@@ -281,7 +353,11 @@ class PaymentController extends Controller
       }
 
       $validate = $request->validate([
-        'receipt_url' => 'required|image|max:1024',
+        'receipt_url' => 'required|file|mimes:jpg,jpeg,png,pdf|max:1024',
+        'start_date' => 'required|date|after_or_equal:today',
+        'end_date' => 'required|date|after:start_date',
+        'number_of_people' => 'required|integer|min:1',
+        'amount_due' => 'required|numeric|min:0'
         
       ]);
 
@@ -314,8 +390,11 @@ class PaymentController extends Controller
 
       $payment =  Payment::create([
         'receipt_url' => $receiptName,
-        'amount_due' => $schedule->amount,
-        'amount' => $schedule->amount,
+        'amount_due' => $request->input('amount_due'),
+        'start_date' => $request->input('start_date'),
+        'end_date' => $request->input('end_date'),
+        'number_of_people' => $request->input('number_of_people'),
+       // 'amount' => $schedule->amount,
         'client_id' => $client->id,
         'purpose' => $schedule->purpose
       ]);
@@ -325,19 +404,25 @@ class PaymentController extends Controller
       $adminEmail = $admin->email;
       $adminName = $admin->name;
 
-    //  dd($adminEmail);
+    
 
   
-    Mail::to($adminEmail)->send(new AdminPaymentNotification ($adminName));
+        Mail::to($adminEmail)->send(new AdminPaymentNotification ($adminName));
 
-    return redirect()->route('payments.success');
+        return redirect()->route('payments.success');
 
 
 
-     }
+        }
   
+
+
+
 
     }
+
+
+
 
 
     
@@ -485,7 +570,7 @@ class PaymentController extends Controller
 
       $inv = Student::genServiceNo($year);
  
-      if(empty($client->inv)) {
+      if(is_null($client->service_no)) {
 
         $client->service_no = $inv;
         $client->save();

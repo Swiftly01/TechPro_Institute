@@ -68,14 +68,24 @@
                   <div class="col text-center">
                       <!-- Service Price Display -->
                       <div class="mb-3">
-                          <label for="service-price" class="form-label"><strong>Service Price</strong></label>
+                          <label for="service-price-display" class="form-label"><strong>Service Price</strong></label>
                           <input 
                               value="₦0" 
                               class="form-control mx-auto input-size" 
-                              id="service-price" 
-                              name="service_price"
+                              id="service-price-display" 
                               readonly
                           >
+                          <input 
+                              type="hidden" 
+                              id="service-price" 
+                              name="amount_due" 
+                              value="0"
+                          />
+                          <span class="text-danger">
+                            @error('amount_due')
+                                {{ $message }}
+                            @enderror
+                        </span>
                       </div>
           
                       <!-- Date Selection -->
@@ -85,17 +95,30 @@
                               type="date" 
                               id="start-date" 
                               class="form-control mx-auto input-size" 
-                              name="start_date" 
+                              name="start_date"
+                              value="{{ old('start_date') }}" 
                               required
                           >
+                          <span class="text-danger">
+                            @error('start_date')
+                                {{ $message }}
+                            @enderror
+                        </span>
                           <label for="end-date" class="form-label mt-3"><strong>Select End Date</strong></label>
                           <input 
                               type="date" 
                               id="end-date" 
                               class="form-control mx-auto input-size" 
-                              name="end_date" 
+                              name="end_date"
+                              value="{{ old('end_date') }}" 
                               required
                           >
+                          <span class="text-danger">
+                            @error('end_date')
+                                {{ $message }}
+                            @enderror
+                        </span>
+
                       </div>
           
                       <!-- Number of People -->
@@ -108,8 +131,14 @@
                               name="number_of_people" 
                               placeholder="Enter number of people" 
                               min="1" 
+                              value="{{ old('number_of_people') }}"
                               required
                           >
+                          <span class="text-danger">
+                            @error('number_of_people')
+                                {{ $message }}
+                            @enderror
+                        </span>
                       </div>
           
                       <!-- Upload Payment Receipt -->
@@ -119,7 +148,8 @@
                               type="file" 
                               class="form-control mt-2 mx-auto input-size" 
                               name="receipt_url" 
-                              placeholder="Upload Payment Receipt" 
+                              placeholder="Upload Payment Receipt"
+                              value="{{ old('receipt_url') }}" 
                               required
                           >
                           <input name="id" value="{{ $client->id }}" type="hidden">
@@ -164,7 +194,8 @@
 
 <script>
     // JavaScript for dynamic service price calculation
-    const servicePriceInput = document.getElementById('service-price');
+   const servicePriceDisplay = document.getElementById('service-price-display');
+   const servicePriceInput = document.getElementById('service-price');
     const startDateInput = document.getElementById('start-date');
     const endDateInput = document.getElementById('end-date');
     const peopleInput = document.getElementById('people');
@@ -184,8 +215,11 @@
         // Calculate total price
         const totalPrice = dailyRate * numberOfDays * numberOfPeople;
 
-        // Update the service price input
-        servicePriceInput.value = `₦${totalPrice.toLocaleString()}`;
+        // Update the display with a formatted string
+        servicePriceDisplay.value = `₦${totalPrice.toLocaleString()}`;
+
+        // Update the hidden input with the raw numeric value
+        servicePriceInput.value = totalPrice;
     }
 
     // Attach event listeners to inputs
