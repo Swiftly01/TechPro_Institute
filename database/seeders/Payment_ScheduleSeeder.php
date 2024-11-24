@@ -77,14 +77,14 @@ class Payment_ScheduleSeeder extends Seeder
              [
                'course_id'=>0,
                'amount' => 2000.00,
-               'type' => 'work station',
+               'type' => 'Work Station',
                'purpose' => 'services',
                'desc' => 'payment for work station',
              ],
              [
                'course_id'=>0,
                'amount' => 0,
-               'type' => 'conference room',
+               'type' => 'Conference Room',
                'purpose' => 'services',
                'desc' => 'payment for conference room',
              ],

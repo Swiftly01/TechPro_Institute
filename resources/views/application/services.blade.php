@@ -66,7 +66,7 @@
           </div>
           <label for="phone" class="form-label mt-2 ms-5 label-name">Services</label>
           <select style="width: 80%;" class="form-select ms-5 mb-3" name="service_type" aria-label="Default select example">
-            <option value = ''>Choose A Program</option>
+            <option value = ''>Choose A Service</option>
             @foreach ($schedules as $service )
             <option value="{{ $service->type }}" {{ old('service_type') == $service->type ? 'selected' : '' }}>{{ $service->type }}</option>
             @endforeach
