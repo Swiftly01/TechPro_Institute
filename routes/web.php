@@ -66,13 +66,11 @@ Route::get('/workstation/revalidate/booking',  function() {
 
 Route::get('/payment/{id}', [PaymentController::class, 'loadPage'])->name('payment.show');
 Route::post('/payment/upload', [PaymentController::class, 'store'])->name('payment.upload');
-
 Route::get('/services/application', [ClientController::class, 'index'])->name('services.register');
 Route::post('/services/register', [ClientController::class, 'create'])->name('services.store');
 Route::get('/services/payment/{id}', [ClientController::class, 'loadSevicePayments'])->name('services.payment');
 Route::post('/services/payment/upload', [PaymentController::class, 'uploadServicePayments'])->name('service.upload');
 Route::post('/services/payment/revalidate', [PaymentController::class, 'uploadRevalidatePayments'])->name('submit.revalidateBooking');
-
 
 
 Route::get('/dashboard', function () {

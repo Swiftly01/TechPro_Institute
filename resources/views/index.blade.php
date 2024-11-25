@@ -182,9 +182,9 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Back-End Development</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img height="200px" src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
+                  <img height="180px" src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Learn how to prepare and clean data, perform  in-depth data analysis and utilize advance data visualization techniques</p>
+                  <p class="desc">Master the art of backend development by building robust, scalable server-side applications. Learn to manage databases, APIs, and server logic to power seamless user experiences.</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#150, 000</p>
@@ -208,7 +208,7 @@
                 <div style="margin-top: -10px;" class="container">
                   <img src="{{ asset('assets/images/Rectangle 7.png') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Learn to design User-friendly interfaces with tools like Figma, Adobe XD, focusing on user experience</p>
+                  <p class="desc">Learn to design user-friendly interfaces with tools like Figma and Adobe XD, focusing on user experience. Master the art of creating intuitive and visually appealing designs that captivate users.</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#100, 000</p>
@@ -232,7 +232,7 @@
                 <div style="margin-top: -10px;" class="container">
                   <img src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
                   <div>
-                    <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
+                    <p class="desc">Protect your digital assets with our comprehensive cybersecurity program. Learn to identify vulnerabilities, prevent cyber threats, and secure systems in today’s ever-evolving digital landscape.</p>
                     <div class="price pt-3">
                       <p class="me-2">Price</p>
                       <p>#130, 000</p>
@@ -251,10 +251,10 @@
             <div class="col">
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Full Stack Development</p>
-                <div style="margin-top: -10px;" class="container">
-                  <img src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
+                <div style="margin-top: -5px;" class="container">
+                  <img src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End  Development  Course</p>
+                  <p class="desc">Build web applications with our full-stack program. Master Front-end and Back-end technologies for dynamic, responsive solutions.</p>
                   <div class="price pt-4">
                     <p class="me-2">Price</p>
                     <p>#250, 000</p>
@@ -276,9 +276,9 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Data Analytics</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
+                  <img src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End  Development  Course</p>
+                  <p class="desc">Unlock the power of data with our data analytics program. Master tools and techniques to analyze, interpret, and turn raw data into actionable insights for smarter decision-making.</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#130, 000</p>
@@ -311,7 +311,7 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p class="text-center pt-2 title">Tech-A-Teen</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img height="200px" src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
+                  <img height="200px" src="{{ asset('assets/images/DSC_4998.jpg') }}" class="card-img-top" alt="...">
                   <div>
                     <p class="desc">Empowers teenagers with practical tech skills and prepare young minds for future tech careers in a supportive learning environment</p>
                     <div class="price pt-3">
@@ -333,9 +333,9 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Work Station</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img height="200px" src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
+                  <img height="200px" src="{{ asset('assets/images/DSC_4919.jpg') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Our workstation provides a productive environment for professionals and learners alike.Equiiped with high speed internet and top notch facilities</p>
+                  <p class="desc">Our workstation provides a productive environment for professionals and learners alike. Equiiped with high speed internet and top notch facilities</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#2, 000</p>
@@ -357,10 +357,10 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Conference Room</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img height="195px" src="{{ asset('assets/images/Rectangle 7.png') }}" class="card-img-top" alt="...">
+                  <img height="195px" src="{{ asset('assets/images/DSC_4921.jpg') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">
-                    The seminar room at techpro institute offers a modern,fully-equipped space for workshops, training sessions and events.With the state-of-the-art technology and a comfortable setup.it's designed to foster collaboration and inspire learning.
+                  The seminar room at TechPro Institute is a modern, fully-equipped space for workshops, training, and events. With state-of-the-art technology and a comfortable setup, it fosters collaboration and inspires learning.
                     </p>
                  
                 </div>

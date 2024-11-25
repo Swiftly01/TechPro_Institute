@@ -6,7 +6,7 @@
   
   <div   class="container">
     <div  class="row main">
-      <div class="col">
+      <div class="col text-center">
         <!-- <h1  class="text-danger home">Home/Services</h1> -->
         <h1 ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home" href="">Application</a><a class=" text-danger home" href="">/outstanding payment</a></h1>
       </div>
@@ -14,8 +14,8 @@
     </div>
    </div> 
    <div class="container mt-5">
-    <div style="background-color: whitesmoke;" class="row">
-      <div class="col-lg-6 col-md-12">
+    <div  class="row">
+      <div style="background-color: whitesmoke;" class="col-lg-6 col-md-12 mx-auto">
         <div class="container">
           <div class="row">
             <div class="col text-center mt-5">
@@ -69,7 +69,7 @@
           
                 <div class="row">
                   <div class="col mx-auto mt-4">
-                    <button type="submit" class="complete-btn">Upload</button>
+                    <button type="submit" class="complete-btn mb-5">Upload</button>
                   </div>
                 </div>
             </form>
@@ -81,10 +81,10 @@
   
   
       </div>
-      <div class="col-lg-6 col-md-12 p-0">
+      {{-- <div class="col-lg-6 col-md-12 p-0">
         <img width="100%" height="100%"  src="{{asset('assets/images/IMG_2590.DNG')}}" class="" alt="">
   
-      </div>
+      </div> --}}
     </div>
    </div>
    

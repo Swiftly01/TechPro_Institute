@@ -6,7 +6,7 @@
 
 <div   class="container">
   <div  class="row main">
-    <div class="col">
+    <div class="col text-center">
       <!-- <h1  class="text-danger home">Home/Services</h1> -->
       <h1 ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home">Application</a><a class=" text- home" href="{{ url('/outstanding') }}">/Outstanding Payment</a></h1>
     </div>
@@ -15,8 +15,8 @@
  
 
  <div class="container mt-5">
-  <div style="background-color: whitesmoke;" class="row">
-    <div class="col-lg-6 col-md-12">
+  <div  class="row">
+    <div style="background-color: whitesmoke;" class="col-lg-6 col-md-12 mx-auto">
 
    <form action="{{ route('application.store.form') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -96,10 +96,10 @@
 
 
     </div>
-    <div class="col-lg-6 col-md-12 p-0">
-      <img width="100%" height="100%"  src="{{asset('assets/images/IMG_2590.DNG')}}" class="" alt="">
+    {{-- <div class="col-lg-6 col-md-12 p-0">
+       <img width="100%" height="100%"  src="{{asset('assets/images/IMG_2590.DNG')}}" class="" alt=""> 
 
-    </div>
+    </div> --}}
   </div>
  </div>
 
