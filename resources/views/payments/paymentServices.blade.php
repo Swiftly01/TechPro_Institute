@@ -61,7 +61,7 @@
                 </div>
             @endif
 
-            @if($schedule->type ==  'Work Station')
+            @if($schedule->type ==  'Work Space')
             <form action="{{ route('service.upload') }}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="row">

@@ -8,7 +8,7 @@
       <div class="col">
         <h1>
           <a class="text-danger home" href="{{ url('/') }}">Home/</a>
-          <a class="text-danger home" href="">/Workstation</a>
+          <a class="text-danger home" href="">/Workspace</a>
           <a class="text-danger home" href="{{ route('revalidate.booking') }}">/Revalidate booking</a>
         </h1>
       </div>

@@ -331,11 +331,11 @@
             </div>
             <div class="col">
               <div class="card shadow-lg rounded-lg border card-rad">
-                <p  class="text-center pt-2 title">Work Station</p>
+                <p  class="text-center pt-2 title">Work Space</p>
                 <div style="margin-top: -10px;" class="container">
                   <img height="200px" src="{{ asset('assets/images/DSC_4919.jpg') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Our workstation provides a productive environment for professionals and learners alike. Equiiped with high speed internet and top notch facilities</p>
+                  <p class="desc">Our workspace provides a productive environment for professionals and learners alike. Equiiped with high speed internet and top notch facilities</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#2, 000</p>
@@ -365,7 +365,7 @@
                  
                 </div>
                 <div class="reg mt-4">
-                  <a href="{{ route('services.register') }}"> <button class="register-card mt-3">Contact Us</button></a>
+                  <a href=""> <button class="register-card mt-3">Contact Us</button></a>
                  
                 </div>
                 
