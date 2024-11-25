@@ -15,6 +15,17 @@ class CourseController extends Controller
         //
     }
 
+    public function loadTechTeen() {
+
+        $id = 8;
+
+        $tech_a_teen = Course::find($id);
+
+      //  dd($tech_a_teen);
+
+        return view('application.tech-a-teen', compact('tech_a_teen'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

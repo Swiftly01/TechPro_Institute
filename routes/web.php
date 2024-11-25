@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
@@ -29,6 +31,8 @@ Route::prefix('/application')->name('application.')->group(function() {
     Route::get('/', [StudentController::class, 'index'])->name('form');
     Route::post('/form', [StudentController::class, 'store'])->name('store.form');
     Route::get('/mail/{id}', [StudentController::class, 'applicationMailNotification'])->name('mail');
+
+    Route::get('/client/{id}', [ClientController::class, 'clientMessage'])->name('client');
     
 
 });
@@ -39,6 +43,8 @@ Route::post('/outstanding/payment', [PaymentController::class, 'updateOutstandin
 Route::get('/outstanding', function() {
     return view('application.outstanding');
 });
+
+Route::get('/tech-a-teen', [CourseController::class, 'loadTechTeen'])->name('tech-a-teen');
 
 Route::get('/verify/details', function() {
 
@@ -62,6 +68,8 @@ Route::get('/workstation/revalidate/booking',  function() {
     return view('payments.revalidateServices');
 
 })->name('revalidate.booking');
+
+Route::get('/contact/submit',[ContactController::class, 'create'])->name('contact.submit');
 
 
 Route::get('/payment/{id}', [PaymentController::class, 'loadPage'])->name('payment.show');

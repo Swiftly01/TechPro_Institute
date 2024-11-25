@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContacUsMail;
 use App\Models\Contact;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -18,11 +21,40 @@ class ContactController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request  $request)
     {
-        //
+        $validate = $request->validate([
+            'email' => 'required|email|unique:contacts',
+            'description' => 'required|string|max:300'
+
+        ]);
+
+       $contact = Contact::create($validate);
+
+       if($contact) {
+
+        $admin = User::first();
+    
+        $adminEmail = $admin->email;
+        $adminName = $admin->name;
+  
+    
+        Mail::to($adminEmail)->send(new ContacUsMail ($adminName, $contact->email, $contact->description));
+
+
+        return redirect()->back()->with('success', 'Your Request Has Been Sent Successfully');
+
+      
+
+       }
+
+       return redirect()->back()->with('errro', 'Sorry, Your Request Could Not Be Completed !!');
+
+
+
     }
 
+   
     /**
      * Store a newly created resource in storage.
      */

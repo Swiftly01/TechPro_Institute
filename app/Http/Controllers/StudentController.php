@@ -15,6 +15,7 @@ use App\Models\Student;
 use App\Models\User;
 use App\Models\UserService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
 
 use function PHPUnit\Framework\isEmpty;
 
@@ -25,10 +26,12 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $courses = Course::all();
+        $courses = Course::where('id', '!=', 8)->get();
 
         return view('application.form', compact('courses'));
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
@@ -92,7 +95,8 @@ class StudentController extends Controller
         $adminName = $adminUser->name;
 
 
-        $student = Student::with('course')->whereNull('app_no')->find($id);
+        $student = Student::with('course')->find($id);
+
 
         if($student) {
 
@@ -108,16 +112,7 @@ class StudentController extends Controller
 
         return view('application.message', compact('student'));
 
-        } else {
-
-
-            $client = Client::find($id);
-
-            if($client) {
-
-                return view('application.message', compact('client'));
-            }
-        }
+        } 
         
 
     }

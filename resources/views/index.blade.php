@@ -324,7 +324,7 @@
                     </div>
                   </div>
                   <div class="reg">
-                    <a href="{{ route('application.form') }}"><button class="register-card">Register Now</button></a>
+                    <a href="{{ route('tech-a-teen') }}"><button class="register-card">Register Now</button></a>
                   </div>
                 </div>
               </div>
@@ -365,7 +365,7 @@
                  
                 </div>
                 <div class="reg mt-4">
-                  <a href=""> <button class="register-card mt-3">Contact Us</button></a>
+                  <a href="{{ url('/contact') }}"> <button class="register-card mt-3">Contact Us</button></a>
                  
                 </div>
                 

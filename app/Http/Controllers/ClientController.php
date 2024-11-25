@@ -56,10 +56,24 @@ class ClientController extends Controller
 
        if($client) {
 
-        return redirect()->route('application.mail', ['id' => $client->id]);
+        return redirect()->route('application.client', ['id' => $client->id]);
 
 
        }
+    }
+
+
+    public function clientMessage($id) {
+
+
+        $client = Client::find($id);
+
+            if($client) {
+
+                return view('application.message', compact('client'));
+            }
+
+        
     }
 
 
