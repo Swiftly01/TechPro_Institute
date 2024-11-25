@@ -103,13 +103,13 @@
               <img src="{{ asset('assets/images/DSC_4918.jpg') }}" class="d-block w-100 img-fluid" alt="Image 4">
             </div>
             <div class="carousel-item">
-              <img src="{{ asset('assets/images/WhatsApp Image 2024-11-14 at 04.03.46_b0185637.jpg') }}" class="d-block w-100 img-fluid" alt="Image 4">
+              <img src="{{ asset('assets/images/DSC_4925.jpg') }}" class="d-block w-100 img-fluid" alt="Image 4">
             </div>
             <div class="carousel-item">
-              <img src="{{ asset('assets/images/WhatsApp Image 2024-11-14 at 04.04.03_526ec5be.jpg') }}" class="d-block w-100 img-fluid" alt="Image 4">
+              <img src="{{ asset('assets/images/DSC_4921.jpg') }}" class="d-block w-100 img-fluid" alt="Image 4">
               </div>
               <div class="carousel-item">
-                <img src="{{ asset('assets/images/WhatsApp Image 2024-11-14 at 04.04.16_75f2d318.jpg') }}" class="d-block w-100 img-fluid" alt="Image 4">
+                <img src="{{ asset('assets/images/DSC_4999.jpg') }}" class="d-block w-100 img-fluid" alt="Image 4">
               </div>
           </div>
 
