@@ -132,11 +132,15 @@ padding-top: 20px;
         font-size: 2rem;
       }
     }
+
+
     body {
     font-family: roboto;
     color: rgb(33, 33, 33);
     margin: 0;
     height: 500vh;
+    overflow-x: hidden;
+
     
   }
    .navbar .navbar-nav > li > a {
