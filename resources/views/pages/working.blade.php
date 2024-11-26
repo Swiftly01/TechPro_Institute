@@ -82,7 +82,7 @@
       </div>
     </div>
     <div class="col-md-12 col-lg-7 p-0">
-      <img wi class="image" src="{{ asset('assets/images/unsplash_p0qKsW3uqA4 (10).png') }}" alt="Image">
+      <img wi class="image" src="{{ asset('assets/images/DSC_4990.jpg') }}" alt="Image">
     </div>
   </div>
 

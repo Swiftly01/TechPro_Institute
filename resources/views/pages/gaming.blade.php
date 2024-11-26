@@ -120,7 +120,7 @@
       </div>
     </div>
     <div class="col-md-12 col-lg-7 p-0 main-color">
-      <img class="image" src="{{ asset('assets/images/unsplash_p0qKsW3uqA4 (13).png') }}" alt="Image">
+      <img class="image" src="{{ asset('assets/images/DSC_4931.jpg') }}" alt="Image">
     </div>
   </div>
 
