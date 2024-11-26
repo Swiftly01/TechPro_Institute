@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="{{ asset('assets/styles/index.css') }}">
   
   <style>
+    .contact-us {
+      margin-top: 50px;
+    }
 
 
   
@@ -161,7 +164,7 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p class="text-center pt-2 title">Front-End Development</p>
                 <div style="margin-top: -10px;" class="container"> 
-                  <img height="200px" src="{{ asset('assets/images/IMG-20241126-WA0004.jpg') }}" class="card-img-top" alt="...">
+                  <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0004.jpg') }}" class="card-img-top" alt="...">
                   <div>
                     <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
                     <div class="price pt-3">
@@ -185,7 +188,7 @@
                 <div style="margin-top: -10px;" class="container">
                   <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0003.jpg') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Master the art of backend development by building robust, scalable server-side applications. Learn to manage databases, APIs, and server logic to power seamless user experiences.</p>
+                  <p class="desc">Master backend development by building robust server-side apps. Manage databases, APIs, and logic for seamless user experiences.</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#150, 000</p>
@@ -209,7 +212,7 @@
                 <div style="margin-top: -10px;" class="container">
                   <img style="height: 180px" src="{{ asset('assets/images/DSC_5001.jpg') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Learn to design user-friendly interfaces with tools like Figma and Adobe XD, focusing on user experience. Master the art of creating intuitive and visually appealing designs that captivate users.</p>
+                  <p class="desc">Design user-friendly interfaces with Figma and Adobe XD. Create intuitive, visually appealing designs that enhance user experience.</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#100, 000</p>
@@ -233,7 +236,7 @@
                 <div style="margin-top: -10px;" class="container">
                   <img style="height: 180px" src="{{ asset('assets/images/DSC_5002.jpg') }}" class="card-img-top" alt="...">
                   <div>
-                    <p class="desc">Protect your digital assets with our comprehensive cybersecurity program. Learn to identify vulnerabilities, prevent cyber threats, and secure systems in today’s ever-evolving digital landscape.</p>
+                    <p class="desc">Secure your digital assets with our cybersecurity program. Learn to spot vulnerabilities, prevent threats, and protect systems effectively.</p>
                     <div class="price pt-3">
                       <p class="me-2">Price</p>
                       <p>#130, 000</p>
@@ -255,8 +258,8 @@
                 <div style="margin-top: -5px;" class="container">
                   <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0005.jpg') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Build web applications with our full-stack program. Master Front-end and Back-end technologies for dynamic, responsive solutions.</p>
-                  <div class="price pt-4">
+                  <p class="desc">Build web apps with our full-stack program. Master both front-end and back-end technologies for dynamic, responsive solutions.</p>
+                  <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#250, 000</p>
                   </div>
@@ -279,7 +282,7 @@
                 <div style="margin-top: -10px;" class="container">
                   <img style="height: 180px" src="{{ asset('assets/images/DSC_5000.jpg') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Unlock the power of data with our data analytics program. Master tools and techniques to analyze, interpret, and turn raw data into actionable insights for smarter decision-making.</p>
+                  <p class="desc">Unlock the power of data with our analytics program. Master tools to analyze, interpret, and turn data into actionable insights.</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#130, 000</p>
@@ -312,9 +315,9 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p class="text-center pt-2 title">Tech-A-Teen</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img height="200px" src="{{ asset('assets/images/DSC_4998.jpg') }}" class="card-img-top" alt="...">
+                  <img height="180px" src="{{ asset('assets/images/DSC_4998.jpg') }}" class="card-img-top" alt="...">
                   <div>
-                    <p class="desc">Empowers teenagers with practical tech skills and prepare young minds for future tech careers in a supportive learning environment</p>
+                    <p class="desc">Empower teenagers with practical tech skills, preparing them for future careers in a supportive learning environment.</p>
                     <div class="price pt-3">
                       <p class="me-2">Price</p>
                       <p>#20, 000</p>
@@ -334,9 +337,9 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Work Space</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img height="200px" src="{{ asset('assets/images/DSC_4919.jpg') }}" class="card-img-top" alt="...">
+                  <img height="180px" src="{{ asset('assets/images/DSC_4919.jpg') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Our workspace provides a productive environment for professionals and learners alike. Equiiped with high speed internet and top notch facilities</p>
+                  <p class="desc">Our workspace offers a productive environment for professionals and learners, equipped with high-speed internet.</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
                     <p>#2, 000</p>
@@ -358,15 +361,15 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Conference Room</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img height="195px" src="{{ asset('assets/images/DSC_4921.jpg') }}" class="card-img-top" alt="...">
+                  <img height="180px" src="{{ asset('assets/images/DSC_4921.jpg') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">
-                  The seminar room at TechPro Institute is a modern, fully-equipped space for workshops, training, and events. With state-of-the-art technology and a comfortable setup, it fosters collaboration and inspires learning.
+                    The seminar room at TechPro Institute is a modern, fully-equipped space for workshops and events, featuring state-of-the-art tech and a comfortable setup.
                     </p>
                  
                 </div>
-                <div class="reg mt-4">
-                  <a href="{{ url('/contact') }}"> <button class="register-card mt-3">Contact Us</button></a>
+                <div class="reg">
+                  <a href="{{ url('/contact') }}"> <button class="register-card contact-us">Contact Us</button></a>
                  
                 </div>
                 

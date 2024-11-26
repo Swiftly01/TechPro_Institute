@@ -275,6 +275,10 @@ h1 span {
   font-size: 13px;
    color: black;
    padding-top: 10px;
+/* 
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis; */
 }
 .price {
   display: flex;
