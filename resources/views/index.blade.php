@@ -178,8 +178,8 @@
             <div class="col">
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p class="text-center pt-2 title">Front-End Development</p>
-                <div style="margin-top: -10px;" class="container">
-                  <img height="200px" src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
+                <div style="margin-top: -10px;" class="container"> 
+                  <img height="200px" src="{{ asset('assets/images/IMG-20241126-WA0004.jpg') }}" class="card-img-top" alt="...">
                   <div>
                     <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
                     <div class="price pt-3">
@@ -201,7 +201,7 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Back-End Development</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img height="180px" src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
+                  <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0003.jpg') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">Master the art of backend development by building robust, scalable server-side applications. Learn to manage databases, APIs, and server logic to power seamless user experiences.</p>
                   <div class="price pt-3">
@@ -225,7 +225,7 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">UI/UX  Design</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img src="{{ asset('assets/images/Rectangle 7.png') }}" class="card-img-top" alt="...">
+                  <img style="height: 180px" src="{{ asset('assets/images/Rectangle 7.png') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">Learn to design user-friendly interfaces with tools like Figma and Adobe XD, focusing on user experience. Master the art of creating intuitive and visually appealing designs that captivate users.</p>
                   <div class="price pt-3">
@@ -249,7 +249,7 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p class="text-center pt-2 title">Cyber Security</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
+                  <img style="height: 180px" src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
                   <div>
                     <p class="desc">Protect your digital assets with our comprehensive cybersecurity program. Learn to identify vulnerabilities, prevent cyber threats, and secure systems in today’s ever-evolving digital landscape.</p>
                     <div class="price pt-3">
@@ -271,7 +271,7 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Full Stack Development</p>
                 <div style="margin-top: -5px;" class="container">
-                  <img src="{{ asset('assets/images/Group 27 (1).png') }}" class="card-img-top" alt="...">
+                  <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0005.jpg') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">Build web applications with our full-stack program. Master Front-end and Back-end technologies for dynamic, responsive solutions.</p>
                   <div class="price pt-4">
@@ -295,7 +295,7 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Data Analytics</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
+                  <img style="height: 180px" src="{{ asset('assets/images/image 7.png') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">Unlock the power of data with our data analytics program. Master tools and techniques to analyze, interpret, and turn raw data into actionable insights for smarter decision-making.</p>
                   <div class="price pt-3">

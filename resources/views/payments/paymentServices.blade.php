@@ -52,20 +52,20 @@
 <body>
   <div class="container mt-5">
     <div class="row">
-      <div class="col text-center mt-5">
+      <div class="col-lg-6 text-center mt-5">
         <h1 class="payment-text">Payment Details</h1>
         {{-- <p class="fs-4">Your Payment reference no <span class="text-danger fs-4">Kabirakinola234567FTD</span></p>
         --}}
         <p class="fs-5">Make direct payment to the bank details below:</p>
         <p class="fs-5">Bank Name: UBA</p>
-        <p class="fs-5">Account Number: 1025989215</p>
+        <p class="fs-5 text-danger">Account Number: 1025989215</p>
         <p class="fs-5">Account Name: Tech-Pro Edutech</p>
         <p class="fs-5"><strong>Client Name:</strong> {{ ucfirst(strtolower($client->firstname)) }} {{
           ucfirst(strtolower($client->lastname)) }}</p>
         <p class="fs-5"><strong>Client Email: </strong>{{ $client->email }}</p>
         <p class="fs-5"><strong>Service Requested: </strong>{{ $client->service_type }}</p>
       </div>
-      <div class="col">
+      <div class="col-lg-6">
 
         @if(session('error'))
         <div class="alert alert-danger">
