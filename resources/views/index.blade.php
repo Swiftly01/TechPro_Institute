@@ -10,27 +10,9 @@
   <link rel="stylesheet" href="{{ asset('assets/styles/index.css') }}">
   
   <style>
-     .card {
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  transition: transform 2s ease;
-}
-
-.card:hover {
-  transform: rotateY(180deg);
-}
-.card-rad {
-    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.card-rad:hover {
-    transform: rotateY(180deg);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
 
 
-
-   
+  
   </style>
 </head>
 <body>
@@ -663,23 +645,27 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const cards = document.querySelectorAll(".card");
+  const cards = document.querySelectorAll(".card");
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("animate");
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
-
-      cards.forEach((card) => {
-        observer.observe(card);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate"); // Add animation class
+        }
       });
-    });
+    },
+    { threshold: 0.2 } // Trigger when 20% of the card is visible
+  );
+
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
+});
+
+
+
+ 
   </script>
 </body>
 </html>

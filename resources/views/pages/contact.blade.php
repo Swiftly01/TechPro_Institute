@@ -44,7 +44,7 @@
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label email mt-2 ms-5">Email address</label>
             <input style="width: 80%;" type="email" name="email" class="form-control mt-2 ms-5" id="exampleFormControlInput1" placeholder="name@example.com">
-            <span class="text-danger">
+            <span class="text-danger ms-5">
               @error('email')
 
               {{ $message }}
@@ -56,7 +56,7 @@
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label desc mt-2 ms-5">Desciption</label>
             <textarea style="width: 80%;" name="description" class="form-control mt-2 ms-5" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <span class="text-danger">
+            <span class="text-danger ms-5">
               @error('description')
 
               {{ $message }}
