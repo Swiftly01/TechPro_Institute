@@ -641,16 +641,24 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
    <style>
-    .card {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
+ .card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 2s ease;
+}
 
-    .card.animate {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card-rad {
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-rad:hover {
+    transform: rotateY(180deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
   </style>
 </head>
 <body>
