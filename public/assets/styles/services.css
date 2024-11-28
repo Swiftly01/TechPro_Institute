@@ -92,9 +92,9 @@ font-size: 19px;
    .card-rad {
      border-radius: 20px;
    }
-   .home {
+   /* .home {
      font-size: 32px;
-   }
+   } */
 
    .main {
      padding-top: 150px;
@@ -105,11 +105,11 @@ font-size: 19px;
 
    @media screen and (max-width:975px) {
      .main {
-       padding-top: 100px;
+       padding-top: 90px;
      }
-     .home {
+     /* .home {
        font-size: 25px;
-     }
+     } */
      
 
    }

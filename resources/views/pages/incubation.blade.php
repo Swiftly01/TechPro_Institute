@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,7 +16,7 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand ps-4" href="{{ url('/') }}">
@@ -96,9 +96,9 @@
   </div>
 
   <div   class="row contact-top">
-    {{-- <div class="col text-center">
+     <div class="col text-center">
       <a href="{{ url('/contact') }}" class="contact-btn">Contact Us</a>
-    </div> --}}
+    </div> 
   </div>
 </div>
   
@@ -113,7 +113,7 @@
 <footer style="background-color: #0A5098; padding: 40px 0; margin-top: 6%;">
   <div class="container">
     <div class="row gy-4">
-      <!-- TechPro and Social Media Section -->
+      
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h1 class="fw-bold"><span style="color: #E21C1C;">Tech</span>Pro</h1>
         <p class="fs-6 fw-light mb-2 follow">Follow Us On</p>
@@ -125,7 +125,7 @@
 
       </div>
       
-      <!-- Courses Section -->
+
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Courses</h4> 
         <ul class="list-unstyled">
@@ -138,7 +138,7 @@
         </ul>
       </div>
       
-      <!-- Resources Section -->
+    
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Links</h4>
         <ul class="list-unstyled">
@@ -148,14 +148,11 @@
           <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
           <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
           <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
-          
-          <!-- <li><a class="fs-6 fw-light text" href="#">TechPro Consultancy</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Frika Xchange</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Osun State Government</a></li> -->
+        
         </ul>
       </div>
       
-      <!-- Legal Section -->
+    
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Legal</h4>
         <ul class="list-unstyled ">
@@ -165,7 +162,7 @@
         </ul>
       </div>
       
-      <!-- Contact Section -->
+    
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Contact</h4>
         <p class="fs-6 fw-light text">103 Gbodofon Street, Ibadan Road, Osogbo.</p>
@@ -185,4 +182,61 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 </body>
-</html>
+</html> --}}
+
+
+
+<x-layout>
+  <x-slot:title>
+    Incubation :: Page
+  </x-slot:title>
+
+  <div  class="container">
+    <div  class="row main">
+      <div class="col">
+        <h1  class="text-danger"><a class="text-danger" href="{{ url('/') }}">Home</a><a class="text-danger" href="{{ url('/services') }}">/Services</a></h1>
+      </div>
+    </div> 
+    <div class="row">
+      <div class="col">
+        <p class="consultancy-text">From accessing current systems to implementing cutting-edge solutions,we offered tailored advice in areas such as  software development, cybersecurity, and digital transformation. Our experienced consultants  work closely with clients to  identify challenges, streamline operations and enhance overall efficiency. Whether you're lookinng to improve performance  or scale or your tech capabilities,we deliver actionable insights and solutions that drive success</p>
+      </div>
+    </div>
+   </div> 
+  
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="links">
+          <ul>
+            <li><a href=""> <h1 class="ps-5 what-text" >What we do</h1></a></li>
+            <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Access to workstations</a></li>
+            <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Workshop</a></li>
+            <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Development Team</a></li>
+            <li><img  class="mb-1" src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Founding Oppurtunities</a></li>
+            <li>
+              <button onclick="window.location.href='/about-u'" class="contact-btn" style="font-size: 14px;">Click here to tell us the program you are interested in</button>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
+      <div class="col-lg-6">
+        <div class="">
+          <img class="img-fluid" src="{{ asset('assets/images/unsplash_p0qKsW3uqA4.png') }}" alt="">
+        </div>
+  
+      </div>
+    </div>
+  
+    <div   class="row contact-top">
+       <div class="col text-center">
+        <a href="{{ url('/contact') }}" class="contact-btn">Contact Us</a>
+      </div> 
+    </div>
+  </div>
+  
+  
+
+</x-layout>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand ps-4" href="{{ url('/') }}">
@@ -60,7 +60,7 @@
   <div  class="row main">
     <div class="col">
       <h1  class="text-danger"><a class="text-danger" href="{{ url('/') }}">Home</a><a class="text-danger" href="{{ url('/services') }}">/Services</a><a class="text-danger" href="">/Hostel Facilities</a></h1>
-      <!-- <h1  class="text-danger">Home/Services/Hostel Facilities</h1> -->
+    
     </div>
   </div>
   <div class="row">
@@ -135,7 +135,7 @@
 
       </div>
       
-      <!-- Courses Section -->
+      
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Courses</h4> 
         <ul class="list-unstyled">
@@ -148,7 +148,7 @@
         </ul>
       </div>
       
-      <!-- Resources Section -->
+    
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Links</h4>
         <ul class="list-unstyled">
@@ -158,14 +158,10 @@
           <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
           <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
           <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
-          
-          <!-- <li><a class="fs-6 fw-light text" href="#">TechPro Consultancy</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Frika Xchange</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Osun State Government</a></li> -->
+        
         </ul>
       </div>
       
-      <!-- Legal Section -->
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Legal</h4>
         <ul class="list-unstyled ">
@@ -175,7 +171,7 @@
         </ul>
       </div>
       
-      <!-- Contact Section -->
+    
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Contact</h4>
         <p class="fs-6 fw-light text">103 Gbodofon Street, Ibadan Road, Osogbo.</p>
@@ -195,4 +191,69 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 </body>
-</html>
+</html> --}}
+
+
+<x-layout>
+  <x-slot:title>
+    Hostel :: Page
+  </x-slot:title>
+
+  <div  class="container">
+    <div  class="row main">
+      <div class="col">
+        <h1  class="text-danger"><a class="text-danger" href="{{ url('/') }}">Home</a><a class="text-danger" href="{{ url('/services') }}">/Services</a><a class="text-danger" href="">/Hostel Facilities</a></h1>
+      
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="consultancy-text">From accessing current systems to implementing cutting-edge solutions,we offered tailored advice in areas such as  software development, cybersecurity, and digital transformation. Our experienced consultants  work closely with clients to  identify challenges, streamline operations and enhance overall efficiency. Whether you're lookinng to improve performance  or scale or your tech capabilities,we deliver actionable insights and solutions that drive success</p>
+      </div>
+    </div>
+   </div> 
+  
+  
+   <div class="container">
+    <div class="row no-gutters mt-5">
+      <div style="background-color: #3F5F94;" class="col-md-12 col-lg-5 height">
+        <div class="hostel-layout">
+        <div class="hostel-link">
+          <h1 class="facility">Our Facilities</h1>
+          <ul>
+            <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Whole Room</a></li>
+            <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Bed Space</a></li>
+            <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Common Room</a></li>
+            <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Tv and Netflix</a></li>
+            <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Internet</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="whole">
+            <h6>Whole Room</h6>
+            <h6>#150,000</h6>
+          </div>
+          <div class="bed">
+            <h6>Bed space</h6>
+            <h6>#80,000</h6>
+          </div>
+          
+  
+        </div> 
+      </div>
+      </div>
+      <div style="background-color: #3F5F94;"  class="col-md-12 col-lg-7 p-0">
+        <img class="image" src="{{ asset('assets/images/DSC_4925.jpg') }}" alt="Image">
+      </div>
+    </div>
+  
+    <div   class="row contact-top">
+      <div class="col text-center">
+        <a href="{{ url('/contact') }}" class="contact-btn">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  
+  
+
+</x-layout>

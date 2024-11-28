@@ -8,13 +8,13 @@
     <div  class="row main">
       <div class="col">
         <!-- <h1  class="text-danger home">Home/Services</h1> -->
-        <h1 ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home" href="{{ url('/contact') }}">Contact Us</a></h1>
+        <h1 class="text-danger" ><a class=" text-danger" href="{{ url('/') }}">Home/</a><a class=" text-danger" href="{{ url('/contact') }}">Contact Us</a></h1>
       </div>
     </div>
    </div> 
 
   
-   <div class="container mt-5">
+   <div class="container mt-3">
     <div class="row ">
       <div style="background-color: #3F5F94;" class="col-lg-4 col-md-12 p-0">
         <img  class="img-fluid image" src="{{ asset('assets/images/Frame 58.png') }}" alt="">

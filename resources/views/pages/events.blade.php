@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -209,4 +209,75 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 </body>
-</html>
+</html> --}}
+
+
+<x-layout>
+  <x-slot:title>
+    Event :: Page
+  </x-slot:title>
+
+  
+ <div  class="container">
+  <div  class="row main">
+    <div class="col">
+      <!-- <h1  class="text-danger home">Home/Services</h1> -->
+      <h1 class="text-danger" ><a class=" text-danger" href="{{ url('/') }}">Home/</a><a class=" text-danger" href="{{ url('/events') }}">Events</a></h1>
+    </div>
+  </div>
+ </div> 
+ 
+
+  
+ <div class="container mt-5">
+  <div class="row event-title">
+    <div class="col text-center">
+      <h1>Events</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p class="consultancy-text">We organize a variety of events throughout the year,each tailored to serve different objectives.From educational workshops and networking opportunities to industry-specific seminars and community engagement activities,our events are designed to foster learning,collaboration, and growth across diverse intrests and fields.</p>
+    </div>
+  </div>
+  <div   class="row up-text">
+    <div class="col text-center">
+      <a class="upcoming-btn" href="events.html">Upcoming Events</a>
+    </div>
+  </div>
+  <div  class="row main-text">
+    <div class="col text-center pt-5 pb-5">
+      <h6 class="event-text">November 12, 2024</h6>
+      <h6 class="event-text pt-1">10am WAT</h6>
+
+    </div>
+    <div class="col text-center  pt-5 pb-5">
+      <h6 class="event-text">Break Into Tech</h6>
+      <h6 class="event-text pt-1" >Tech Pro Institute, Nigeria</h6>
+
+    </div>
+    <div class="col text-center  pt-5 pb-5 mt-2">
+      <a href="" class="view-btn mt-5">View Program</a>
+
+    </div>
+  </div>
+  <div  class="row main-text">
+    <div class="col text-center pt-5 pb-5">
+      <h6 class="event-text">November 25, 2024</h6>
+      <h6 class="event-text pt-1">10am WAT</h6>
+
+    </div>
+    <div class="col text-center  pt-5 pb-5">
+      <h6 class="event-text">Intro to Start-up Journey</h6>
+      <h6 class="event-text pt-1" >Online Via Teams</h6>
+
+    </div>
+    <div class="col text-center  pt-5 pb-5 mt-2">
+      <a href="" class="view-btn ">View Program</a>
+
+    </div>
+  </div>
+  
+</div> 
+
+</x-layout>

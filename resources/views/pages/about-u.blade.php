@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,7 +16,6 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->                                                                                                                                                                                                          
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand ps-4" href="{{ url('/') }}">
@@ -60,7 +59,6 @@
  <div   class="container">
   <div  class="row main">
     <div class="col">
-      <!-- <h1  class="text-danger home">Home/Services</h1> -->
       <h1 ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home" href="{{ url('/about-u') }}">About You</a></h1>
     </div>
   </div>
@@ -71,7 +69,6 @@
   <div style="background-color: whitesmoke;" class="row">
     <div class="col-lg-6 col-md-12">
       <form action="payment.html" method="POST">
-    {{-- <h1 class="about ms-5">Incubation</h1> --}}
     <div class="mb-3">
         <label for="firstName" class="form-label mt-2 ms-5 label-name">FirstName</label>
         <input style="width: 80%;" type="text" class="form-control mt-2 ms-5" id="firstName" name="firstName" placeholder="John" required>
@@ -108,7 +105,7 @@
         <input style="width: 80%;" type="file" class="form-control mt-2 ms-5" id="pitchDeck" name="pitchDeck" required>
     </div>
     <button type="submit" class="submit-btn ms-5 mb-5">Submit</button>
-</form>
+  </form>
 
 
     </div>
@@ -137,7 +134,7 @@
  <footer style="background-color: #0A5098; padding: 40px 0; margin-top: 6%;">
   <div class="container">
     <div class="row gy-4">
-      <!-- TechPro and Social Media Section -->
+    
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h1 class="fw-bold"><span style="color: #E21C1C;">Tech</span>Pro</h1>
         <p class="fs-6 fw-light mb-2 follow">Follow Us On</p>
@@ -149,7 +146,7 @@
 
       </div>
       
-      <!-- Courses Section -->
+      
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Courses</h4> 
         <ul class="list-unstyled">
@@ -162,7 +159,7 @@
         </ul>
       </div>
       
-      <!-- Resources Section -->
+
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Links</h4>
         <ul class="list-unstyled">
@@ -173,13 +170,11 @@
           <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
           <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
           
-          <!-- <li><a class="fs-6 fw-light text" href="#">TechPro Consultancy</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Frika Xchange</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Osun State Government</a></li> -->
+          
         </ul>
       </div>
       
-      <!-- Legal Section -->
+  
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Legal</h4>
         <ul class="list-unstyled ">
@@ -189,7 +184,7 @@
         </ul>
       </div>
       
-      <!-- Contact Section -->
+  
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Contact</h4>
         <p class="fs-6 fw-light text">103 Gbodofon Street, Ibadan Road, Osogbo.</p>
@@ -209,4 +204,72 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 </body>
-</html>
+</html> --}}
+
+<x-layout>
+  <x-slot:title>
+    About :: Page
+  </x-slot:title>
+
+  <div   class="container">
+    <div  class="row main">
+      <div class="col text-center">
+       <h1 class="text-danger" ><a class=" text-danger " href="{{ url('/') }}">Home/</a><a class=" text-danger" href="{{ url('/about-u') }}">About You</a></h1>
+      </div>
+    </div>
+   </div> 
+
+  
+ <div class="container mt-3">
+  <div style="background-color: whitesmoke;" class="row">
+    <div class="col-lg-6 col-md-12">
+      <form action="payment.html" method="POST">
+    <div class="mb-3">
+        <label for="firstName" class="form-label mt-2 ms-5 label-name">FirstName</label>
+        <input style="width: 80%;" type="text" class="form-control mt-2 ms-5" id="firstName" name="firstName" placeholder="John" required>
+    </div>
+    <div class="mb-3">
+        <label for="lastName" class="form-label mt-2 ms-5 label-name">LastName</label>
+        <input style="width: 80%;" type="text" class="form-control mt-2 ms-5" id="lastName" name="lastName" placeholder="Doe" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label mt-2 ms-5 label-name">Email</label>
+        <input style="width: 80%;" type="email" class="form-control mt-2 ms-5" id="email" name="email" placeholder="name@example.com" required>
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label mt-2 ms-5 label-name">Phone No</label>
+        <input style="width: 80%;" type="number" class="form-control mt-2 ms-5" id="phone" name="phone" placeholder="1234567890" required>
+    </div>
+    <div class="mb-3">
+      <select  name="payment_option" style="width: 80%;" class="form-select ms-5 mt-5" id="payment-option" aria-label="Default select example">
+        <option selected="">Choose Incubation Program</option>
+        <option value="one_time">Access to Work Stations</option>
+        <option value="installments">Workshop</option>
+        <option value="installments">Development Team</option>
+        <option value="installments">Funding Oppurtunities</option>
+    </select>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="summary" class="form-label mt-2 ms-5 label-name">Summary of your idea</label>
+        <textarea style="width: 80%;" class="form-control mt-2 ms-5" id="summary" name="summary" placeholder="Write a brief summary about your idea" rows="3" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="pitchDeck" class="form-label mt-2 ms-5 label-name">Upload Pitch Deck</label>
+        <input style="width: 80%;" type="file" class="form-control mt-2 ms-5" id="pitchDeck" name="pitchDeck" required>
+    </div>
+    <button type="submit" class="submit-btn ms-5 mb-5">Submit</button>
+  </form>
+
+
+    </div>
+    <div class="col-lg-6 col-md-12 p-0">
+
+      <img width="100%" height="100%" src="{{ asset('assets/images/bila.jpg') }}" class="" alt="">
+
+    </div>
+  </div>
+ </div>
+
+</x-layout>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand ps-4" href="{{ url('/') }}">
@@ -103,7 +103,7 @@
 <footer style="background-color: #0A5098; padding: 40px 0; margin-top: 6%;">
   <div class="container">
     <div class="row gy-4">
-      <!-- TechPro and Social Media Section -->
+      
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h1 class="fw-bold"><span style="color: #E21C1C;">Tech</span>Pro</h1>
         <p class="fs-6 fw-light mb-2 follow">Follow Us On</p>
@@ -115,7 +115,7 @@
 
       </div>
       
-      <!-- Courses Section -->
+    
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Courses</h4> 
         <ul class="list-unstyled">
@@ -128,7 +128,7 @@
         </ul>
       </div>
       
-      <!-- Resources Section -->
+  
       <div class="col-lg-2 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Links</h4>
         <ul class="list-unstyled">
@@ -138,14 +138,10 @@
           <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
           <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
           <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
-          
-          <!-- <li><a class="fs-6 fw-light text" href="#">TechPro Consultancy</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Frika Xchange</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Osun State Government</a></li> -->
         </ul>
       </div>
       
-      <!-- Legal Section -->
+      
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Legal</h4>
         <ul class="list-unstyled ">
@@ -155,7 +151,7 @@
         </ul>
       </div>
       
-      <!-- Contact Section -->
+
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Contact</h4>
         <p class="fs-6 fw-light text">103 Gbodofon Street, Ibadan Road, Osogbo.</p>
@@ -175,4 +171,53 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 </body>
-</html>
+</html> --}}
+
+
+<x-layout>
+  <x-slot:title>
+    Mentorship :: Page
+  </x-slot:title>
+
+  
+  <div  class="container">
+    <div  class="row main">
+      <div class="col">
+        <h1 class="text-danger" ><a class=" text-danger" href="{{ url('/') }}">Home/</a><a class=" text-danger" href="{{ url('/services') }}">Services/</a><a class=" text-danger" href="">Mentoring</a></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="consultancy-text">From accessing current systems to implementing cutting-edge solutions,we offered tailored advice in areas such as  software development, cybersecurity, and digital transformation. Our experienced consultants  work closely with clients to  identify challenges, streamline operations and enhance overall efficiency. Whether you're lookinng to improve performance  or scale or your tech capabilities,we deliver actionable insights and solutions that drive success</p>
+      </div>
+    </div>
+   </div> 
+  
+  
+   <div class="container">
+    <div class="row no-gutters mt-5">
+      <div style="background-color: #105697;" class="col-md-12 col-lg-5">
+        
+        <div class="links">
+          <h1 style="font-size: 22px; text-align: center; padding-top: 15px;">How we support</h1>
+          <ul style="padding-bottom: 100px;">
+            <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">1 on 1 Sessions</a></li>
+            <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Group Sesssion</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-7 p-0">
+        <img class="image" src="{{ asset('assets/images/unsplash_p0qKsW3uqA4 (7).png') }}" alt="Image">
+      </div>
+    </div>
+  
+    <div   class="row contact-top">
+      <div class="col text-center">
+        <a href="{{ url('/contact') }}" class="contact-btn">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  
+  
+
+</x-layout>

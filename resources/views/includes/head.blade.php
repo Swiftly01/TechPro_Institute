@@ -11,6 +11,17 @@
   <link rel="stylesheet" href="{{asset('assets/styles/nav.css')}}">
   <link rel="stylesheet" href="{{asset('assets/styles/payment.css')}}">
   <link rel="stylesheet" href="{{asset('assets/styles/workstation.css')}}">
+
+  <link rel="stylesheet" href="{{ asset('assets/styles/about-u.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles/consultancy.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles/events.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles/gaming.css') }}">
+   <link rel="stylesheet" href="{{ asset('assets/styles/hostel.css') }}">
+   <link rel="stylesheet" href="{{ asset('assets/styles/incubation.css') }}">
+   <link rel="stylesheet" href="{{ asset('assets/styles/internship.css') }}">
+   <link rel="stylesheet" href="{{ asset('assets/styles/working.css') }}">
   
+  
+
 
 </head>

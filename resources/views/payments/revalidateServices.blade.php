@@ -6,13 +6,13 @@
   <div class="container">
     <div class="row main">
       <div class="col text-center">
-        <h1><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home" href="">Revalidate
+        <h1 class="text-danger"><a class=" text-danger" href="{{ url('/') }}">Home/</a><a class=" text-danger" href="">Revalidate
             Booking</a></h1>
       </div>
 
     </div>
   </div>
-  <div class="container mt-5">
+  <div class="container mt-2">
     <div class="row">
       <div style="background-color: whitesmoke;" class="col">
         <div class="container">

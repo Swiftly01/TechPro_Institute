@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -179,4 +179,53 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 </body>
-</html>
+</html> --}}
+
+
+<x-layout>
+  <x-slot:title>
+    Consultancy :: Page
+  </x-slot:title>
+
+  <div  class="container">
+    <div  class="row main">
+      <div class="col">
+        <h1 class="text-danger" ><a class=" text-danger " href="{{ url('/') }}">Home/</a><a class=" text-danger" href="{{ url('/services') }}">Services/</a><a class=" text-danger" href="{{ url('/consultancy') }}">IT Consultancy</a></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="consultancy-text">From accessing current systems to implementing cutting-edge solutions,we offered tailored advice in areas such as  software development, cybersecurity, and digital transformation. Our experienced consultants  work closely with clients to  identify challenges, streamline operations and enhance overall efficiency. Whether you're lookinng to improve performance  or scale or your tech capabilities,we deliver actionable insights and solutions that drive success</p>
+      </div>
+    </div>
+   </div> 
+
+  
+ <div class="container">
+  <div class="row no-gutters mt-5">
+    <div style="background-color: #105697;" class="col-md-12 col-lg-5">
+      
+      <div class="links">
+        <h1 style="font-size: 22px; text-align: center; padding-top: 15px;">What we do</h1>
+        <ul>
+          <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Software Development</a></li>
+          <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Cyber Security</a></li>
+          <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Digital transformation</a></li>
+          <li><img src="{{ asset('assets/images/mdi-light_arrow-right (1).png') }}" alt=""> <a href="">Digital Marketing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-7 p-0">
+      <img class="image" src="{{ asset('assets/images/unsplash_p0qKsW3uqA4-consult.png') }}" alt="Image">
+    </div>
+  </div>
+
+  <div   class="row contact-top">
+    <div class="col text-center">
+      <a href="{{ url('/contact') }}" class="contact-btn">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+
+</x-layout>

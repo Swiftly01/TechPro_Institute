@@ -90,6 +90,9 @@
                   <td colspan="5" class="text-right"><strong>Balance Remaining</strong></td>
                   <td><strong>&#8358;{{ number_format($balanceDue) }}</strong></td>
                 </tr>
+                <tr>
+                  <td><strong><a href="{{ url('/outstanding') }}">proceed to pay balance</a></strong></td>
+                </tr>
               @endif
             </tbody>
           </table>

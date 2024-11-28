@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Techpro Institute Nigeria</title>
   <link rel="icon" href="{{ asset('assets/images/techpro_img.png') }}" type="image/x-icon">
-  <!-- Bootstrap CSS -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="{{ asset('assets/styles/gallery.css') }}">
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand ps-4" href="{{ url('/') }}">
@@ -51,7 +51,7 @@
     </div>
 </nav>
 
-  <!-- Page Breadcrumb -->
+
   <div class="container">
     <div class="row main">
       <div class="col">
@@ -60,7 +60,6 @@
     </div>
   </div> 
 
-  <!-- Gallery and Sidebar -->
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-12">
@@ -74,7 +73,7 @@
         </div>
       </div>
 
-      <!-- Carousel Section -->
+      
       <div class="col-lg-8 col-md-12">
         <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -113,7 +112,7 @@
               </div>
           </div>
 
-          <!-- Carousel Controls -->
+      
           <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -127,11 +126,11 @@
     </div>
   </div>
 
-  <!-- Footer Section -->
+  
   <footer style="background-color: #0A5098; padding: 40px 0; margin-top: 6%;">
     <div class="container">
       <div class="row gy-4">
-        <!-- TechPro and Social Media Section -->
+        
         <div class="col-lg-2 col-md-6 col-sm-12 footer">
           <h1 class="fw-bold"><span style="color: #E21C1C;">Tech</span>Pro</h1>
           <p class="fs-6 fw-light mb-2 follow">Follow Us On</p>
@@ -143,7 +142,7 @@
   
         </div>
         
-        <!-- Courses Section -->
+        
         <div class="col-lg-2 col-md-6 col-sm-12 footer">
           <h4 class="fw-bold follow">Courses</h4> 
           <ul class="list-unstyled">
@@ -156,34 +155,30 @@
           </ul>
         </div>
         
-        <!-- Resources Section -->
+  
         <div class="col-lg-2 col-md-6 col-sm-12 footer">
           <h4 class="fw-bold follow">Links</h4>
           <ul class="list-unstyled">
             <li><a class="fs-6 fw-light  text" href="{{ url('/gaming') }}">Gaming</a></li>
             <li><a class="fs-6 fw-light text" href="{{ url('/events') }}">Events</a></li>
-            <li><a class="fs-6 fw-light  text" href="">Tech-A-Child</a></li>
+            <li><a class="fs-6 fw-light  text" href="{{ route('tech-a-teen') }}">Tech-A-Teen</a></li>
             <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
             <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
             <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
             
-            <!-- <li><a class="fs-6 fw-light text" href="#">TechPro Consultancy</a></li>
-            <li><a class="fs-6 fw-light text" href="#">Frika Xchange</a></li>
-            <li><a class="fs-6 fw-light text" href="#">Osun State Government</a></li> -->
           </ul>
         </div>
         
-        <!-- Legal Section -->
         <div class="col-lg-3 col-md-6 col-sm-12 footer">
           <h4 class="fw-bold follow">Legal</h4>
           <ul class="list-unstyled ">
-            <li><a class="fs-6 fw-light  text" href="#">Terms Of Use</a></li>
-            <li><a class="fs-6 fw-light text" href="#">Privacy Policy</a></li>
-            <li><a class="fs-6 fw-light text" href="#">Legal Notice</a></li>
+            <li><a class="fs-6 fw-light  text" href="{{ route('terms') }}">Terms Of Use</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('privacy') }}">Privacy Policy</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('legal') }}">Legal Notice</a></li>
           </ul>
         </div>
         
-        <!-- Contact Section -->
+
         <div class="col-lg-3 col-md-6 col-sm-12 footer">
           <h4 class="fw-bold follow">Contact</h4>
           <p class="fs-6 fw-light text">103 Gbodofon Street, Ibadan Road, Osogbo.</p>
@@ -201,7 +196,7 @@
 
 <script>
   var myCarousel = new bootstrap.Carousel(document.getElementById('galleryCarousel'), {
-    interval: 4000, // 2 seconds for automatic slide
+    interval: 4000, 
     ride: 'carousel'
   });
 

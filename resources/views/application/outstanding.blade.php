@@ -8,12 +8,12 @@
     <div  class="row main">
       <div class="col text-center">
         <!-- <h1  class="text-danger home">Home/Services</h1> -->
-        <h1 ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home" href="">Application</a><a class=" text-danger home" href="">/outstanding payment</a></h1>
+        <h1 class="text-danger" ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home" href="">Application</a><a class=" text-danger home" href="">/outstanding payment</a></h1>
       </div>
 
     </div>
    </div> 
-   <div class="container mt-5">
+   <div class="container mt-2">
     <div  class="row">
       <div style="background-color: whitesmoke;" class="col-lg-6 col-md-12 mx-auto">
         <div class="container">

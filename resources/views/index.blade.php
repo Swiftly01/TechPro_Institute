@@ -619,9 +619,9 @@
         <div class="col-lg-3 col-md-6 col-sm-12 footer">
           <h4 class="fw-bold follow">Legal</h4>
           <ul class="list-unstyled ">
-            <li><a class="fs-6 fw-light  text" href="#">Terms Of Use</a></li>
-            <li><a class="fs-6 fw-light text" href="#">Privacy Policy</a></li>
-            <li><a class="fs-6 fw-light text" href="#">Legal Notice</a></li>
+            <li><a class="fs-6 fw-light  text" href="{{ route('terms') }}">Terms Of Use</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('privacy') }}">Privacy Policy</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('legal') }}">Legal Notice</a></li>
           </ul>
         </div>
         
@@ -664,7 +664,7 @@
   cards.forEach((card) => {
     observer.observe(card);
   });
-});
+  });
 
 
 

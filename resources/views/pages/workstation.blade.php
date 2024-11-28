@@ -6,16 +6,16 @@
   <div class="container">
     <div class="row main">
       <div class="col">
-        <h1>
-          <a class="text-danger home" href="{{ url('/') }}">Home/</a>
-          <a class="text-danger home" href="">Workspace</a>
-          <a class="text-danger home" href="{{ route('revalidate.booking') }}">/Revalidate booking</a>
+        <h1 class="text-danger">
+          <a class="text-danger " href="{{ url('/') }}">Home/</a>
+          <a class="text-danger " href="">Workspace</a>
+          <a class="text-danger" href="{{ route('revalidate.booking') }}">/Revalidate booking</a>
         </h1>
       </div>
     </div>
   </div>
 
-  <div class="container mt-5">
+  <div class="container mt-2">
     <div style="background-color: whitesmoke;" class="row">
       <div class="container">
         <div class="gallery-layout">

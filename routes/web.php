@@ -69,6 +69,23 @@ Route::get('/workstation/revalidate/booking',  function() {
 
 })->name('revalidate.booking');
 
+Route::get('/terms', function() {
+
+    return view('pages.terms');
+
+})->name('terms');
+
+Route::get('/privacy', function() {
+    return view('pages.privacy');
+
+})->name('privacy');
+
+Route::get('/legal', function() {
+    
+    return view('pages.legal');
+
+})->name('legal');
+
 Route::get('/contact/submit',[ContactController::class, 'create'])->name('contact.submit');
 
 

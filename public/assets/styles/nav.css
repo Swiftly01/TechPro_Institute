@@ -82,7 +82,7 @@ font-size: 19px;
 
 @media screen and (max-width:975px) {
   .main {
-    padding-top: 100px;
+    padding-top: 80px;
   }
   .home {
     font-size: 25px;

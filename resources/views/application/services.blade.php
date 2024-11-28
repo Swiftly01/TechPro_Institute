@@ -7,13 +7,12 @@
   <div   class="container">
     <div  class="row main">
       <div class="col text-center">
-        <!-- <h1  class="text-danger home">Home/Services</h1> -->
-        <h1 ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home">Services</a><a class="text-danger home" href="{{ route('revalidate.booking') }}">/Revalidate booking</a></h1>
+        <h1 class="text-danger" ><a class=" text-danger" href="{{ url('/') }}">Home/</a><a class=" text-danger">Services</a><a class="text-danger " href="{{ route('revalidate.booking') }}">/Revalidate booking</a></h1>
       </div>
     </div>
    </div> 
   
-   <div class="container mt-5">
+   <div class="container mt-2">
     <div  class="row">
       <div style="background-color: whitesmoke;" class="col-lg-6 col-md-12 mx-auto">
   

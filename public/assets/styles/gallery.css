@@ -71,9 +71,9 @@ font-size: 19px;
  font-size: 16px;
 }
 
-   .home {
+   /* .home {
      font-size: 32px;
-   }
+   } */
 
    .main {
      padding-top: 150px;
@@ -86,9 +86,9 @@ font-size: 19px;
      .main {
        padding-top: 100px;
      }
-     .home {
+     /* .home {
        font-size: 25px;
-     }
+     } */
      
 
    }

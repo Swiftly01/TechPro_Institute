@@ -11,6 +11,13 @@
   
   
   <style>
+    
+@media screen and (max-width:483px) {
+
+.text-danger a {
+  font-size: 20px;
+}
+}
 
   </style>
 </head>
@@ -60,15 +67,14 @@
  <div  class="container">
   <div  class="row main">
     <div class="col">
-      <!-- <h1  class="text-danger home">Home/Services</h1> -->
-      <h1 ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home" href="{{ url('/services') }}">Services</a></h1>
+      <h1 class="text-danger"><a class=" text-danger " href="{{ url('/') }}">Home/</a><a class=" text-danger " href="{{ url('/services') }}">Services</a></h1>
     </div>
   </div>
  </div> 
 
 
- <div  class="container">
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 mt-2">
+ <div  class="container mt-1">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
     
     <div class="col">
       <div class="card shadow-lg rounded-lg border card-rad">
@@ -206,7 +212,7 @@
         <ul class="list-unstyled">
           <li><a class="fs-6 fw-light  text" href="{{ url('/gaming') }}">Gaming</a></li>
           <li><a class="fs-6 fw-light text" href="{{ url('/events') }}">Events</a></li>
-          <li><a class="fs-6 fw-light  text" href="">Tech-A-Child</a></li>
+          <li><a class="fs-6 fw-light  text" href="{{ route('tech-a-teen') }}">Tech-A-Teen</a></li>
           <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
           <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
           <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
@@ -221,9 +227,9 @@
       <div class="col-lg-3 col-md-6 col-sm-12 footer">
         <h4 class="fw-bold follow">Legal</h4>
         <ul class="list-unstyled ">
-          <li><a class="fs-6 fw-light  text" href="#">Terms Of Use</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Privacy Policy</a></li>
-          <li><a class="fs-6 fw-light text" href="#">Legal Notice</a></li>
+          <li><a class="fs-6 fw-light  text" href="{{ route('terms') }}">Terms Of Use</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('privacy') }}">Privacy Policy</a></li>
+          <li><a class="fs-6 fw-light text" href="{{ route('legal') }}">Legal Notice</a></li>
         </ul>
       </div>
       
