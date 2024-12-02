@@ -82,7 +82,7 @@
           <img width="65%" src="{{ asset('assets/images/image 22.png') }}" class="" alt="...">
           <div>
             <p style="font-size: 25px; color: #355B7D; font-weight: bold;">IT Consultancy</p>
-            <p style="font-size: 17px;">Our IT Consultancy Services provide expert guidance to help business optimize their technology infrastructure and digital strategies.</p>
+            <p style="font-size: 17px;">Our IT consultancy services offer tailored solutions to meet business goals. We optimize processes, improve efficiency, and leverage technology for success.</p>
           </div>
           <div class="mb-3">
             <a href="{{ url('/consultancy') }}" class="learn-more">Learn More</a>
@@ -97,7 +97,7 @@
           <img width="60%" src="{{ asset('assets/images/image 23.png') }}" class="" alt="...">
           <div>
             <p style="font-size: 25px; color: #355B7D; font-weight: bold;">Incubation</p>
-            <p style="font-size: 17px;">Our IT Consultancy Services provide expert guidance to help business optimize their technology infrastructure and digital strategies.</p>
+            <p style="font-size: 17px;">At TechPro Institute Nigeria, we provide incubation services to nurture startups. With resources, mentorship, and tools, we help ideas grow into successful ventures.</p>
           </div>
           <div class="mb-3">
             <a href="{{ url('/incubation') }}" class="learn-more">Learn More</a>
@@ -109,10 +109,10 @@
     <div class="col">
       <div class="card shadow-lg rounded-lg border card-rad">
         <div class="container text-center mt-4">
-          <img width="55%" src="{{ asset('assets/images/image 24.png') }}" class="" alt="...">
+          <img width="50%" src="{{ asset('assets/images/image 24.png') }}" class="" alt="...">
           <div>
             <p style="font-size: 25px; color: #355B7D; font-weight: bold;">Mentorship</p>
-            <p style="font-size: 17px;">Our IT Consultancy Services provide expert guidance to help business optimize their technology infrastructure and digital strategies.</p>
+            <p style="font-size: 17px;">We connect learners with skilled mentors who guide their personal and professional growth. Our mentorship program fosters success through valuable insights.</p>
           </div>
           <div class="mb-3">
             <a href="{{ url('mentor') }}" class="learn-more">Learn More</a>
@@ -127,7 +127,9 @@
           <img width="45%" src="{{ asset('assets/images/image.png') }}" class="" alt="...">
           <div>
             <p style="font-size: 25px; color: #355B7D; font-weight: bold;">Internship</p>
-            <p style="font-size: 17px;">Our IT Consultancy Services provide expert guidance to help business optimize their technology infrastructure and digital strategies.</p>
+            <p style="font-size: 17px;">Our internship program gives students hands-on experience in tech fields. We prepare participants for real-world challenges and successful professional careers.
+
+</p>
           </div>
           <div class="mb-3">
             <a href="{{ url('/internship') }}" class="learn-more">Learn More</a>
@@ -142,7 +144,7 @@
           <img width="58%" src="{{ asset('assets/images/image (2).png') }}" class="" alt="...">
           <div>
             <p style="font-size: 25px; color: #355B7D; font-weight: bold;">Hostel Facilities</p>
-            <p style="font-size: 17px;">Our IT Consultancy Services provide expert guidance to help business optimize their technology infrastructure and digital strategies.</p>
+            <p style="font-size: 17px;">We provide secure, affordable hostels for students and professionals. Our facilities ensure comfort and convenience to support learning and productivity.</p>
           </div>
           <div class="mb-3">
             <a href="{{ url('/hostel') }}" class="learn-more">Learn More</a>
@@ -157,7 +159,7 @@
           <img width="49%" src="{{ asset('assets/images/image (3).png') }}" class="" alt="...">
           <div>
             <p style="font-size: 25px; color: #355B7D; font-weight: bold;">Workspace</p>
-            <p style="font-size: 17px;">Our IT Consultancy Services provide expert guidance to help business optimize their technology infrastructure and digital strategies.</p>
+            <p style="font-size: 17px;">We offer modern workspace designed for innovation and teamwork. Equipped with essential amenities, it’s perfect for executing tasks and sharing ideas.</p>
           </div>
           <div class="mb-3">
             <a href="{{ url('/working') }}" class="learn-more">Learn More</a>
