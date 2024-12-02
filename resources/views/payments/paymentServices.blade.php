@@ -58,7 +58,7 @@
         --}}
         <p class="fs-5">Make direct payment to the bank details below:</p>
         <p class="fs-5">Bank Name: UBA</p>
-        <p class="fs-5 text-danger">Account Number: 1025989215</p>
+        {{-- <p class="fs-5 text-danger">Account Number: 1025989215</p> --}}
         <p class="fs-5">Account Name: Tech-Pro Edutech</p>
         <p class="fs-5"><strong>Client Name:</strong> {{ ucfirst(strtolower($client->firstname)) }} {{
           ucfirst(strtolower($client->lastname)) }}</p>
