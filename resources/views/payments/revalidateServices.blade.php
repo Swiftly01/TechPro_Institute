@@ -34,9 +34,9 @@
               {{-- <p class="fs-4">Your Payment reference no <span class="text-danger fs-4">Kabirakinola234567FTD</span>
               </p> --}}
               <p class="fs-5">Make direct payment to the below bank details</p>
-              <p class="fs-5">Bank Name: UBA</p>
-              {{-- <p class="fs-5 text-danger">Account Number: 1025989215</p> --}}
-              <p class="fs-5">Account Name: Tech-Pro Edutech</p>
+              <p class="fs-5">Bank Name:  Unity Bank</p>
+              <p class="fs-5 text-danger">Account Number:  0061481312</p> 
+              <p class="fs-5">Account Name: Tech-Pro Edutech Consulting LTD</p>
               <p class="fs-5">Upload Payment Evidence</p>
 
 
