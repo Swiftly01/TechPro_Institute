@@ -104,7 +104,7 @@
                       <p class="fs-5 text-success">60% of the course price: <span id="sixty-percent"></span></p>
                   </div>
                   <div class="mb-3">
-                      <label for="receipt_url" class="form-label label-name fs-5 text-danger">Upload Payment Receipts</label>
+                      <label for="receipt_url" class="form-label label-name fs-5 text-danger mt-3">Upload Payment Receipts</label>
                       <input  type="file" class="form-control mt-2 mx-auto input-size" name="receipt_url" placeholder="Upload Payment Receipt" required>
                       <input name="id" value="{{ $id }}" type="text" hidden>
                       <span class="text-danger">

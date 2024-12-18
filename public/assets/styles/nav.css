@@ -79,9 +79,15 @@ font-size: 19px;
 .main {
   padding-top: 150px;
 }
+.main-form {
+  padding-top: 100px;
+}
 
 @media screen and (max-width:975px) {
   .main {
+    padding-top: 80px;
+  }
+  .main-form {
     padding-top: 80px;
   }
   .home {

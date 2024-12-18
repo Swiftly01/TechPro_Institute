@@ -112,7 +112,7 @@
 
               <!-- Upload Payment Receipt -->
               <div class="mb-3">
-                <label for="receipt_url" class="form-label label-name fs-5 text-danger">Upload Payment Receipts</label>
+                <label for="receipt_url" class="form-label label-name fs-5 text-danger ">Upload Payment Receipts</label>
                 <input type="file" class="form-control mt-2  input-size" name="receipt_url"
                   placeholder="Upload Payment Receipt" value="{{ old('receipt_url') }}" required>
                 <input name="id" value="{{ $client->id }}" type="hidden">

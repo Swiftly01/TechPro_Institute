@@ -5,7 +5,7 @@
 </x-slot:title>
 
 <div   class="container">
-  <div  class="row main">
+  <div  class="row main-form">
     <div class="col text-center">
       <!-- <h1  class="text-danger home">Home/Services</h1> -->
       <h1 class="text-danger" ><a class=" text-danger home" href="{{ url('/') }}">Home/</a><a class=" text-danger home">Application</a>
