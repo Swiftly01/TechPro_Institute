@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Mail\BarbingServiceMail;
+use App\Models\Appointment;
+use App\Models\PaymentSchedule;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -18,7 +20,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $schedules = PaymentSchedule::where('type', '!=', '0')->get();
+
+        return view('application.services', compact('schedules'));
     }
 
     /**
@@ -34,7 +38,9 @@ class UserController extends Controller
             'appointment_time' => ['required', 'date_format:H:i'],
         ]);
 
-      $appointment_exists = User::where('appointment_date', $request->appointment_date)
+
+
+      $appointment_exists = Appointment::where('appointment_date', $request->appointment_date)
                                 ->where('appointment_time', $request->appointment_time)
                                 ->exists();
       
@@ -48,14 +54,17 @@ class UserController extends Controller
       $details['email'] = $request->email;
       $details['phone'] = $request->phone;
       $details['password'] = Hash::make($request->password);
-      $details['appointment_date'] = $request->appointment_date;
-      $details['appointment_time'] = $request->appointment_time;
+      $appointment_details['appointment_date'] = $request->appointment_date;
+      $appointment_details['appointment_time'] = $request->appointment_time;
 
       try {
 
         DB::beginTransaction();
 
      $user  =  User::create($details);
+     
+     $appointment_details['user_id'] = $user->id;
+     $booking = Appointment::create($appointment_details);
 
         try {
 

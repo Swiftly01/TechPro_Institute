@@ -194,7 +194,7 @@
             </span>
               
             @enderror
-          </div>
+         </div>
 
           <div class="mb-3">
             <label for="timeInput" class="form-label">Select Time</label>

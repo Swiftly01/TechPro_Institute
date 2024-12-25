@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppointmentsController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CourseController;
@@ -107,6 +108,14 @@ Route::get('/dashboard', function () {
     
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::middleware(['auth', 'verified', 'userType'])->prefix('/client')->group(function() {
+
+    Route::get('appointments/',[AppointmentsController::class, 'index'])->name('appointments.index');
+    Route::Post('appointment/update',[AppointmentsController::class, 'store'])->name('appointment.update');
+    Route::Post('appointment',[AppointmentsController::class, 'create'])->name('appointment.create');
+    Route::post('appointment/{id}/destroy',[AppointmentsController::class, 'destroy'])->name('appointment.destroy');
+
+});
 
 Route::middleware(['auth', 'verified'])->prefix('/admin')->group(function() {
     Route::get('/students', [StudentController::class, 'show'])->name('show.students');
