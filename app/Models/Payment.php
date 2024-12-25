@@ -20,8 +20,12 @@ class Payment extends Model
          return $this->belongsTo(PaymentSchedule::class,'schedule_id','id');
     }
 
-    public function client() {
-        return $this->belongsTo(Client::class, 'client_id', 'id');
+    // public function client() {
+    //     return $this->belongsTo(Client::class, 'client_id', 'id');
+    // }
+
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
     public static function generateTxn(){

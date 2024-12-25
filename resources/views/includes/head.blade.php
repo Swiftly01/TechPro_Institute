@@ -16,10 +16,11 @@
   <link rel="stylesheet" href="{{ asset('assets/styles/consultancy.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/styles/events.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/styles/gaming.css') }}">
-   <link rel="stylesheet" href="{{ asset('assets/styles/hostel.css') }}">
-   <link rel="stylesheet" href="{{ asset('assets/styles/incubation.css') }}">
-   <link rel="stylesheet" href="{{ asset('assets/styles/internship.css') }}">
-   <link rel="stylesheet" href="{{ asset('assets/styles/working.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles/hostel.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles/incubation.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles/internship.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles/working.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/styles/barbing.css') }}">
   
   
 

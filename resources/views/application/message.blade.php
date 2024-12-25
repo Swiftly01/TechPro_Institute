@@ -32,6 +32,16 @@
             <button style="background-color: #105697;" type="button" class="btn text-white">proceed to make payments</button>
           </a>
 
+
+          @elseif (isset($user))
+
+          <p>Hi {{ ucfirst(strtolower($user->email))}} you have booked an appointment succesfully</p>
+        
+          <a href="{{ route('dashboard') }}">
+            <button style="background-color: #105697;" type="button" class="btn text-white">proceed to Login Page</button>
+          </a>
+
+
   
           @endif
       

@@ -6,7 +6,7 @@
 
 <div style="margin-top: 170px" class="container d-flex justify-content-center">
     <div class="card" style="max-width: 500px; width: 100%;">
-        <div style="background-color: #0A5098;" class="card-header  text-white text-center">Admin :: Login </div>
+        <div style="background-color: #0A5098;" class="card-header  text-white text-center">Login :: Page</div>
         <div class="card-body p-4 p-lg-5 text-black">
 
             <!-- Session Status -->

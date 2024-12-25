@@ -7,6 +7,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\UserController;
 use App\Models\Client;
 use App\Models\Payment;
 use App\Models\Student;
@@ -98,9 +99,14 @@ Route::post('/services/payment/upload', [PaymentController::class, 'uploadServic
 Route::post('/services/payment/revalidate', [PaymentController::class, 'uploadRevalidatePayments'])->name('submit.revalidateBooking');
 
 
+Route::post('/services/barbing', [UserController::class, 'create'])->name('services.barbing.create');
+
+
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
+    
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware(['auth', 'verified'])->prefix('/admin')->group(function() {
     Route::get('/students', [StudentController::class, 'show'])->name('show.students');
@@ -182,6 +188,11 @@ Route::get('/services', function() {
 
 Route::get('/working', function() {
     return view('pages.working');
+});
+
+
+Route::get('/barbing', function() {
+    return view('pages.barbing');
 });
 
 

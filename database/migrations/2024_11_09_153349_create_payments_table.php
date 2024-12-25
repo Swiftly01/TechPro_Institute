@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
            // $table->foreignId('student_id')->references('id')->on('students')->onDelete('cascade');
            $table->unsignedBigInteger('student_id')->nullable();
-           $table->unsignedBigInteger('client_id')->nullable();
+           $table->unsignedBigInteger('user_id')->nullable();
             $table->decimal('amount', 10, 2)->nullable();
             $table->decimal('amount_due',10,2);
             $table->string('payment_reference')->nullable();
+            $table->string('transaction_reference')->nullable();
             $table->string('status')->nullable();
             $table->string('purpose')->nullable();
             $table->integer('number_of_people')->nullable();

@@ -65,7 +65,7 @@ class CourseSeeder extends Seeder
             'name'=>'Tech A Teen',
             'course_code'=>'TT',
             'duration'=>'Monthly', 
-            'frequency'=>'Thrice a week', 
+            'frequency'=>'Once a week', 
          ], 
           
         ]);
