@@ -62,7 +62,7 @@
                     <tbody>
                       <tr>
                           <td>{{ $index + 1 }}</td>
-                          <td>{{ $payment->client->firstname }}  {{ $payment->client->lastname }}</td>
+                          <td>{{ $payment->user->firstname }}  {{ $payment->user->lastname }}</td>
                           <td> {{ $payment->payment_reference }}</td>
                           <td>{{ $payment->status}}</td>
                           <td>&#8358;{{number_format($payment->amount)}}</td>

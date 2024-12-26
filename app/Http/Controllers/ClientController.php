@@ -11,6 +11,7 @@ class ClientController extends Controller
     /**
      * Display a listing of the resource.
      */
+    /*
     public function index()
     {
         $schedules = PaymentSchedule::where('type', '!=', '0')->get();
@@ -18,9 +19,11 @@ class ClientController extends Controller
         return view('application.services', compact('schedules'));
     }
 
+    */
     /**
      * Show the form for creating a new resource.
      */
+    /*
     public function create(Request $request)
     {
         $validate = $request->validate([
@@ -61,8 +64,8 @@ class ClientController extends Controller
 
        }
     }
-
-
+     */
+/*
     public function clientMessage($id) {
 
 
@@ -76,7 +79,8 @@ class ClientController extends Controller
         
     }
 
-
+*/
+/*
     public function loadSevicePayments($id) {
 
         $client = Client::find($id);
@@ -96,7 +100,7 @@ class ClientController extends Controller
         }
 
     }
-
+*/
     /**
      * Store a newly created resource in storage.
      */

@@ -54,9 +54,7 @@
         <p class="fs-5"><strong>Student Name:</strong> {{ ucfirst(strtolower($student->firstname))}} {{ ucfirst(strtolower($student->lastname)) }}</p>
         <p class="fs-5"><strong>Email: </strong>{{ $student->email }}</p>
         <p class="fs-5"><strong>Course: </strong>{{$student->course->name  }}</p>
-
-        
-    
+         
       
         
         @if(session('error'))
@@ -79,9 +77,12 @@
                       <label for="amount-due" class="form-label"><strong>Course Price</strong></label>
                       <input  value="&#8358;{{number_format($amount_due) }}" class="form-control mx-auto input-size" id="amount-due" readonly>
                   </div>
-                  <label for="amount-due" class="form-label text-danger"><strong>* compulsory</strong></label>
+                 
+                  @if($student->course->id !== 8)  
+
+                   <label for="amount-due" class="form-label text-danger"><strong>* compulsory</strong></label>  
                   <select  name="payment_option"  class="form-select mx-auto input-size" id="payment-option" aria-label="Default select example">
-                      <option selected="">Payment Option</option>
+                      <option value="" >Payment Option</option>
                       <option value="one_time">Full Payment</option>
                       <option value="installments">Installments</option>
                   </select>
@@ -103,6 +104,9 @@
                   <div id="installment-details" class="mt-3" style="display: none;">
                       <p class="fs-5 text-success">60% of the course price: <span id="sixty-percent"></span></p>
                   </div>
+
+                   @endif 
+                   
                   <div class="mb-3">
                       <label for="receipt_url" class="form-label label-name fs-5 text-danger mt-3">Upload Payment Receipts</label>
                       <input  type="file" class="form-control mt-2 mx-auto input-size" name="receipt_url" placeholder="Upload Payment Receipt" required>

@@ -7,11 +7,19 @@
             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                         class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
                 <ul aria-expanded="false">
-                    <li><a href="./index.html">Dashboard 1</a></li>
+                    <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
                     {{-- <li><a href="./index2.html">Dashboard 2</a></li> --}}
                 </ul>
             </li>
             <li class="nav-label">Menu</li>
+            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                        class="icon icon-app-store"></i><span class="nav-text">User Menu</span></a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('view.users') }}">View Users</a></li>
+                    <li><a href="{{ route('view.users.appointments') }}">View  Appointments</a></li>
+
+                </ul>
+            </li>
             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                         class="icon icon-app-store"></i><span class="nav-text">Student Menu</span></a>
                 <ul aria-expanded="false">
@@ -33,7 +41,7 @@
                     <li><a href="{{ route('student.payments') }}"> Approve Payments</a></li>
                     <li><a href="{{ route('view.active.payments') }}">Active Payments</a></li>
                     <li><a href="{{ route('view.failed.payments') }}">Failed Payments</a></li>
-                    <li><a href="{{ route('view.service.payments') }}">Service Payments</a></li>
+                    <li><a href="{{ route('view.service.payments') }}">Approve Service Payments</a></li>
 
                 </ul>
             </li>
@@ -46,21 +54,21 @@
                 </ul>
             </li>
 
-            @endif 
+            @endif
 
             @if(Auth::user()->user_type === 'clients')
 
-            
+
             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                         class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
                 <ul aria-expanded="false">
-                    <li><a href="{{ route('dashboard') }}">Dashboard</a></li> 
+                    <li><a href="{{ route('client.dashboard') }}">Dashboard</a></li>
                     <li><a href="{{ route('appointments.index')}}">My Appointments</a></li>
-                     
-                </ul>   
+
+                </ul>
             </li>
 
-            @endif 
+            @endif
 
 
             {{-- <li class="nav-label">Components</li>

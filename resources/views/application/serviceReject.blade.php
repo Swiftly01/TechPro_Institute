@@ -18,7 +18,7 @@
         <p>The following are your application details:</p>
         <h6>Name: {{ucfirst(strtolower($firstName))}}  {{ ucfirst(strtolower($lastName))}}</h6>
         <h6>Email Address: {{ $email }}</h6>
-        <h6>Service Requested:  {{$service}} </h6>
+        <h6>Service Requested:  {{ str_replace( '_', ' ',$service)}} </h6>
         <h6>Phone Number: {{ $phone }}</h6>
         <h6>Reason Payment was not approved: {{ $reason }}</h6>
             

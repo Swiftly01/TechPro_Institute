@@ -60,10 +60,10 @@
         <p class="fs-5">Bank Name: Unity Bank</p>
         <p class="fs-5 text-danger">Account Number:  0061481312</p> 
         <p class="fs-5">Account Name: Tech-Pro Edutech Consulting LTD</p>
-        <p class="fs-5"><strong>Client Name:</strong> {{ ucfirst(strtolower($client->firstname)) }} {{
-          ucfirst(strtolower($client->lastname)) }}</p>
-        <p class="fs-5"><strong>Client Email: </strong>{{ $client->email }}</p>
-        <p class="fs-5"><strong>Service Requested: </strong>{{ $client->service_type }}</p>
+        <p class="fs-5"><strong>Client Name:</strong> {{ ucfirst(strtolower($user->firstname)) }} {{
+          ucfirst(strtolower($user->lastname)) }}</p>
+        <p class="fs-5"><strong>Client Email: </strong>{{ $user->email }}</p>
+        <p class="fs-5"><strong>Service Requested: </strong>{{ $user->service_type }}</p>
       </div>
       <div class="col-lg-6">
 
@@ -115,7 +115,7 @@
                 <label for="receipt_url" class="form-label label-name fs-5 text-danger ">Upload Payment Receipts</label>
                 <input type="file" class="form-control mt-2  input-size" name="receipt_url"
                   placeholder="Upload Payment Receipt" value="{{ old('receipt_url') }}" required>
-                <input name="id" value="{{ $client->id }}" type="hidden">
+                <input name="id" value="{{ $user->id }}" type="hidden">
                 <span class="text-danger">
                   @error('receipt_url')
                   {{ $message }}

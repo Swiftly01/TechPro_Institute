@@ -20,9 +20,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $schedules = PaymentSchedule::where('type', '!=', '0')->get();
+        $schedules = PaymentSchedule::where('type', '!=', 'course')->get();
 
-        return view('application.services', compact('schedules'));
+        return view('application.servicesForm', compact('schedules'));
     }
 
     /**
@@ -54,6 +54,7 @@ class UserController extends Controller
       $details['email'] = $request->email;
       $details['phone'] = $request->phone;
       $details['password'] = Hash::make($request->password);
+      $details['service_type'] = 'barbing';
       $appointment_details['appointment_date'] = $request->appointment_date;
       $appointment_details['appointment_time'] = $request->appointment_time;
 
@@ -108,6 +109,104 @@ class UserController extends Controller
 
 
     }
+
+    public function storeClientDetails(Request $request)
+    {
+        $validate = $request->validate([
+            'firstname' => 'required|string',
+            'lastname' => 'required|string',
+            'email' => 'required|email|unique:clients',
+            'phone' => 'required',
+            'service_type' => 'required|string|exists:payment_schedules,type',
+            'image_url' => 'required|image|mimes:jpg,jpeg,png,gif,svg|max:1024', 
+        ]);
+
+
+        if($request->hasFile('image_url')) {
+
+            $passport = $request->File('image_url');
+            $rad = mt_rand(1000, 9999);
+
+            $passportName = md5($passport->getClientOriginalName()) . $rad . '.' .  $passport->getClientOriginalExtension();
+
+            $passport->move(public_path('upload/'), $passportName);
+            $upload = 'upload/' . $passportName;
+
+            if ($upload) {
+                $validate['image_url'] = $passportName;
+            } else {
+                return redirect()->back()->with('error passport upload failed');
+            }
+
+        }
+
+
+       $user =  User::create($validate);
+
+       if($user) {
+
+        return redirect()->route('application.user', ['id' => $user->id]);
+
+
+       }
+    }
+
+    public function userMessage($id) {
+
+
+        $userService = User::find($id);
+
+            if($userService) {
+
+                return view('application.message', compact('userService'));
+            }
+
+        
+    }
+
+    public function loadSevicePayments($id) {
+
+        $user = User::find($id);
+
+        if($user) {
+
+          $service = $user->service_type;
+
+          $schedule = PaymentSchedule::where('type', $service)->first();
+          
+          if($schedule) {
+
+            return view('payments.paymentServices', compact('schedule','user'));
+          }
+
+
+        }
+
+    }
+
+    public function getUsers() 
+    {
+        $users = User::where('user_type', 'clients')->get();
+
+
+        return view('admin.users.view', compact('users'));
+    }
+
+
+    public function getUsersAppointments() {
+
+        $users = User::with('appointments')
+                              ->where('user_type', 'clients')
+                              ->whereNotNull('service_type')
+                              ->where('service_type',  'barbing')
+                              ->get();
+
+        
+
+        return view('admin.users.appointments', compact('users'));
+    }
+
+
 
     /**
      * Store a newly created resource in storage.

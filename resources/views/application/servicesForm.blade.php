@@ -67,7 +67,7 @@
             <select style="width: 80%;" class="form-select ms-5 mb-3" name="service_type" aria-label="Default select example">
               <option value = ''>Choose A Service</option>
               @foreach ($schedules as $service )
-              <option value="{{ $service->type }}" {{ old('service_type') == $service->type ? 'selected' : '' }}>{{ $service->type }}</option>
+              <option value="{{ $service->type }}" {{ old('service_type') == $service->type ? 'selected' : '' }}>{{ str_replace(    '_', '',$service->type) }}</option>
               @endforeach
             </select>
             <span class="text-danger ms-5">

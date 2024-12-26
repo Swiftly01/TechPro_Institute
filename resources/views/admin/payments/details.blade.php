@@ -1,6 +1,6 @@
 <x-admin-layouts>
   <x-slot:title>
-    Student :: Details
+   Details  :: page
   </x-slot:title>
 
   <div class="container-fluid">
@@ -47,15 +47,15 @@
 
            @elseif(isset($payment))
 
-           <h4>Firstname : {{ $payment->client->firstname  }}</h4>
-            <h4>lastname : {{ $payment->client->lastname  }}</h4>
-            <h4>Email Address : {{ $payment->client->email }}</h4>
-            <h4>Phone Number : {{ $payment->client->phone  }}</h4>
-            <h4>Service Requested : {{ $payment->client->service_type  }}</h4>
+           <h4>Firstname : {{ $payment->user->firstname  }}</h4>
+            <h4>lastname : {{ $payment->user->lastname  }}</h4>
+            <h4>Email Address : {{ $payment->user->email }}</h4>
+            <h4>Phone Number : {{ $payment->user->phone  }}</h4>
+            <h4>Service Requested : {{ str_replace('_', ' ' $payment->user->service_type)}}</h4>
           </div>
           <div>
             <img style="height: 200px; width:200px" 
-            src="{{ asset('upload/' . $payment->client->image_url ) }}" 
+            src="{{ asset('upload/' . $payment->user->image_url ) }}" 
             alt="">
        
           </div>

@@ -62,7 +62,7 @@
                     <tbody>
                       <tr>
                           <td>{{ $index + 1 }}</td>
-                          <td>{{ $payment->client->firstname }}  {{ $payment->client->lastname }}</td>
+                          <td>{{ $payment->user->firstname }}  {{ $payment->user->lastname }}</td>
                           <td> {{ $payment->start_date }}</td>
                           <td>{{ $payment->end_date }}</td>
                           <td>{{ $payment->amount_due}}</td>

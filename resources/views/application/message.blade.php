@@ -24,11 +24,11 @@
             <button style="background-color: #105697;" type="button" class="btn text-white">proceed to make payments</button>
           </a>
 
-          @elseif (isset($client))
+          @elseif (isset($userService))
 
-          <p>Hi {{ ucfirst(strtolower($client->firstname))}} {{ $client->surname }} you have registered succesfully</p>
+          <p>Hi {{ ucfirst(strtolower($userService->firstname))}} {{ $userService->surname }} you have registered succesfully</p>
         
-          <a href="{{ route('services.payment', ['id' => $client->id,]) }}">
+          <a href="{{ route('services.payment', ['id' => $userService->id,]) }}">
             <button style="background-color: #105697;" type="button" class="btn text-white">proceed to make payments</button>
           </a>
 
@@ -37,7 +37,7 @@
 
           <p>Hi {{ ucfirst(strtolower($user->email))}} you have booked an appointment succesfully</p>
         
-          <a href="{{ route('dashboard') }}">
+          <a href="{{ route('client.dashboard') }}">
             <button style="background-color: #105697;" type="button" class="btn text-white">proceed to Login Page</button>
           </a>
 

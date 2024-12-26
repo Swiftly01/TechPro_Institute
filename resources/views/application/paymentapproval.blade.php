@@ -22,7 +22,7 @@
         <h6>Phone Number: {{ $phone }}</h6>
         <h6>Application Number: {{ $app_no }}</h6>
         <h6>Payment Reference: {{ $payment_reference }}</h6>
-        <h6>Amount Paid: {{ $amount }}</h6>
+        <h6>Amount Paid:&#8358;{{number_format($amount )}}</h6>
 
         <a href="{{ url('/verify/details') }}">
           <button style="background-color: #105697;" type="button" class="btn text-white">Proceed to verify payments</button>

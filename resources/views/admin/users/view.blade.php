@@ -1,6 +1,6 @@
 <x-admin-layouts>
   <x-slot:title>
-    Payments
+    view :: Users
   </x-slot:title>
 
   <div class="container-fluid">
@@ -8,7 +8,7 @@
       <div class="col-sm-6 p-md-0">
           <div class="welcome-text">
               <h4>Hi, welcome back!</h4>
-              <span class="ml-1 fs-5">{{ $user->email }}</span>
+              <span class="ml-1 fs-5">{{ Auth::user()->email }}</span>
           </div>
       </div>
       <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
@@ -41,7 +41,7 @@
   <div class="col-12">
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Rejected :: Payment</h4>
+            <h4 class="card-title">Basic Datatable</h4>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -49,27 +49,25 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Firstname</th>
-                            <th>Status</th> 
-                            <th>Amount Paid</th>
-                            <th>Amount_due</th>
-                            <th>purpose</th>
-                            <th>Receipt</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Service Type</th>
+                            <th>Image</th>
                         </tr>
                     </thead>
-                    @foreach ($rejectedPayments as $index => $payment )
+                    @foreach ($users as $index => $user )
                     <tbody>
                       <tr>
                           <td>{{ $index + 1 }}</td>
-                          <td>{{ $payment->user->firstname }} {{ $payment->user->lastname }}</td>
-                          <td>{{ $payment->status }}</td>
-                          <td>&#8358;{{number_format($payment->amount ?? 0 )}}</td>
-                          <td>&#8358;{{ $payment->amount_due }}</td>
-                          <td>{{ $payment->purpose}}</td>
-                          <td> <a href="{{ asset('upload/'.$payment->receipt_url) }}" target="_blank">
-                            <img style="height: 100px" src="{{ asset('upload/'.$payment->receipt_url) }}" alt="">
+                          <td>{{ $user->firstname }}  {{ $user->lastname }}</td>
+                          <td> {{ $user->phone}}</td>
+                          <td>{{ $user->email }}</td>
+                          <td>{{ $user->service_type}}</td>
+                          <td> <a href="{{ asset('upload/' .$user->image_url) }}" target="_blank">
+                            <img style="height: 100px" src="{{ asset('upload/' .$user->image_url) }}" alt="">
                           </a></td>
-                       
+                          
                       </tr>
                       
                   </tbody>
@@ -78,14 +76,12 @@
                    
                     <tfoot>
                         <tr>
-                            <th>#</th>
-                            <th>Firstname</th>
-                            <th>Status</th> 
-                            <th>Amount Paid</th>
-                            <th>Amount_due</th>
-                            <th>purpose</th>
-                            <th>Receipt</th>
-                
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Phone</th>
+                          <th>Email</th>
+                          <th>Service Type</th>
+                          <th>Image</th>
                         </tr>
                     </tfoot>
                 </table>

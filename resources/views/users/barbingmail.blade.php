@@ -18,7 +18,7 @@
         <p>Hi {{ucfirst(strtolower($email))}}  </p>
         <p>Your barbing appointment has been scheduled successfully</p>
   
-        <a href="{{ route('dashboard') }}">
+        <a href="{{ route('client.dashboard') }}">
           <button style="background-color: #105697;" type="button" class="btn text-white">Proceed to view appointment Details</button>
         </a>
           

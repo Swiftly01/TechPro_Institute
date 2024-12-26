@@ -8,7 +8,7 @@
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                 </button>
             </div>
-            <div class="modal-body">Are you sure you want to Reject {{ ucfirst(strtolower($payment->student->firstname)) }} {{ ucfirst(strtolower($payment->student->lastname))  }} Payment</div>
+            <div class="modal-body text-dark">Are you sure you want to Reject <span class="text-danger" > {{ ucfirst(strtolower($payment->student->firstname)) }} {{ ucfirst(strtolower($payment->student->lastname))  }} Payment </span></div>
             <input type="hidden"  name="payment_id" type="text" value="{{ $payment->id }}">
             <input type="text" class="form-control  " value="" name="reject-reason" required> 
             <span class="text-danger">
@@ -18,8 +18,9 @@
               @enderror
             </span>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-warning">Reject</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-danger">Reject</button>
                 
             </div>
         </div>

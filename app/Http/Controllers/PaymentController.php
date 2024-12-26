@@ -54,7 +54,7 @@ class PaymentController extends Controller
                              ->get();
 
         $user = $request->user();
-        return  view('admin.payments.view', ['payments' => $payments, 'user' => $user]);
+        return  view('admin.payments.uploads', ['payments' => $payments, 'user' => $user]);
     }
 
     /**
@@ -111,6 +111,11 @@ class PaymentController extends Controller
           if (!$schedule) {
               return redirect()->back()->with('error', 'No payment schedule found for the course.');
           }
+
+          $year = date('Y');
+          $type = 'TXN';
+    
+          $txn = Student::genRefNo($year, $type);
   
           Payment::create([
               'receipt_url' => $receiptName,
@@ -118,6 +123,7 @@ class PaymentController extends Controller
               'amount_due' => $schedule->amount,
               'purpose' => $schedule->purpose,
               'schedule_id' => $courseId,
+              'transaction_reference' => $txn,
           ]);
   
           $student->update([
@@ -168,9 +174,9 @@ class PaymentController extends Controller
 
     $inv = $request->input('inv');
 
-    $client = Client::where('service_no', $inv)->first();
+    $user = User::where('app_service_no', $inv)->first();
     
-    if(!$client) {
+    if(!$user) {
 
       return redirect()->back()->with('error', 'No previous payment or Invalid Service No');
     }
@@ -205,11 +211,16 @@ class PaymentController extends Controller
     }
 
      
-    $service_type = $client->service_type;
+    $service_type = $user->service_type;
 
     $schedule = PaymentSchedule::where('type', $service_type)->first();
 
     if($schedule) {
+
+      $year = date('Y');
+      $type = 'TXN';
+
+      $txn = Student::genRefNo($year, $type);
 
      $payment =  Payment::create([
        'receipt_url' => $receiptName,
@@ -218,7 +229,8 @@ class PaymentController extends Controller
        'end_date' => $request->input('end_date'),
        'number_of_people' => $request->input('number_of_people'),
       // 'amount' => $schedule->amount,
-       'client_id' => $client->id,
+      'transaction_reference' => $txn,
+       'user_id' => $user->id,
        'purpose' => $schedule->purpose
      ]);
 
@@ -268,10 +280,22 @@ class PaymentController extends Controller
         return  redirect()->back()->with('error', 'Invalid Student Details');
       }
 
-    
+      $payment_option = $request->payment_option;
+
+
+      if($student->course_id === 8 && $payment_option === null) {
+
+        $payment_option = 'one_time';
+
+        $request->merge(['payment_option' => $payment_option]);
+
+       
+      }
+
+
       $validate = $request->validate([
         'receipt_url' => 'required|image|max:1024',
-        'payment_option' => 'required|in:one_time,installments',
+         'payment_option' => 'required|in:one_time,installments',
         
       ]);
 
@@ -306,12 +330,18 @@ class PaymentController extends Controller
 
      if($schedule) {
 
+      $year = date('Y');
+      $type = 'TXN';
+
+      $txn = Student::genRefNo($year, $type);
+
         $payment =  Payment::create([
             'receipt_url' => $receiptName,
             'student_id' => $student->id,
             'amount_due' => $schedule->amount,
             'purpose' => $schedule->purpose,
             'schedule_id' => $course_id,
+            'transaction_reference' => $txn,
     
           ]);
 
@@ -343,11 +373,11 @@ class PaymentController extends Controller
 
     public function uploadServicePayments(Request $request) {
 
-      $clientId = $request->input('id');
+      $userId = $request->input('id');
   
-      $client = Client::find($clientId);
+      $user = User::find($userId);
 
-      if(!$client) {
+      if(!$user) {
 
         return  redirect()->back()->with('error', 'Invalid  Details');
       }
@@ -382,11 +412,15 @@ class PaymentController extends Controller
       }
 
       
-     $service_type = $client->service_type;
+     $service_type = $user->service_type;
 
      $schedule = PaymentSchedule::where('type', $service_type)->first();
 
      if($schedule) {
+      $year = date('Y');
+      $type = 'TXN';
+
+      $txn = Student::genRefNo($year, $type);
 
       $payment =  Payment::create([
         'receipt_url' => $receiptName,
@@ -395,7 +429,8 @@ class PaymentController extends Controller
         'end_date' => $request->input('end_date'),
         'number_of_people' => $request->input('number_of_people'),
        // 'amount' => $schedule->amount,
-        'client_id' => $client->id,
+         'transaction_reference' => $txn,
+        'user_id' => $user->id,
         'purpose' => $schedule->purpose
       ]);
 
@@ -453,7 +488,7 @@ class PaymentController extends Controller
 
       $user = $request->user();
 
-      $payment = Payment::with('client')->where('id', $paymentId)->first();
+      $payment = Payment::with('user')->where('id', $paymentId)->first();
       if($payment)  {
 
         return view('admin.payments.details', [ 'user' => $user, 'payment' => $payment]);
@@ -502,8 +537,9 @@ class PaymentController extends Controller
       $student = Student::find($student_id);
 
       $year = date('Y');
+      $type = 'APP';
 
-      $app_no = Student::genAppNo($year);
+      $app_no = Student::genRefNo($year, $type);
 
       if(empty($student->app_no)) {
 
@@ -562,23 +598,25 @@ class PaymentController extends Controller
 
 
 
-      $clientId = $payment->client_id;
+      $userId = $payment->user_id;
 
-      $client = Client::find($clientId);
+      $user = User::find($userId);
 
       $year = date('Y');
 
-      $inv = Student::genServiceNo($year);
- 
-      if(is_null($client->service_no)) {
+      $type = 'INV';
 
-        $client->service_no = $inv;
-        $client->save();
+      $inv = Student::genRefNo($year, $type);
+ 
+      if(is_null($user->service_no)) {
+
+        $user->app_service_no = $inv;
+        $user->save();
       }
 
       $payment->save();
 
-      Mail::to($client->email)->send( new ServicePaymentMail ($client->firstname, $client->lastname, $client->email, $client->service_type, $client->phone, $inv, $payment->payment_reference, $payment->amount));
+      Mail::to($user->email)->send( new ServicePaymentMail ($user->firstname, $user->lastname, $user->email, $user->service_type, $user->phone, $inv, $payment->payment_reference, $payment->amount));
 
 
       return redirect()->back()->with('success', 'Payment Record Updated Successfully');
@@ -630,16 +668,16 @@ class PaymentController extends Controller
     $payment_id = $request->input('payment_id');
       $reason = $request->input('reject-reason');
 
-      $payment = Payment::with('client')->find($payment_id);
+      $payment = Payment::with('user')->find($payment_id);
 
 
       if($payment) {
 
-        $firstName = $payment->client->firstname;
-        $lastName = $payment->client->lastname;
-        $email = $payment->client->email;
-        $course = $payment->client->service_type;
-        $phone = $payment->client->phone;
+        $firstName = $payment->user->firstname;
+        $lastName = $payment->user->lastname;
+        $email = $payment->user->email;
+        $course = $payment->user->service_type;
+        $phone = $payment->user->phone;
 
         $status = 'failed';
 
@@ -665,10 +703,9 @@ class PaymentController extends Controller
 
       $approvedPayments = Payment::with('student')->where('status','success')->whereNotNull('student_id')->get();
       
-
       $user = $request->user();
 
-      return view('admin.payments.approvedpayments', [
+      return view('admin.payments.approved', [
         'approvedPayments' => $approvedPayments,
          'user' => $user
       ]);
@@ -676,7 +713,7 @@ class PaymentController extends Controller
 
     public function showApprovedServicePayment(Request $request) {
 
-      $approvedPayments = Payment::with('client')->where('status','success')->whereNull('student_id')->get();
+      $approvedPayments = Payment::with('user')->where('status','success')->whereNull('student_id')->get();
       
       $user = $request->user();
 
@@ -690,7 +727,7 @@ class PaymentController extends Controller
     public function showRejectedServicePayment(Request $request) {
 
       
-      $rejectedPayments = Payment::with('client')->where('status', 'failed')->whereNull('student_id')->get();
+      $rejectedPayments = Payment::with('user')->where('status', 'failed')->whereNull('student_id')->get();
 
       $user = $request->user();
 
@@ -711,7 +748,7 @@ class PaymentController extends Controller
 
       $user = $request->user();
 
-      return view('admin.payments.rejectedpayments', [
+      return view('admin.payments.rejected', [
         'rejectedPayments' => $rejectedPayments,
          'user' => $user
       ]);
@@ -722,7 +759,7 @@ class PaymentController extends Controller
 
     public function showServicePayment(Request $request) {
 
-      $payments = Payment::with('client')->whereNotNull('client_id')->whereNull('status')->get();
+      $payments = Payment::with('user')->whereNotNull('user_id')->whereNull('status')->get();
 
       $user = $request->user();
 

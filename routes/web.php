@@ -34,7 +34,7 @@ Route::prefix('/application')->name('application.')->group(function() {
     Route::post('/form', [StudentController::class, 'store'])->name('store.form');
     Route::get('/mail/{id}', [StudentController::class, 'applicationMailNotification'])->name('mail');
 
-    Route::get('/client/{id}', [ClientController::class, 'clientMessage'])->name('client');
+    Route::get('user/{id}', [UserController::class, 'userMessage'])->name('user');
     
 
 });
@@ -93,22 +93,29 @@ Route::get('/contact/submit',[ContactController::class, 'create'])->name('contac
 
 Route::get('/payment/{id}', [PaymentController::class, 'loadPage'])->name('payment.show');
 Route::post('/payment/upload', [PaymentController::class, 'store'])->name('payment.upload');
-Route::get('/services/application', [ClientController::class, 'index'])->name('services.register');
-Route::post('/services/register', [ClientController::class, 'create'])->name('services.store');
-Route::get('/services/payment/{id}', [ClientController::class, 'loadSevicePayments'])->name('services.payment');
+Route::get('/services/application', [UserController::class, 'index'])->name('services.register');
+Route::post('/services/register', [UserController::class, 'storeClientDetails'])->name('services.store');
+Route::get('/services/payment/{id}', [UserController::class, 'loadSevicePayments'])->name('services.payment');
 Route::post('/services/payment/upload', [PaymentController::class, 'uploadServicePayments'])->name('service.upload');
 Route::post('/services/payment/revalidate', [PaymentController::class, 'uploadRevalidatePayments'])->name('submit.revalidateBooking');
 
 
 Route::post('/services/barbing', [UserController::class, 'create'])->name('services.barbing.create');
 
-
+/*
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
     
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware(['auth', 'verified', 'userType'])->prefix('/client')->group(function() {
+*/
+
+Route::middleware(['auth', 'verified', 'user'])->prefix('/client')->group(function() {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+        
+    })->name('client.dashboard');
+    
 
     Route::get('appointments/',[AppointmentsController::class, 'index'])->name('appointments.index');
     Route::Post('appointment/update',[AppointmentsController::class, 'store'])->name('appointment.update');
@@ -117,8 +124,17 @@ Route::middleware(['auth', 'verified', 'userType'])->prefix('/client')->group(fu
 
 });
 
-Route::middleware(['auth', 'verified'])->prefix('/admin')->group(function() {
+Route::middleware(['auth', 'verified', 'admin'])->prefix('/admin')->group(function() {
+
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+        
+    })->name('dashboard');
+    
+   
     Route::get('/students', [StudentController::class, 'show'])->name('show.students');
+    Route::get('users', [UserController::class, 'getUsers'])->name('view.users');
+    Route::get('users/appointments', [UserController::class, 'getUsersAppointments'])->name('view.users.appointments');
    // Route::get('/pending/view', [StudentController::class, 'pending'])->name('application.pending');
   //  Route::post('/approve', [StudentController::class, 'approve'])->name('application.approve');
     Route::post('/student/edit/{id}', [StudentController::class, 'update'])->name('student.edit');

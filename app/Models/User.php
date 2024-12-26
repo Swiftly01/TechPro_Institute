@@ -45,9 +45,9 @@ class User extends Authenticatable
     ];
 
 
-    public function appointment() 
+    public function appointments() 
     {
-        return $this->hasMany(Appointment::class);
+       return $this->hasMany(Appointment::class,)->orderBy('appointment_date', 'desc');
     }
 
 

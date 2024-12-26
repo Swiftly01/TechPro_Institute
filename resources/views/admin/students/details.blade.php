@@ -9,8 +9,8 @@
       <div class="col">
         <h1>
           <a class="text-danger home" href="{{ url('/') }}">Home</a> / 
-          <a class="text-danger home" href="">Application</a> / 
-          <a class="text-danger home" href="">Details</a>
+          <a class="text-danger home" href="{{ route('application.form') }}">Application</a> / 
+          <a class="text-danger home">Details</a>
         </h1>
       </div> 
     </div>
@@ -26,12 +26,12 @@
         <div class="row">
           <!-- Student Information -->
           <div class="col-md-8">
-            <h4>Firstname: {{ $student->firstname }}</h4>
-            <h4>Lastname: {{ $student->lastname }}</h4>
-            <h4>Email Address: {{ $student->email }}</h4>
-            <h4>Phone Number: {{ $student->phone }}</h4>
-            <h4>App No: {{ $student->app_no }}</h4>
-            <h4>Course: {{ $student->course->name }}</h4>
+            <h5>Firstname: {{ $student->firstname }}</h5>
+            <h5>Lastname: {{ $student->lastname }}</h5>
+            <h5>Email Address: {{ $student->email }}</h5>
+            <h5>Phone Number: {{ $student->phone }}</h5>
+            <h5>App No: {{ $student->app_no }}</h5>
+            <h5>Course: {{ $student->course->name }}</h5>
           </div>
 
           <!-- Student Image -->
@@ -91,8 +91,15 @@
                   <td><strong>&#8358;{{ number_format($balanceDue) }}</strong></td>
                 </tr>
                 <tr>
-                  <td><strong><a href="{{ url('/outstanding') }}">proceed to pay balance</a></strong></td>
+                  <td colspan="9"><strong><a href="{{ url('/outstanding') }}">proceed to pay balance</a></strong></td>
                 </tr>
+              @endif
+
+              @if($student->course_id === 8)
+              <tr>
+                <td colspan="9"><strong><a  href="{{ url('/outstanding') }}">proceed to pay for a new month</a></strong></td>
+              </tr>
+                
               @endif
             </tbody>
           </table>

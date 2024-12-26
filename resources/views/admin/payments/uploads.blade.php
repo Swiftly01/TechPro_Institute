@@ -51,7 +51,6 @@
                             <th>#</th>
                             <th>Firstname</th>
                             <th>Lastname</th>
-                            <th>App No</th>
                             <th>Amount_due</th>
                             <th>purpose</th>
                             <th>Receipt</th>
@@ -64,20 +63,19 @@
                           <td>{{ $index + 1 }}</td>
                           <td>{{ $payment->student->firstname }}</td>
                           <td>{{ $payment->student->lastname }}</td>
-                          <td>{{ $payment->student->app_no }}</td>
-                          <td>{{ $payment->amount_due }}</td>
+                          <td>&#8358;{{number_format($payment->amount_due) }}</td>
                           <td>{{ $payment->purpose}}</td>
                           <td> <a href="{{ asset('upload/'.$payment->receipt_url) }}" target="_blank">
                             <img style="height: 100px" src="{{ asset('upload/'.$payment->receipt_url) }}" alt="">
                           </a></td>
                           <td>
-                            @include('admin.payments.approval')
+                            @include('admin.payments.approvalForm')
                               <div style="display: flex;gap:5px">
                               <a href="{{ route('details.show',['id' => $payment->student->id]) }}" class="btn btn-primary" >View Details</a>
                               
                               <button class="btn btn-success"data-toggle="modal" data-target="#basicModalapprove{{ $payment->id }}" >Approve</button>
 
-                              @include('admin.payments.rejectModal')
+                              @include('admin.payments.rejectForm')
                               <button class="btn btn-danger"  data-toggle="modal" data-target="#basicModalReject{{ $payment->id }}" >Reject</button>
                               </div>
                               
@@ -95,7 +93,6 @@
                           <th>#</th>
                           <th>Firstname</th>
                           <th>Lastname</th>
-                          <th>App No</th>
                           <th>Amount_due</th>
                           <th>purpose</th>
                           <th>Receipt</th>

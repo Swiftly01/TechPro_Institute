@@ -18,15 +18,15 @@
         <p>The following are your application and payment details:</p>
         <h6>Name: {{ucfirst(strtolower($firstName))}}  {{ ucfirst(strtolower($lastName))}}</h6>
         <h6>Email Address: {{ $email }}</h6>
-        <h6>Service Requested:  {{$services}} </h6>
+        <h6>Service Requested:  {{ str_replace('_', ' ',$services)}} </h6>
         <h6>Phone Number: {{ $phone }}</h6>
-        <h6>service refrence: {{ $inv }}</h6>
+        <h6>service reference: {{ $inv }}</h6>
         <h6>Payment Reference: {{ $payment_reference }}</h6>
-        <h6>Amount Paid: {{ $amount }}</h6>
+        <h6>Amount Paid:&#8358;{{number_format($amount)}}</h6>
 
-        <a href="{{ url('/verify/details') }}">
+        {{-- <a href="{{ url('/verify/details') }}">
           <button style="background-color: #105697;" type="button" class="btn text-white">Proceed to verify payments</button>
-        </a>
+        </a> --}}
             
         </div>
     </div>

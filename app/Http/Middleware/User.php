@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class checkUserType
+class User
 {
     /**
      * Handle an incoming request.
@@ -22,7 +22,7 @@ class checkUserType
             return $next($request);
          }
 
-         abort(403, 'Unauthorized acess');
+         abort(403, 'Unauthorized access');
     
     }
 }
