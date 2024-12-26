@@ -595,6 +595,7 @@
             <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">UI/UX Design</a></li>
             <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Graphic Design</a></li>
             <li><a class="fs-6 fw-light text" href="{{ route('application.form') }}">Full Stack Development</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('tech-a-teen') }}">Tech A Teen</a></li>
           </ul>
         </div>
         
@@ -608,6 +609,8 @@
             <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
             <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
             <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ url('/barbing') }}">Barbing</a></li>
+
             
             <!-- <li><a class="fs-6 fw-light text" href="#">TechPro Consultancy</a></li>
             <li><a class="fs-6 fw-light text" href="#">Frika Xchange</a></li>
