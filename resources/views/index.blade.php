@@ -376,6 +376,63 @@
                 </div>
               </div>
             </div>
+            <div class="col">
+              <div class="card shadow-lg rounded-lg border card-rad">
+                <p  class="text-center pt-2 title">Barbing</p>
+                <div style="margin-top: -10px;" class="container">
+                  <img style="height:180px" src="{{ asset('assets/images/image (2).png') }}" class="card-img-top" alt="...">
+                <div>
+                  <p class="desc">
+                    Our barbering services offer expert grooming, tailored to your style. We use premium products and provide a comfortable, relaxing environment for a refined, polished look.
+                    </p>
+                 
+                </div>
+                <div class="reg">
+                  <a href="{{ url('/contact') }}"> <button class="register-card contact-us">Contact Us</button></a>
+                 
+                </div>
+                
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg rounded-lg border card-rad">
+                <p  class="text-center pt-2 title">Hostel</p>
+                <div style="margin-top: -10px;" class="container">
+                  <img height="180px" src="{{ asset('assets/images/DSC_4925.jpg') }}" class="card-img-top" alt="...">
+                <div>
+                  <p class="desc">
+                    Our hostels at TechPro Institute are secure affordable, and designed for students and professionals, offering modern facilities and a productive, comfortable stay.
+                    </p>
+                 
+                </div>
+                <div class="reg">
+                  <a href="{{ url('/contact') }}"> <button class="register-card contact-us">Contact Us</button></a>
+                 
+                </div>
+                
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-lg rounded-lg border card-rad">
+                <p  class="text-center pt-2 title">IT Consultancy</p>
+                <div style="margin-top: -10px;" class="container">
+                  <img height="180px" src="{{ asset('assets/images/image 22.png') }}" class="card-img-top" alt="...">
+                <div>
+                  <p class="desc">
+                    Our IT consultancy services provide expert solutions for achieving business success, optimizing operations, enhancing productivity, and leveraging advanced technology.
+                    </p>
+                 
+                </div>
+                <div class="reg">
+                  <a href="{{ url('/contact') }}"> <button class="register-card contact-us">Contact Us</button></a>
+                 
+                </div>
+                
+                </div>
+              </div>
+            </div>
           </div>
   
     
