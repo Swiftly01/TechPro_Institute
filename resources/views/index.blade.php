@@ -336,7 +336,7 @@
             <div class="col">
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Work Space</p>
-                <div style="margin-top: -10px;" class="container">
+                <div style="margin-top: -12px;" class="container">
                   <img height="180px" src="{{ asset('assets/images/DSC_4919.jpg') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">Our workspace offers a productive environment for professionals and learners, equipped with high-speed internet.</p>
@@ -385,10 +385,10 @@
                   <p class="desc">
                     Our barbering services offer expert grooming, tailored to your style. We use premium products and provide a comfortable, relaxing environment for a refined, polished look.
                     </p>
-                 
+                
                 </div>
                 <div class="reg">
-                  <a href="{{ url('/contact') }}"> <button class="register-card contact-us">Contact Us</button></a>
+                  <a href="{{ url('/barbing') }}"> <button class="register-card contact-us">View More</button></a>
                  
                 </div>
                 
@@ -407,7 +407,7 @@
                  
                 </div>
                 <div class="reg">
-                  <a href="{{ url('/contact') }}"> <button class="register-card contact-us">Contact Us</button></a>
+                  <a href="{{ url('/hostel') }}"> <button class="register-card contact-us">View More</button></a>
                  
                 </div>
                 

@@ -98,9 +98,7 @@ class UserController extends Controller
 
         return redirect()->back()->with('error', 'Something went wrong when processing your application, kindly try again later!!');
 
-
-
-
+        
       }
 
 
