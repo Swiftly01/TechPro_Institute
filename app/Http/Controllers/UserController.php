@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Mail\BarbingServiceMail;
 use App\Models\Appointment;
+use App\Models\Payment;
 use App\Models\PaymentSchedule;
+use App\Models\Student;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -211,7 +213,70 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $request->validate([
+            'email' => ['required', 'unique:users,email', 'string'],
+            'phone' => ['required', 'regex:/^(080|091|090|070|081)[0-9]{8}$/'],
+            'receipt_url' => 'required|image|mimes:jpg,jpeg,png,gif,svg|max:1024',
+        ]);
+
+    try{
+
+        DB::beginTransaction();
+
+        $user = User::create([
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'service_type' => 'barbing',
+        ]);
+
+          $paymentData = [];
+          
+        if($request->hasFile('receipt_url')) {
+
+            $passport = $request->File('receipt_url');
+            $rad = mt_rand(1000, 9999);
+
+            $passportName = md5($passport->getClientOriginalName()) . $rad . '.' .  $passport->getClientOriginalExtension();
+
+            $passport->move(public_path('upload/'), $passportName);
+            $upload = 'upload/' . $passportName;
+
+            $paymentData['receipt_url'] = $passportName;
+            
+        }
+
+        $year = date('Y');
+        $txn = Student::genRefNo($year, 'TXN');
+        $inv = Student::genRefNo($year, 'INV');
+
+        $paymentData['user_id'] = $user->id;
+        $paymentData['transaction_reference'] = $txn;
+        $paymentData['invoice_no'] = $inv;
+        $paymentData['purpose'] = 'services';
+        $paymentData['amount_due'] = 0.00;
+
+        Payment::create($paymentData);
+
+        DB::commit();
+
+        return redirect()->back()->with('success', 'Payment uploaded successfully');
+
+    } catch(Exception $err) {
+
+        DB::rollBack();
+
+        log::error($err->getMessage());
+
+        return redirect()->back()->with('error', 'Payment Upload could not be proccessed, kindly contact our support team');
+
+    }
+
+
+
+
+
+
+
     }
 
     /**

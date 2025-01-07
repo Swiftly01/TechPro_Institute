@@ -101,6 +101,7 @@ Route::post('/services/payment/revalidate', [PaymentController::class, 'uploadRe
 
 
 Route::post('/services/barbing', [UserController::class, 'create'])->name('services.barbing.create');
+Route::post('/services/barbing/upload', [UserController::class, 'store'])->name('service.barbing.upload');
 
 /*
 Route::get('/dashboard', function () {

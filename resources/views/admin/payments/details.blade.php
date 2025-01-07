@@ -51,11 +51,11 @@
             <h4>lastname : {{ $payment->user->lastname  }}</h4>
             <h4>Email Address : {{ $payment->user->email }}</h4>
             <h4>Phone Number : {{ $payment->user->phone  }}</h4>
-            <h4>Service Requested : {{ str_replace('_', ' ' $payment->user->service_type)}}</h4>
+            <h4>Service Requested : {{ str_replace('_', ' ', $payment->user->service_type)}}</h4>
           </div>
           <div>
             <img style="height: 200px; width:200px" 
-            src="{{ asset('upload/' . $payment->user->image_url ) }}" 
+            src="{{ asset($payment->user->image_url ? 'upload/' . $payment->user->image_url : 'upload/' . $payment->receipt_url) }}"
             alt="">
        
           </div>

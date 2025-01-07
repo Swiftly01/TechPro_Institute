@@ -14,15 +14,25 @@
 
         @endif
 
+        @if(session('success'))
+
+        <div class="alert alert-danger">
+          {{ session('success') }}
+        </div>
+
+        @endif
+
+        
+
         @if ($errors->any())
-          <div class="alert alert-danger">
-              <ul>
-                  @foreach ($errors->all() as $error)
-                      <li>{{ $error }}</li>
-                  @endforeach
-                  </ul>
-              </div>
-         @endif
+        <div class="alert alert-danger">
+          <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+        </div>
+        @endif
         <h1>
           <a class="text-danger home" href="index.html">Home/</a><a class="text-danger home"
             href="services.html">Services/</a><a class="text-danger home" href="mentoring.html">Barbing</a>
@@ -76,6 +86,7 @@
           <div style="background-color: #0a5098; width: 30%">
             <div class="gallery-btn-layout">
               <a class="gallery-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Schedule Now</a>
+              <a class="make-payment-btn" data-bs-toggle="modal" data-bs-target="#payment" href="">Make Payment</a>
             </div>
           </div>
         </div>
@@ -193,7 +204,76 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="payment" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Barbing Service :: Payment</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <!-- Modal Body -->
+          <form action="{{ route('service.barbing.upload') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="modal-body">
+              <!-- Step 1 -->
+              <div id="step-1" class="step">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                  <input value="{{ old('email') }}" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="phone_number" class="form-label">Phone Number</label>
+                  <input value="{{ old('phone') }}" name="phone" type="number" class="form-control" id="phone_number" aria-describedby="phone_number">
+                </div>
+                <button type="button" class="btn btn-secondary float-end mb-3" id="next-step">Next</button>
+              </div>
+              
+              <!-- Step 2 -->
+              <div id="step-2" class="step d-none">
+                <h6>Kindly make payment to the account details below and upload payment evidence</h6>
+                <h6 class="text-muted">Account Name: Tech-Pro Edutech Consulting LTD</h6>
+                <h6 class="text-muted">Bank Name: Unity Bank</h6>
+                <h6 class="text-muted">Account Number: 0061481312</h6>
+                <div class="mb-3">
+                  <label for="payment_receipt" class="form-label">Upload Payment Evidence</label>
+                  <input  type="file" class="form-control" name="receipt_url">
+                </div>
+                <button type="button" class="btn btn-secondary" id="prev-step">Back</button>
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
   </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const nextButton = document.getElementById('next-step');
+      const prevButton = document.getElementById('prev-step');
+      const step1 = document.getElementById('step-1');
+      const step2 = document.getElementById('step-2');
+  
+      nextButton.addEventListener('click', function () {
+        step1.classList.add('d-none');
+        step2.classList.remove('d-none');
+      });
+  
+      prevButton.addEventListener('click', function () {
+        step2.classList.add('d-none');
+        step1.classList.remove('d-none');
+      });
+    });
+  </script>
+  
 
 
 </x-layout>

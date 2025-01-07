@@ -73,6 +73,7 @@ ul li {
 }
 
 
+
 .schedule-btn {
   display: inline-block;
     padding: 10px 50px;
@@ -130,6 +131,20 @@ h1 a {
     transition: background-color 0.3s ease;
   }
 
+  .make-payment-btn {
+     display: inline-block;
+     text-align: center;
+     padding: 10px 40px;
+     background-color:  #E4C939; 
+     color: #0A5098; 
+     font-size: 28px;
+     border: none;
+     border-radius: 50px;
+     text-decoration: none;
+     transition: background-color 0.3s ease;
+     margin-top: 53px; 
+   }
+
   .explore-btn:hover {
     background-color: #e6b800;
   }
@@ -143,7 +158,7 @@ h1 a {
   }
   .gallery-btn-layout {
     text-align: center;
-    margin-top: 70%;
+    margin-top: 58%;
   }
 
   @media screen and (max-width: 1189px) {
@@ -151,11 +166,22 @@ h1 a {
       padding: 15px 40px;
       font-size: 20px;
     }
+    .make-payment-btn {
+      padding: 15px 40px;
+      font-size: 20px;
+      margin-top: 35px; 
+
+    }
   }
   @media screen and (max-width: 981px) {
     .gallery-btn {
       padding: 12px 25px;
       font-size: 18px;
+    }
+    .make-payment-btn {
+      padding: 10px 20px;
+      font-size: 18px;
+
     }
   }
 
@@ -164,11 +190,54 @@ h1 a {
       padding: 15px 20px;
       font-size: small;
     }
+    .make-payment-btn {
+      padding: 15px 20px;
+      font-size: small;
+
+    }
   }
+  @media screen and (max-width: 757px) {
+    .gallery-btn {
+      padding: 10px 20px;
+      font-size: small;
+    }
+    .make-payment-btn {
+      padding: 8px 20px;
+      font-size: small;
+
+    }
+    .gallery-btn-layout {
+      margin-top: 50%;
+    }
+  }
+
+
   @media screen and (max-width: 665px) {
     .gallery-btn {
       padding: 6px 8px;
       font-size: x-small;
+    }
+    .make-payment-btn {
+      padding: 6px 8px;
+      font-size: x-small;
+
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .gallery-btn {
+      padding: 6px 8px;
+      font-size: x-small;
+    }
+    .make-payment-btn {
+      padding: 6px 8px;
+      font-size: x-small;
+      margin-top: 30px;
+
+    }
+
+    .gallery-btn-layout {
+      margin-top: 45%;
     }
   }
 
@@ -187,3 +256,6 @@ h1 a {
       font-size: 15px;
     }
   }
+
+
+ 

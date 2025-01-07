@@ -114,6 +114,8 @@ class PaymentController extends Controller
 
           $year = date('Y');
           $type = 'TXN';
+
+        $prevPayment = Payment::where('student_id', $student->id)->first();
     
           $txn = Student::genRefNo($year, $type);
   
@@ -124,6 +126,7 @@ class PaymentController extends Controller
               'purpose' => $schedule->purpose,
               'schedule_id' => $courseId,
               'transaction_reference' => $txn,
+              'invoice_no' => $prevPayment->invoice_no,
           ]);
   
           $student->update([
@@ -172,9 +175,9 @@ class PaymentController extends Controller
 
   public function uploadRevalidatePayments(Request $request) {
 
-    $inv = $request->input('inv');
+    $service_no = $request->input('inv');
 
-    $user = User::where('app_service_no', $inv)->first();
+    $user = User::where('app_service_no', $service_no)->first();
     
     if(!$user) {
 
@@ -215,6 +218,8 @@ class PaymentController extends Controller
 
     $schedule = PaymentSchedule::where('type', $service_type)->first();
 
+    $userPrevPayment = Payment::where('user_id', $user->id)->first();
+
     if($schedule) {
 
       $year = date('Y');
@@ -230,6 +235,7 @@ class PaymentController extends Controller
        'number_of_people' => $request->input('number_of_people'),
       // 'amount' => $schedule->amount,
       'transaction_reference' => $txn,
+      'invoice_no' => $userPrevPayment->invoice_no,
        'user_id' => $user->id,
        'purpose' => $schedule->purpose
      ]);
@@ -334,6 +340,7 @@ class PaymentController extends Controller
       $type = 'TXN';
 
       $txn = Student::genRefNo($year, $type);
+      $inv = Student::genRefNo($year, 'INV');
 
         $payment =  Payment::create([
             'receipt_url' => $receiptName,
@@ -342,6 +349,7 @@ class PaymentController extends Controller
             'purpose' => $schedule->purpose,
             'schedule_id' => $course_id,
             'transaction_reference' => $txn,
+            'invoice_no' => $inv,
     
           ]);
 
@@ -421,6 +429,7 @@ class PaymentController extends Controller
       $type = 'TXN';
 
       $txn = Student::genRefNo($year, $type);
+      $inv = Student::genRefNo($year, 'INV');
 
       $payment =  Payment::create([
         'receipt_url' => $receiptName,
@@ -430,8 +439,9 @@ class PaymentController extends Controller
         'number_of_people' => $request->input('number_of_people'),
        // 'amount' => $schedule->amount,
          'transaction_reference' => $txn,
+         'invoice_no' => $inv,
         'user_id' => $user->id,
-        'purpose' => $schedule->purpose
+        'purpose' => $schedule->purpose,
       ]);
 
       $admin = User::first();
