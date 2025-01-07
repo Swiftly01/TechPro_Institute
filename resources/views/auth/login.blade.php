@@ -4,6 +4,18 @@
     Admin :: Login
 </x-slot:title>
 
+<style>
+    /* Ensuring consistent border and visibility */
+    .form-control {
+        border: 1px solid #ced4da;
+        border-radius: 0;
+    }
+    .form-control:focus {
+        border-color: #0A5098;
+        box-shadow: none;
+    }
+</style>
+
 <div style="margin-top: 170px" class="container d-flex justify-content-center">
     <div class="card" style="max-width: 500px; width: 100%;">
         <div style="background-color: #0A5098;" class="card-header  text-white text-center">Login :: Page</div>
@@ -55,6 +67,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 
 

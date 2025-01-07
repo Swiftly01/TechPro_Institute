@@ -380,7 +380,7 @@
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p  class="text-center pt-2 title">Barbing</p>
                 <div style="margin-top: -10px;" class="container">
-                  <img style="height:180px" src="{{ asset('assets/images/image (2).png') }}" class="card-img-top" alt="...">
+                  <img style="height:180px" src="{{ asset('assets/images/barbing2.jpg') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">
                     Our barbering services offer expert grooming, tailored to your style. We use premium products and provide a comfortable, relaxing environment for a refined, polished look.
