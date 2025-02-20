@@ -160,9 +160,9 @@
     <div class="container about ">
       <div class="row">
         <div class="">
-          <h1  class="text-center text-danger">Our Available Courses</h1>
+          <h1  class="text-center text-danger mb-0">Our Available Courses</h1>
 
-          <div class="row  row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4 mt-5"> 
+          <div class="row  row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4 mt-0 mt-md-5"> 
             <div class="col">
               <div class="card shadow-lg rounded-lg border card-rad">
                 <p class="text-center pt-2 title">Front-End Development</p>
@@ -218,7 +218,7 @@
                   <p class="desc">Design user-friendly interfaces with Figma and Adobe XD. Create intuitive, visually appealing designs that enhance user experience.</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
-                    <p>#100, 000</p>
+                    <p>#150, 000</p>
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
