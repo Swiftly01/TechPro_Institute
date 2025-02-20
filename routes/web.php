@@ -54,6 +54,39 @@ Route::get('/verify/details', function() {
 
 });
 
+
+Route::get('/projects', function() {
+
+    return view('pages.projects');
+
+});
+
+
+Route::get('/frika', function() {
+
+    return view('pages.frika');
+
+});
+Route::get('/digital', function() {
+
+    return view('pages.digital');
+
+});
+Route::get('/sportsganner', function() {
+
+    return view('pages.sportsganner');
+
+});
+Route::get('/various', function() {
+
+    return view('pages.various');
+
+});
+Route::get('/ngo', function() {
+
+    return view('pages.ngo');
+
+});
 Route::get('/payment/success', function() {
     return view ('payments.success');
 

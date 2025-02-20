@@ -123,6 +123,9 @@
           <li class="nav-item me-5">
             <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
           </li>
+          <li class="nav-item me-5">
+                    <a class="nav-link" href="{{ url('/project') }}">Projects</a>
+                </li>
           <li class="nav-item d-lg-none">
             <a href="{{ url('/verify/details') }}" class="nav-link">
               <button class="register">Login</button>

@@ -77,8 +77,7 @@
     <div class="row main">
       <div class="col">
         <!-- <h1  class="text-danger home">Home/Services</h1> -->
-        <h1 class="text-danger"><a class=" text-danger " href="{{ url('/') }}">Home/</a><a class=" text-danger"
-            href="{{ route('application.form') }}">Courses</a></h1>
+        <h1 class="text-danger"><a class=" text-danger " href="{{ url('/') }}">Projects</a></h1>
       </div>
     </div>
   </div>
@@ -90,22 +89,23 @@
         <div class="row  row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4"> 
           <div class="col">
             <div class="card shadow-lg rounded-lg border card-rad">
-              <p class="text-center pt-2 title">Front-End Development</p>
+              <p class="text-center pt-2 title">Frika Xchange</p>
               <div style="margin-top: -10px;" class="container"> 
-                <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0004.jpg') }}" class="card-img-top" alt="...">
+                <!-- <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0004.jpg') }}" class="card-img-top" alt="..."> -->
                 <div>
-                  <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
+                  <p class="desc">Frika Xchange, a growing currency exchange platform, 
+                    faced significant challenges with their existing application...</p>
                   <div class="price pt-3">
-                    <p class="me-2">Price</p>
-                    <p>#130, 000</p>
+                    <!-- <p class="me-2">Price</p>
+                    <p>#130, 000</p> -->
                   </div>
                   <div class="duration">
-                    <p class="ms-1">Duration</p>
-                    <p class="me-2">3 Months</p>
+                    <!-- <p class="ms-1">Duration</p>
+                    <p class="me-2">3 Months</p> -->
                   </div>
                 </div>
                 <div class="reg">
-                  <a href="{{ route('application.form') }}"><button class="register-card">Register Now</button></a>
+                  <a href="{{ route('application.form') }}"><button class="register-card">Read More</button></a>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@
             <div class="card shadow-lg rounded-lg border card-rad">
               <p  class="text-center pt-2 title">Back-End Development</p>
               <div style="margin-top: -10px;" class="container">
-                <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0003.jpg') }}" class="card-img-top" alt="...">
+                <!-- <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0003.jpg') }}" class="card-img-top" alt="..."> -->
               <div>
                 <p class="desc">Master backend development by building robust server-side apps. Manage databases, APIs, and logic for seamless user experiences.</p>
                 <div class="price pt-3">
@@ -138,7 +138,7 @@
             <div class="card shadow-lg rounded-lg border card-rad">
               <p  class="text-center pt-2 title">UI/UX  Design</p>
               <div style="margin-top: -10px;" class="container">
-                <img style="height: 180px" src="{{ asset('assets/images/DSC_5001.jpg') }}" class="card-img-top" alt="...">
+                <!-- <img style="height: 180px" src="{{ asset('assets/images/DSC_5001.jpg') }}" class="card-img-top" alt="..."> -->
               <div>
                 <p class="desc">Design user-friendly interfaces with Figma and Adobe XD. Create intuitive, visually appealing designs that enhance user experience.</p>
                 <div class="price pt-3">
@@ -162,7 +162,7 @@
             <div class="card shadow-lg rounded-lg border card-rad">
               <p class="text-center pt-2 title">Cyber Security</p>
               <div style="margin-top: -10px;" class="container">
-                <img style="height: 180px" src="{{ asset('assets/images/DSC_5002.jpg') }}" class="card-img-top" alt="...">
+                <!-- <img style="height: 180px" src="{{ asset('assets/images/DSC_5002.jpg') }}" class="card-img-top" alt="..."> -->
                 <div>
                   <p class="desc">Secure your digital assets with our cybersecurity program. Learn to spot vulnerabilities, prevent threats, and protect systems effectively.</p>
                   <div class="price pt-3">
@@ -184,7 +184,7 @@
             <div class="card shadow-lg rounded-lg border card-rad">
               <p  class="text-center pt-2 title">Full Stack Development</p>
               <div style="margin-top: -5px;" class="container">
-                <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0005.jpg') }}" class="card-img-top" alt="...">
+                <!-- <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0005.jpg') }}" class="card-img-top" alt="..."> -->
               <div>
                 <p class="desc">Build web apps with our full-stack program. Master both front-end and back-end technologies for dynamic, responsive solutions.</p>
                 <div class="price pt-3">
@@ -208,7 +208,7 @@
             <div class="card shadow-lg rounded-lg border card-rad">
               <p  class="text-center pt-2 title">Data Analytics</p>
               <div style="margin-top: -10px;" class="container">
-                <img style="height: 180px" src="{{ asset('assets/images/DSC_5000.jpg') }}" class="card-img-top" alt="...">
+                <!-- <img style="height: 180px" src="{{ asset('assets/images/DSC_5000.jpg') }}" class="card-img-top" alt="..."> -->
               <div>
                 <p class="desc">Unlock the power of data with our analytics program. Master tools to analyze, interpret, and turn data into actionable insights.</p>
                 <div class="price pt-3">
