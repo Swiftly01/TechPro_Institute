@@ -40,7 +40,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 mt-2">
+        <ul class="mx-auto mt-2 mb-2 navbar-nav mb-lg-0">
           <li class="nav-item me-5">
             <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
           </li>
@@ -77,27 +77,27 @@
     <div class="row main">
       <div class="col">
         <!-- <h1  class="text-danger home">Home/Services</h1> -->
-        <h1 class="text-danger"><a class=" text-danger " href="{{ url('/') }}">Home/</a><a class=" text-danger"
+        <h1 class="text-danger"><a class=" text-danger" href="{{ url('/') }}">Home/</a><a class=" text-danger"
             href="{{ route('application.form') }}">Courses</a></h1>
       </div>
     </div>
   </div>
 
 
-  <div class="container about mt-1">
+  <div class="container mt-1 about">
     <div class="row">
       <div class="">
-        <div class="row  row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4"> 
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4"> 
           <div class="col">
-            <div class="card shadow-lg rounded-lg border card-rad">
-              <p class="text-center pt-2 title">Front-End Development</p>
+            <div class="border rounded-lg shadow-lg card card-rad">
+              <p class="pt-2 text-center title">Front-End Development</p>
               <div style="margin-top: -10px;" class="container"> 
                 <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0004.jpg') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
-                  <div class="price pt-3">
+                  <div class="pt-3 price">
                     <p class="me-2">Price</p>
-                    <p>#130, 000</p>
+                    <p>#150, 000</p>
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
@@ -111,15 +111,15 @@
             </div>
           </div>
           <div class="col">
-            <div class="card shadow-lg rounded-lg border card-rad">
-              <p  class="text-center pt-2 title">Back-End Development</p>
+            <div class="border rounded-lg shadow-lg card card-rad">
+              <p  class="pt-2 text-center title">Back-End Development</p>
               <div style="margin-top: -10px;" class="container">
                 <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0003.jpg') }}" class="card-img-top" alt="...">
               <div>
                 <p class="desc">Master backend development by building robust server-side apps. Manage databases, APIs, and logic for seamless user experiences.</p>
-                <div class="price pt-3">
+                <div class="pt-3 price">
                   <p class="me-2">Price</p>
-                  <p>#150, 000</p>
+                  <p>#170, 000</p>
                 </div>
                 <div class="duration">
                   <p class="ms-1">Duration</p>
@@ -135,13 +135,13 @@
             </div>
           </div>
           <div class="col">
-            <div class="card shadow-lg rounded-lg border card-rad">
-              <p  class="text-center pt-2 title">UI/UX  Design</p>
+            <div class="border rounded-lg shadow-lg card card-rad">
+              <p  class="pt-2 text-center title">UI/UX  Design</p>
               <div style="margin-top: -10px;" class="container">
                 <img style="height: 180px" src="{{ asset('assets/images/DSC_5001.jpg') }}" class="card-img-top" alt="...">
               <div>
                 <p class="desc">Design user-friendly interfaces with Figma and Adobe XD. Create intuitive, visually appealing designs that enhance user experience.</p>
-                <div class="price pt-3">
+                <div class="pt-3 price">
                   <p class="me-2">Price</p>
                   <p>#100, 000</p>
                 </div>
@@ -159,13 +159,13 @@
             </div>
           </div>
           <div class="col">
-            <div class="card shadow-lg rounded-lg border card-rad">
-              <p class="text-center pt-2 title">Cyber Security</p>
+            <div class="border rounded-lg shadow-lg card card-rad">
+              <p class="pt-2 text-center title">Cyber Security</p>
               <div style="margin-top: -10px;" class="container">
                 <img style="height: 180px" src="{{ asset('assets/images/DSC_5002.jpg') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">Secure your digital assets with our cybersecurity program. Learn to spot vulnerabilities, prevent threats, and protect systems effectively.</p>
-                  <div class="price pt-3">
+                  <div class="pt-3 price">
                     <p class="me-2">Price</p>
                     <p>#130, 000</p>
                   </div>
@@ -181,15 +181,15 @@
             </div>
           </div>
           <div class="col">
-            <div class="card shadow-lg rounded-lg border card-rad">
-              <p  class="text-center pt-2 title">Full Stack Development</p>
+            <div class="border rounded-lg shadow-lg card card-rad">
+              <p  class="pt-2 text-center title">Full Stack Development</p>
               <div style="margin-top: -5px;" class="container">
                 <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0005.jpg') }}" class="card-img-top" alt="...">
               <div>
                 <p class="desc">Build web apps with our full-stack program. Master both front-end and back-end technologies for dynamic, responsive solutions.</p>
-                <div class="price pt-3">
+                <div class="pt-3 price">
                   <p class="me-2">Price</p>
-                  <p>#250, 000</p>
+                  <p>#320, 000</p>
                 </div>
                 <div class="duration">
                   <p class="ms-1">Duration</p>
@@ -205,13 +205,13 @@
             </div>
           </div>
           <div class="col">
-            <div class="card shadow-lg rounded-lg border card-rad">
-              <p  class="text-center pt-2 title">Data Analytics</p>
+            <div class="border rounded-lg shadow-lg card card-rad">
+              <p  class="pt-2 text-center title">Data Analytics</p>
               <div style="margin-top: -10px;" class="container">
                 <img style="height: 180px" src="{{ asset('assets/images/DSC_5000.jpg') }}" class="card-img-top" alt="...">
               <div>
                 <p class="desc">Unlock the power of data with our analytics program. Master tools to analyze, interpret, and turn data into actionable insights.</p>
-                <div class="price pt-3">
+                <div class="pt-3 price">
                   <p class="me-2">Price</p>
                   <p>#130, 000</p>
                 </div>
@@ -257,7 +257,7 @@
         <!-- TechPro and Social Media Section -->
         <div class="col-lg-2 col-md-6 col-sm-12 footer">
           <h1 class="fw-bold"><span style="color: #E21C1C;">Tech</span>Pro</h1>
-          <p class="fs-6 fw-light mb-2 follow">Follow Us On</p>
+          <p class="mb-2 fs-6 fw-light follow">Follow Us On</p>
           <div class="d-flex">
             <a href="http://wa.me/2348086478810" class="me-3 " target="_blank"><i
                 class="bi bi-whatsapp fs-4 follow"></i></a>
@@ -285,11 +285,11 @@
         <div class="col-lg-2 col-md-6 col-sm-12 footer">
           <h4 class="fw-bold follow">Links</h4>
           <ul class="list-unstyled">
-            <li><a class="fs-6 fw-light  text" href="{{ url('/gaming') }}">Gaming</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ url('/gaming') }}">Gaming</a></li>
             <li><a class="fs-6 fw-light text" href="{{ url('/events') }}">Events</a></li>
-            <li><a class="fs-6 fw-light  text" href="{{ route('tech-a-teen') }}">Tech-A-Teen</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('tech-a-teen') }}">Tech-A-Teen</a></li>
             <li><a class="fs-6 fw-light text" href="#">Meetups</a></li>
-            <li><a class="fs-6 fw-light  text" href="{{ url('/internship') }}">Internship</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ url('/internship') }}">Internship</a></li>
             <li><a class="fs-6 fw-light text" href="{{ url('/hostel') }}">Hostel Facilities</a></li>
 
           </ul>
@@ -299,7 +299,7 @@
         <div class="col-lg-3 col-md-6 col-sm-12 footer">
           <h4 class="fw-bold follow">Legal</h4>
           <ul class="list-unstyled ">
-            <li><a class="fs-6 fw-light  text" href="{{ route('terms') }}">Terms Of Use</a></li>
+            <li><a class="fs-6 fw-light text" href="{{ route('terms') }}">Terms Of Use</a></li>
             <li><a class="fs-6 fw-light text" href="{{ route('privacy') }}">Privacy Policy</a></li>
             <li><a class="fs-6 fw-light text" href="{{ route('legal') }}">Legal Notice</a></li>
           </ul>
