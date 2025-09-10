@@ -46,7 +46,7 @@ class Payment_ScheduleSeeder extends Seeder
             ],
             [
              'course_id'=>5,
-              'amount' => 100000.00,
+              'amount' => 150000.00,
               'purpose' => 'sch_fee',
               'type' => 'course',
               'desc' =>  'School fees payment for UI/UX',

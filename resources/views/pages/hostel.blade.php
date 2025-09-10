@@ -231,11 +231,11 @@
         <div>
           <div class="whole">
             <h6>Whole Room</h6>
-            <h6>#150,000</h6>
+            <h6>#170,000</h6>
           </div>
           <div class="bed">
             <h6>Bed space</h6>
-            <h6>#80,000</h6>
+            <h6>#120,000</h6>
           </div>
           
   

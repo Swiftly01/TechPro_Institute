@@ -70,7 +70,10 @@
         <div class="carousel-item active">
           <img src="{{ asset('assets/images/DSC_4907.jpg') }}" class="d-block w-100 img-fluid" alt="Techpro Training 1">
           <div class="carousel-caption">
+
             <h1 class="carousel-text">TechPro Institute<br> <span style="color:orange">Nigeria</span></h1>
+
+              
           </div>
         </div>
         
