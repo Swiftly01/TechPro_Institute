@@ -175,7 +175,7 @@
                     <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
                     <div class="price pt-3">
                       <p class="me-2">Price</p>
-                      <p>#130, 000</p>
+                      <p>#170, 000</p>
                     </div>
                     <div class="duration">
                       <p class="ms-1">Duration</p>
@@ -197,7 +197,7 @@
                   <p class="desc">Master backend development by building robust server-side apps. Manage databases, APIs, and logic for seamless user experiences.</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
-                    <p>#150, 000</p>
+                    <p>#250, 000</p>
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
@@ -267,7 +267,7 @@
                   <p class="desc">Build web apps with our full-stack program. Master both front-end and back-end technologies for dynamic, responsive solutions.</p>
                   <div class="price pt-3">
                     <p class="me-2">Price</p>
-                    <p>#250, 000</p>
+                    <p>#340, 000</p>
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
