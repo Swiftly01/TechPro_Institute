@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\DataTransferObjects\BlogDto;
+use App\DataTransferObjects\BlogDTO;
 use App\Exceptions\MediaProcessingException;
 use App\Http\Requests\StoreBlogRequest;
 use App\Http\Requests\UpdateBlogRequest;
