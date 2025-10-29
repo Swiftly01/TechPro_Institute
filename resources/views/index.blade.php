@@ -545,7 +545,7 @@
                     <div class="col">
                         <div class="border-0 shadow-sm card h-100">
                             @if ($firstImage)
-                                <img src="{{ $firstImage }}" class="card-img-top" alt="{{ $blog->title }}">
+                                <img src="{{ $firstImage }}" height="250px" class="card-img-top" alt="{{ $blog->title }}">
                             @else
                                 
                                 <img src="{{ asset('images/default-placeholder.jpg') }}" class="card-img-top"
