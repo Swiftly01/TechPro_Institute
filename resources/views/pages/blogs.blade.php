@@ -18,7 +18,9 @@
         $firstImage = $images->first();
 
         // Ensure the image URL is absolute (not relative)
-        $ogImage = $firstImage ? url($firstImage) : asset('default-preview.jpg');
+        $ogImage = $firstImage ? asset($firstImage) : asset('default-preview.jpg');
+
+        dd($ogImage);
     @endphp
 
     <!-- Open Graph (for Facebook, WhatsApp, LinkedIn) -->
