@@ -11,6 +11,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('assets/styles/nav.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/blogs.css') }}">
+    <meta property="og:title" content="{{ $blog->title }}">
+    <meta property="og:description" content="{{ $blog->excerpt }}">
+    @php
+        $images = $blog->getFeaturedImages('featured_image');
+        $firstImage = $images->first();
+
+        // Ensure the image URL is absolute (not relative)
+        $ogImage = $firstImage ? url($firstImage) : asset('default-preview.jpg');
+    @endphp
+
+    <!-- Open Graph (for Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="{{ $blog->title }}">
+    <meta property="og:description" content="{{ Str::limit(strip_tags($blog->excerpt), 150) }}">
+    <meta property="og:image" content="{{ $ogImage }}">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $blog->title }}">
+    <meta name="twitter:description" content="{{ Str::limit(strip_tags($blog->excerpt), 150) }}">
+    <meta name="twitter:image" content="{{ $ogImage }}">
+
+
     <style>
         :root {
             --primary-color: #1e3a8a;
