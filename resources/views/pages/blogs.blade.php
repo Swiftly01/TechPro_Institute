@@ -125,7 +125,8 @@
                 </p>
 
                 <p class="text-secondary mb-4">
-                    {{ Str::limit(strip_tags($blog->content), 300) }}
+                    {{-- {{ Str::limit(strip_tags($blog->content), 300) }} --}}
+                    {!! nl2br(e($blog->content)) !!}
                 </p>
 
                 {{-- Highlights --}}
