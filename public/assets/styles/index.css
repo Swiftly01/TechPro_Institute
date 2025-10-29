@@ -543,7 +543,7 @@ h1 span {
 
 }
 
-.card {
+.card_custom {
   perspective: 1000px;
   transform-style: preserve-3d;
   transition: transform 0.5s ease, box-shadow 0.3s ease;
@@ -553,15 +553,38 @@ h1 span {
   /* Start invisible */
 }
 
-.card.animate {
+.card_custom.animate {
   transform: translateY(0);
   /* Move to its original position */
   opacity: 1;
   /* Make it visible */
 }
 
-.card:hover {
+.card_custom:hover {
   transform: translateY(10px);
   /* Slight downward movement on hover */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.read_more_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: #e63946; 
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.read_more_link i {
+  transition: transform 0.3s ease;
+}
+
+.read_more_link:hover {
+  color: #c1121f; 
+  transform: translateX(2px);
+}
+
+.read_more_link:hover i {
+  transform: translateX(4px);
 }

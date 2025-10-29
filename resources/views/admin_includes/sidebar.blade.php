@@ -8,10 +8,16 @@
                         class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
                 <ul aria-expanded="false">
                     <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                    {{-- <li><a href="./index2.html">Dashboard 2</a></li> --}}
                 </ul>
             </li>
+            
             <li class="nav-label">Menu</li>
+             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                        class="ti-bookmark-alt"></i><span class="nav-text">Blog Menu</span></a>
+                <ul aria-expanded="false">
+                    <li><a href="{{route('blogs.index')}}">View Blogs</a></li>
+                </ul>
+            </li>
             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                         class="icon icon-app-store"></i><span class="nav-text">User Menu</span></a>
                 <ul aria-expanded="false">

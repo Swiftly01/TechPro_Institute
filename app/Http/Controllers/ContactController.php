@@ -48,7 +48,7 @@ class ContactController extends Controller
 
        }
 
-       return redirect()->back()->with('errro', 'Sorry, Your Request Could Not Be Completed !!');
+       return redirect()->back()->with('errror', 'Sorry, Your Request Could Not Be Completed !!');
 
 
 
