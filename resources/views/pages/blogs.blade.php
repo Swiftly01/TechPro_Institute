@@ -11,6 +11,137 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('assets/styles/nav.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/blogs.css') }}">
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --text-color: #333;
+            --light-blue: #e5edff;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.9)),
+                url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+            position: relative;
+            width: 100%;
+        }
+
+        .breadcrumb {
+            margin-bottom: 2rem;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+            opacity: 0.8;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+        }
+
+        .carousel-caption {
+            transition: all 0.4s ease;
+        }
+
+        .carousel-item img {
+            filter: brightness(0.9);
+            transition: transform 0.4s ease;
+        }
+
+        .carousel-item:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Footer responsive styles */
+        footer {
+            width: 100%;
+        }
+
+        footer .row {
+            justify-content: space-between;
+        }
+
+        footer .col-lg-2,
+        footer .col-lg-3 {
+            margin-bottom: 1rem;
+        }
+
+        footer h4,
+        footer h1 {
+            margin-bottom: 1rem;
+        }
+
+        footer .follow {
+            /* color: white; */
+        }
+
+        footer .text {
+            /* color: rgba(255, 255, 255, 0.8); */
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        footer .text:hover {
+            color: white;
+
+        }
+
+        /* Navbar responsive styles */
+        .navbar-brand img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+
+
+        @media (max-width: 768px) {
+
+
+            footer .row {
+                text-align: center;
+            }
+
+            footer .d-flex {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+
+            footer {
+                padding: 30px 0;
+            }
+        }
+    </style>
+
 
 
 
@@ -237,7 +368,7 @@
     <footer style="background-color: #0A5098; padding: 40px 0; margin-top: 6%;">
         <div class="container">
             <div class="row gy-4">
-
+                <!-- TechPro and Social Media Section -->
                 <div class="col-lg-2 col-md-6 col-sm-12 footer">
                     <h1 class="fw-bold"><span style="color: #E21C1C;">Tech</span>Pro</h1>
                     <p class="fs-6 fw-light mb-2 follow">Follow Us On</p>
