@@ -243,10 +243,10 @@
                         @forelse ($images as $index => $image)
                             <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                                 <img src="{{ $image }}" class="d-block w-100" alt="{{ $blog->title }}">
-                                <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                                {{-- <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
                                     <h5 class="text-white">{{ Str::limit($blog->excerpt, 60) }}</h5>
                                     <p class="small text-white-50">{{ Str::limit($blog->subtitle, 60) }}</p>
-                                </div>
+                                </div> --}}
                             </div>
                         @empty
                             <div class="carousel-item active">
