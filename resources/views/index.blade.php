@@ -178,7 +178,7 @@
                                         comprehensive Front-End Development Course</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#170, 000</p>
+                                        <p>#200, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -204,7 +204,7 @@
                                         APIs, and logic for seamless user experiences.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#250, 000</p>
+                                        <p>#300, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -232,7 +232,7 @@
                                         appealing designs that enhance user experience.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#150, 000</p>
+                                        <p>#200, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -260,7 +260,7 @@
                                         vulnerabilities, prevent threats, and protect systems effectively.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#130, 000</p>
+                                        <p>#220, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -286,7 +286,7 @@
                                         technologies for dynamic, responsive solutions.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#340, 000</p>
+                                        <p>#400, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -314,7 +314,7 @@
                                         interpret, and turn data into actionable insights.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#130, 000</p>
+                                        <p>#250, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -575,7 +575,7 @@
                 @endforelse
             </div>
 
-          <div class="d-flex justify-content-center my-5">
+          <div class="my-5 d-flex justify-content-center">
             {{ $blogs->onEachSide(5)->links() }}
 
           </div>
