@@ -32,6 +32,7 @@ class Blog extends Model implements HasMedia
         $this
             ->addMediaConversion('preview')
             ->fit(Fit::Contain, 300, 300)
+            ->sharpen(10)
             ->nonQueued();
     }
 
