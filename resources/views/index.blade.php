@@ -178,7 +178,7 @@
                                         comprehensive Front-End Development Course</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#200, 000</p>
+                                        <p>#170, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -204,7 +204,7 @@
                                         APIs, and logic for seamless user experiences.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#300, 000</p>
+                                        <p>#250, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -232,7 +232,7 @@
                                         appealing designs that enhance user experience.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#200, 000</p>
+                                        <p>#160, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>

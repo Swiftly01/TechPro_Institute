@@ -143,7 +143,7 @@
                 <p class="desc">Design user-friendly interfaces with Figma and Adobe XD. Create intuitive, visually appealing designs that enhance user experience.</p>
                 <div class="pt-3 price">
                   <p class="me-2">Price</p>
-                  <p>#100, 000</p>
+                  <p>#160, 000</p>
                 </div>
                 <div class="duration">
                   <p class="ms-1">Duration</p>
@@ -167,7 +167,7 @@
                   <p class="desc">Secure your digital assets with our cybersecurity program. Learn to spot vulnerabilities, prevent threats, and protect systems effectively.</p>
                   <div class="pt-3 price">
                     <p class="me-2">Price</p>
-                    <p>#130, 000</p>
+                    <p>#220, 000</p>
                   </div>
                   <div class="duration">
                     <p class="ms-1">Duration</p>
@@ -189,7 +189,7 @@
                 <p class="desc">Build web apps with our full-stack program. Master both front-end and back-end technologies for dynamic, responsive solutions.</p>
                 <div class="pt-3 price">
                   <p class="me-2">Price</p>
-                  <p>#340, 000</p>
+                  <p>#400, 000</p>
                 </div>
                 <div class="duration">
                   <p class="ms-1">Duration</p>
@@ -213,7 +213,7 @@
                 <p class="desc">Unlock the power of data with our analytics program. Master tools to analyze, interpret, and turn data into actionable insights.</p>
                 <div class="pt-3 price">
                   <p class="me-2">Price</p>
-                  <p>#130, 000</p>
+                  <p>#250, 000</p>
                 </div>
                 <div class="duration">
                   <p class="ms-1">Duration</p>
