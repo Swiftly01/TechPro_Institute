@@ -114,16 +114,16 @@ Route::post('/services/barbing', [UserController::class, 'create'])->name('servi
 Route::post('/services/barbing/upload', [UserController::class, 'store'])->name('service.barbing.upload');
 
 
-Route::middleware(['auth', 'verified', 'user'])->prefix('/client')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('client.dashboard');
+// Route::middleware(['auth', 'verified', 'user'])->prefix('/client')->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('admin.dashboard');
+//     })->name('client.dashboard');
 
-    Route::get('appointments/', [AppointmentsController::class, 'index'])->name('appointments.index');
-    Route::Post('appointment/update', [AppointmentsController::class, 'store'])->name('appointment.update');
-    Route::Post('appointment', [AppointmentsController::class, 'create'])->name('appointment.create');
-    Route::post('appointment/{id}/destroy', [AppointmentsController::class, 'destroy'])->name('appointment.destroy');
-});
+//     Route::get('appointments/', [AppointmentsController::class, 'index'])->name('appointments.index');
+//     Route::Post('appointment/update', [AppointmentsController::class, 'store'])->name('appointment.update');
+//     Route::Post('appointment', [AppointmentsController::class, 'create'])->name('appointment.create');
+//     Route::post('appointment/{id}/destroy', [AppointmentsController::class, 'destroy'])->name('appointment.destroy');
+// });
 
 Route::middleware(['auth', 'verified', 'admin'])->prefix('/admin')->group(function () {
 
