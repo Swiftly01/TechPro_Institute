@@ -92,7 +92,7 @@
             <div class="border rounded-lg shadow-lg card card-rad">
               <p class="pt-2 text-center title">Front-End Development</p>
               <div style="margin-top: -10px;" class="container"> 
-                <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0004.jpg') }}" class="card-img-top" alt="...">
+                <img height="180px" src="{{ asset('assets/images/frontend.jpg') }}" class="card-img-top" alt="...">
                 <div>
                   <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
                   <div class="pt-3 price">
@@ -114,7 +114,7 @@
             <div class="border rounded-lg shadow-lg card card-rad">
               <p  class="pt-2 text-center title">Back-End Development</p>
               <div style="margin-top: -10px;" class="container">
-                <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0003.jpg') }}" class="card-img-top" alt="...">
+                <img height="180px" src="{{ asset('assets/images/backend.jpg') }}" class="card-img-top" alt="...">
               <div>
                 <p class="desc">Master backend development by building robust server-side apps. Manage databases, APIs, and logic for seamless user experiences.</p>
                 <div class="pt-3 price">
@@ -184,7 +184,7 @@
             <div class="border rounded-lg shadow-lg card card-rad">
               <p  class="pt-2 text-center title">Full Stack Development</p>
               <div style="margin-top: -5px;" class="container">
-                <img height="180px" src="{{ asset('assets/images/IMG-20241126-WA0005.jpg') }}" class="card-img-top" alt="...">
+                <img height="180px" src="{{ asset('assets/images/fullstack.jpg') }}" class="card-img-top" alt="...">
               <div>
                 <p class="desc">Build web apps with our full-stack program. Master both front-end and back-end technologies for dynamic, responsive solutions.</p>
                 <div class="pt-3 price">
