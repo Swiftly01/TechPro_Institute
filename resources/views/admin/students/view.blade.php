@@ -40,9 +40,9 @@
     <div class="col-12">
       <div class="card">
           <div class="card-header">
-              <h4 class="card-title">Basic Datatable</h4>
+              <h4 class="card-title">Student Table</h4>
           </div>
-          {{-- <div class="card-body">
+          <div class="card-body">
               <div class="table-responsive">
                   <table id="example" class="display" style="min-width: 845px">
                       <thead>
@@ -97,7 +97,7 @@
                       </tfoot>
                   </table>
               </div>
-          </div> --}}
+          </div>
       </div>
   </div>
 </div>
