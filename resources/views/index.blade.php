@@ -170,7 +170,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Front-End Development</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/frontend.jpg') }}"
+                                <img height="180px" src="{{ asset('assets/images/frontend.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Master the art of building visually engaging and interactive
@@ -196,7 +196,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Back-End Development</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/backend.jpg') }}"
+                                <img height="180px" src="{{ asset('assets/images/backend.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Master backend development by building robust server-side
@@ -224,7 +224,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">UI/UX Design</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img style="height: 180px" src="{{ asset('assets/images/DSC_5001.jpg') }}"
+                                <img style="height: 180px" src="{{ asset('assets/images/ui-ux.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Design user-friendly interfaces with Figma and Adobe XD.
@@ -252,7 +252,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Cyber Security</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img style="height: 180px" src="{{ asset('assets/images/DSC_5002.jpg') }}"
+                                <img style="height: 180px" src="{{ asset('assets/images/cybersecurity.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Secure your digital assets with our cybersecurity program.
@@ -278,7 +278,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Full Stack Development</p>
                             <div style="margin-top: -5px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/fullstack.jpg') }}"
+                                <img height="180px" src="{{ asset('assets/images/fullstack.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Build web apps with our full-stack program. Master both
@@ -290,7 +290,7 @@
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
-                                        <p class="me-2">6 Months</p>
+                                        <p class="me-2">7 Months</p>
                                     </div>
                                 </div>
                                 <div class="reg">
@@ -306,7 +306,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Data Analytics</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img style="height: 180px" src="{{ asset('assets/images/DSC_5000.jpg') }}"
+                                <img style="height: 180px" src="{{ asset('assets/images/data-analysis.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Unlock the power of data with our analytics program. Master
@@ -344,7 +344,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Tech-A-Teen</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/DSC_4998.jpg') }}"
+                                <img height="180px" src="{{ asset('assets/images/teen.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Empower teenagers with practical tech skills, preparing them

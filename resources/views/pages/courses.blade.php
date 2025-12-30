@@ -10,18 +10,17 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="{{ asset('assets/styles/courses.css') }}">
-  {{-- <link rel="stylesheet" href="{{ asset('assets/styles/index.css') }}"> --}}
+  {{--
+  <link rel="stylesheet" href="{{ asset('assets/styles/index.css') }}"> --}}
   <link rel="stylesheet" href="{{ asset('assets/styles/nav.css') }}">
 
   <style>
-        
-@media screen and (max-width:483px) {
+    @media screen and (max-width:483px) {
 
-.text-danger a {
-  font-size: 20px;
-}
-}
-
+      .text-danger a {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
 
@@ -55,8 +54,8 @@
             <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
           </li>
           <li class="nav-item me-5">
-                    <a class="nav-link" href="{{ url('/contact') }}">Projects</a>
-                </li>
+            <a class="nav-link" href="{{ url('/contact') }}">Projects</a>
+          </li>
           <li class="nav-item d-lg-none">
             <a href="{{ url('/verify/details') }}" class="nav-link">
               <button class="register">Login</button>
@@ -87,14 +86,15 @@
   <div class="container mt-1 about">
     <div class="row">
       <div class="">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4"> 
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4">
           <div class="col">
             <div class="border rounded-lg shadow-lg card card-rad">
               <p class="pt-2 text-center title">Front-End Development</p>
-              <div style="margin-top: -10px;" class="container"> 
-                <img height="180px" src="{{ asset('assets/images/frontend.jpg') }}" class="card-img-top" alt="...">
+              <div style="margin-top: -10px;" class="container">
+                <img height="180px" src="{{ asset('assets/images/frontend.jpeg') }}" class="card-img-top" alt="...">
                 <div>
-                  <p class="desc">Master the art of building visually engaging and interactive websites with our comprehensive Front-End Development Course</p>
+                  <p class="desc">Master the art of building visually engaging and interactive websites with our
+                    comprehensive Front-End Development Course</p>
                   <div class="pt-3 price">
                     <p class="me-2">Price</p>
                     <p>#170, 000</p>
@@ -112,49 +112,52 @@
           </div>
           <div class="col">
             <div class="border rounded-lg shadow-lg card card-rad">
-              <p  class="pt-2 text-center title">Back-End Development</p>
+              <p class="pt-2 text-center title">Back-End Development</p>
               <div style="margin-top: -10px;" class="container">
-                <img height="180px" src="{{ asset('assets/images/backend.jpg') }}" class="card-img-top" alt="...">
-              <div>
-                <p class="desc">Master backend development by building robust server-side apps. Manage databases, APIs, and logic for seamless user experiences.</p>
-                <div class="pt-3 price">
-                  <p class="me-2">Price</p>
-                  <p>#250, 000</p>
+                <img height="180px" src="{{ asset('assets/images/backend.jpeg') }}" class="card-img-top" alt="...">
+                <div>
+                  <p class="desc">Master backend development by building robust server-side apps. Manage databases,
+                    APIs, and logic for seamless user experiences.</p>
+                  <div class="pt-3 price">
+                    <p class="me-2">Price</p>
+                    <p>#250, 000</p>
+                  </div>
+                  <div class="duration">
+                    <p class="ms-1">Duration</p>
+                    <p class="me-2">3 Months</p>
+                  </div>
                 </div>
-                <div class="duration">
-                  <p class="ms-1">Duration</p>
-                  <p class="me-2">3 Months</p>
+                <div class="reg">
+                  <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
+
                 </div>
-              </div>
-              <div class="reg">
-                <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
-               
-              </div>
-              
+
               </div>
             </div>
           </div>
           <div class="col">
             <div class="border rounded-lg shadow-lg card card-rad">
-              <p  class="pt-2 text-center title">UI/UX  Design</p>
+              <p class="pt-2 text-center title">UI/UX Design</p>
               <div style="margin-top: -10px;" class="container">
-                <img style="height: 180px" src="{{ asset('assets/images/DSC_5001.jpg') }}" class="card-img-top" alt="...">
-              <div>
-                <p class="desc">Design user-friendly interfaces with Figma and Adobe XD. Create intuitive, visually appealing designs that enhance user experience.</p>
-                <div class="pt-3 price">
-                  <p class="me-2">Price</p>
-                  <p>#160, 000</p>
+                <img style="height: 180px" src="{{ asset('assets/images/ui-ux.jpeg') }}" class="card-img-top"
+                  alt="...">
+                <div>
+                  <p class="desc">Design user-friendly interfaces with Figma and Adobe XD. Create intuitive, visually
+                    appealing designs that enhance user experience.</p>
+                  <div class="pt-3 price">
+                    <p class="me-2">Price</p>
+                    <p>#160, 000</p>
+                  </div>
+                  <div class="duration">
+                    <p class="ms-1">Duration</p>
+                    <p class="me-2">3 Months</p>
+                  </div>
                 </div>
-                <div class="duration">
-                  <p class="ms-1">Duration</p>
-                  <p class="me-2">3 Months</p>
+                <div class="reg">
+                  <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
+
                 </div>
-              </div>
-              <div class="reg">
-                <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
-               
-              </div>
-              
+
               </div>
             </div>
           </div>
@@ -162,9 +165,11 @@
             <div class="border rounded-lg shadow-lg card card-rad">
               <p class="pt-2 text-center title">Cyber Security</p>
               <div style="margin-top: -10px;" class="container">
-                <img style="height: 180px" src="{{ asset('assets/images/DSC_5002.jpg') }}" class="card-img-top" alt="...">
+                <img style="height: 180px" src="{{ asset('assets/images/cybersecurity.jpeg') }}" class="card-img-top"
+                  alt="...">
                 <div>
-                  <p class="desc">Secure your digital assets with our cybersecurity program. Learn to spot vulnerabilities, prevent threats, and protect systems effectively.</p>
+                  <p class="desc">Secure your digital assets with our cybersecurity program. Learn to spot
+                    vulnerabilities, prevent threats, and protect systems effectively.</p>
                   <div class="pt-3 price">
                     <p class="me-2">Price</p>
                     <p>#220, 000</p>
@@ -182,49 +187,52 @@
           </div>
           <div class="col">
             <div class="border rounded-lg shadow-lg card card-rad">
-              <p  class="pt-2 text-center title">Full Stack Development</p>
+              <p class="pt-2 text-center title">Full Stack Development</p>
               <div style="margin-top: -5px;" class="container">
-                <img height="180px" src="{{ asset('assets/images/fullstack.jpg') }}" class="card-img-top" alt="...">
-              <div>
-                <p class="desc">Build web apps with our full-stack program. Master both front-end and back-end technologies for dynamic, responsive solutions.</p>
-                <div class="pt-3 price">
-                  <p class="me-2">Price</p>
-                  <p>#400, 000</p>
+                <img height="180px" src="{{ asset('assets/images/fullstack.jpeg') }}" class="card-img-top" alt="...">
+                <div>
+                  <p class="desc">Build web apps with our full-stack program. Master both front-end and back-end
+                    technologies for dynamic, responsive solutions.</p>
+                  <div class="pt-3 price">
+                    <p class="me-2">Price</p>
+                    <p>#400, 000</p>
+                  </div>
+                  <div class="duration">
+                    <p class="ms-1">Duration</p>
+                    <p class="me-2">7 Months</p>
+                  </div>
                 </div>
-                <div class="duration">
-                  <p class="ms-1">Duration</p>
-                  <p class="me-2">6 Months</p>
+                <div class="reg">
+                  <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
+
                 </div>
-              </div>
-              <div class="reg">
-                <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
-               
-              </div>
-              
+
               </div>
             </div>
           </div>
           <div class="col">
             <div class="border rounded-lg shadow-lg card card-rad">
-              <p  class="pt-2 text-center title">Data Analytics</p>
+              <p class="pt-2 text-center title">Data Analytics</p>
               <div style="margin-top: -10px;" class="container">
-                <img style="height: 180px" src="{{ asset('assets/images/DSC_5000.jpg') }}" class="card-img-top" alt="...">
-              <div>
-                <p class="desc">Unlock the power of data with our analytics program. Master tools to analyze, interpret, and turn data into actionable insights.</p>
-                <div class="pt-3 price">
-                  <p class="me-2">Price</p>
-                  <p>#250, 000</p>
+                <img style="height: 180px" src="{{ asset('assets/images/data-analysis.jpeg') }}" class="card-img-top"
+                  alt="...">
+                <div>
+                  <p class="desc">Unlock the power of data with our analytics program. Master tools to analyze,
+                    interpret, and turn data into actionable insights.</p>
+                  <div class="pt-3 price">
+                    <p class="me-2">Price</p>
+                    <p>#250, 000</p>
+                  </div>
+                  <div class="duration">
+                    <p class="ms-1">Duration</p>
+                    <p class="me-2">3 Months</p>
+                  </div>
                 </div>
-                <div class="duration">
-                  <p class="ms-1">Duration</p>
-                  <p class="me-2">3 Months</p>
+                <div class="reg">
+                  <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
+
                 </div>
-              </div>
-              <div class="reg">
-                <a href="{{ route('application.form') }}"> <button class="register-card">Register Now</button></a>
-               
-              </div>
-              
+
               </div>
             </div>
           </div>
@@ -295,7 +303,7 @@
           </ul>
         </div>
 
-      
+
         <div class="col-lg-3 col-md-6 col-sm-12 footer">
           <h4 class="fw-bold follow">Legal</h4>
           <ul class="list-unstyled ">
