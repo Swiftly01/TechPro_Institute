@@ -171,15 +171,15 @@ class StudentController extends Controller
      */
     public function show(Student $student, Request $request)
     {
-       // $students = Student::with('course')->get();
+        $students = Student::with('course')->get();
 
-       $students = [];
+       
 
         $user = $request->user();
 
-       // return $students;
+        return $students;
 
-        return view('admin.students.view', ['students' => $students, 'user' => $user]);
+       // return view('admin.students.view', ['students' => $students, 'user' => $user]);
     }
 
 
