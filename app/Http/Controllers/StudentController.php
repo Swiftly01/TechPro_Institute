@@ -175,7 +175,7 @@ class StudentController extends Controller
 
         $user = $request->user();
 
-
+        return $students;
 
         return view('admin.students.view', ['students' => $students, 'user' => $user]);
     }
