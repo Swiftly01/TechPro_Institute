@@ -42,7 +42,7 @@
           <div class="card-header">
               <h4 class="card-title">Basic Datatable</h4>
           </div>
-          <div class="card-body">
+          {{-- <div class="card-body">
               <div class="table-responsive">
                   <table id="example" class="display" style="min-width: 845px">
                       <thead>
@@ -68,9 +68,9 @@
                             <td>
                                 <div style="display: flex;gap:5px">
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#basicModal{{ $student->id }}" >Edit</button>
-                                {{-- @include('admin.students.edit') --}}
+                                @include('admin.students.edit') 
                                 
-                                {{-- @include('admin.students.delete') --}}
+                                @include('admin.students.delete')
                                 <button class="btn btn-danger"  data-toggle="modal" data-target="#basicModaldelete{{ $student->id }}" >Delete</button>
 
                                 </div>
@@ -97,7 +97,7 @@
                       </tfoot>
                   </table>
               </div>
-          </div>
+          </div> --}}
       </div>
   </div>
 </div>
