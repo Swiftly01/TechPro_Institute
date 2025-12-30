@@ -4,14 +4,14 @@
   </x-slot:title>
 
   <div class="container-fluid">
-    <div class="row page-titles mx-0">
+    <div class="mx-0 row page-titles">
         <div class="col-sm-6 p-md-0">
             <div class="welcome-text">
                 <h4>Hi, welcome back!</h4>
                 <span class="ml-1 fs-5">{{ $user->email }}</span>
             </div>
         </div>
-        <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+        <div class="mt-2 col-sm-6 p-md-0 justify-content-sm-end mt-sm-0 d-flex">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Datatable</a></li>
@@ -68,9 +68,9 @@
                             <td>
                                 <div style="display: flex;gap:5px">
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#basicModal{{ $student->id }}" >Edit</button>
-                                @include('admin.students.edit')
+                                {{-- @include('admin.students.edit') --}}
                                 
-                                @include('admin.students.delete')
+                                {{-- @include('admin.students.delete') --}}
                                 <button class="btn btn-danger"  data-toggle="modal" data-target="#basicModaldelete{{ $student->id }}" >Delete</button>
 
                                 </div>
