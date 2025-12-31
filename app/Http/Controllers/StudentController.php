@@ -171,7 +171,7 @@ class StudentController extends Controller
      */
     public function show(Student $student, Request $request)
     {
-        $students = Student::with('course')->paginate(1);
+        $students = Student::with('course')->paginate(15);
 
 
         $user = $request->user();
