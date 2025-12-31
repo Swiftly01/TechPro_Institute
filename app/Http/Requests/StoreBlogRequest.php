@@ -29,7 +29,7 @@ class StoreBlogRequest extends FormRequest
             'blog_content' => ['required', 'string'],
             'blog_highlight' => ['required', 'string'],
             'featured_image' => ['required', 'array'],
-            'featured_image.*' => ['image', 'mimes:png,jpg,jpeg', 'max:3048'],
+            'featured_image.*' => ['image', 'mimes:png,jpg,jpeg', 'max:8000'],
 
         ];
     }
