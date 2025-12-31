@@ -27,7 +27,7 @@ Route::get('/blog/{blog}', [IndexController::class, 'show'])->name('blog.details
 
 Route::prefix('/application')->name('application.')->group(function () {
     Route::get('/', [StudentController::class, 'index'])->name('form');
-    Route::post('/form', [StudentController::class, 'store'])->name('store.form');
+    Route::post('/form', [StudentController::class, 'store'])->name('store.form')->middleware('throttle:5,5');
     Route::get('/mail/{id}', [StudentController::class, 'applicationMailNotification'])->name('mail');
 
     Route::get('user/{id}', [UserController::class, 'userMessage'])->name('user');
@@ -100,7 +100,7 @@ Route::get('/legal', function () {
     return view('pages.legal');
 })->name('legal');
 
-Route::get('/contact/submit', [ContactController::class, 'create'])->name('contact.submit');
+Route::post('/contact/submit', [ContactController::class, 'create'])->name('contact.submit')->middleware('throttle:5,5');
 
 Route::get('/payment/{id}', [PaymentController::class, 'loadPage'])->name('payment.show');
 Route::post('/payment/upload', [PaymentController::class, 'store'])->name('payment.upload');
