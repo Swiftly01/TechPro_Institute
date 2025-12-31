@@ -28,7 +28,8 @@ class UpdateBlogRequest extends FormRequest
             'excerpt' => ['nullable', 'string', 'max:300'],
             'blog_content' => ['nullable', 'string'],
             'blog_highlight' => ['required', 'string'],
-            'featured_image' => ['nullable', 'image', 'mimes:png,jpg,jpeg', 'max:3048']
+            'featured_image' => ['nullable', 'array'],
+            'featured_image.*' => ['image', 'mimes:png,jpg,jpeg', 'max:3048'],
         ];
     }
 }

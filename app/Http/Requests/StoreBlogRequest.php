@@ -19,8 +19,8 @@ class StoreBlogRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules() 
-    {       
+    public function rules()
+    {
         return [
             'title' => ['required', 'string', 'max:255'],
             'subtitle' => ['nullable', 'string', 'max:255'],
@@ -28,7 +28,9 @@ class StoreBlogRequest extends FormRequest
             'excerpt' => ['required', 'string', 'max:300'],
             'blog_content' => ['required', 'string'],
             'blog_highlight' => ['required', 'string'],
-            'featured_image' => ['nullable', 'image', 'mimes:png,jpg,jpeg', 'max:3048']
+            'featured_image' => ['required', 'array'],
+            'featured_image.*' => ['image', 'mimes:png,jpg,jpeg', 'max:3048'],
+
         ];
     }
 
