@@ -96,6 +96,8 @@
                           </tr>
                       </tfoot>
                   </table>
+
+                   {{ $students->onEachSide(2)->links() }}
               </div>
           </div>
       </div>
