@@ -283,7 +283,8 @@
 
                 <p class="mb-4 text-secondary">
                     {{-- {{ Str::limit(strip_tags($blog->content), 300) }} --}}
-                    {!! nl2br(e($blog->content)) !!}
+                   {!! $blog->content !!}
+
                 </p>
 
                 {{-- Highlights --}}

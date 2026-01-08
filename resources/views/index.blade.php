@@ -126,8 +126,7 @@
                 <div class="mb-3 col-12 col-sm-6 col-lg-3">
                     <div class="shadow-lg card card_custom">
                         <div class="mx-auto why-afford">
-                            <img src="{{ asset('assets/images/image 3.png') }}" class="card-img-top "
-                                alt="...">
+                            <img src="{{ asset('assets/images/image 3.png') }}" class="card-img-top " alt="...">
                         </div>
                         <div class="mb-3 card-body">
                             <h5 class="text-center card-title fw-bold why-afford-text">Flexible Payment</h5>
@@ -196,8 +195,8 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Back-End Development</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/backend.jpeg') }}"
-                                    class="card-img-top" alt="...">
+                                <img height="180px" src="{{ asset('assets/images/backend.jpeg') }}" class="card-img-top"
+                                    alt="...">
                                 <div>
                                     <p class="desc">Master backend development by building robust server-side
                                         apps. Manage databases,
@@ -344,8 +343,8 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Tech-A-Teen</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/teen.jpeg') }}"
-                                    class="card-img-top" alt="...">
+                                <img height="180px" src="{{ asset('assets/images/teen.jpeg') }}" class="card-img-top"
+                                    alt="...">
                                 <div>
                                     <p class="desc">Empower teenagers with practical tech skills, preparing them
                                         for future careers in a
@@ -370,8 +369,8 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Work Space</p>
                             <div style="margin-top: -12px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/DSC_4919.jpg') }}"
-                                    class="card-img-top" alt="...">
+                                <img height="180px" src="{{ asset('assets/images/DSC_4919.jpg') }}" class="card-img-top"
+                                    alt="...">
                                 <div>
                                     <p class="desc">Our workspace offers a productive environment for
                                         professionals and learners,
@@ -398,8 +397,8 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Conference Room</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/DSC_4921.jpg') }}"
-                                    class="card-img-top" alt="...">
+                                <img height="180px" src="{{ asset('assets/images/DSC_4921.jpg') }}" class="card-img-top"
+                                    alt="...">
                                 <div>
                                     <p class="desc">
                                         The seminar room at TechPro Institute is a modern, fully-equipped space for
@@ -444,8 +443,8 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Hostel</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/DSC_4925.jpg') }}"
-                                    class="card-img-top" alt="...">
+                                <img height="180px" src="{{ asset('assets/images/DSC_4925.jpg') }}" class="card-img-top"
+                                    alt="...">
                                 <div>
                                     <p class="desc">
                                         Our hostels at TechPro Institute are secure affordable, and designed for
@@ -468,8 +467,8 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">IT Consultancy</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/image 22.png') }}"
-                                    class="card-img-top" alt="...">
+                                <img height="180px" src="{{ asset('assets/images/image 22.png') }}" class="card-img-top"
+                                    alt="...">
                                 <div>
                                     <p class="desc">
                                         Our IT consultancy services provide expert solutions for achieving business
@@ -537,48 +536,47 @@
 
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
                 @forelse ($blogs as $blog)
-                    @php
-                        $images = $blog->getFeaturedImages('featured_image');
-                        $firstImage = $images->first(); 
-                    @endphp
+                @php
+                $images = $blog->getFeaturedImages('featured_image');
+                $firstImage = $images->first();
+                @endphp
 
-                    <div class="col">
-                        <div class="border-0 shadow-sm card h-100">
-                            @if ($firstImage)
-                                <img src="{{ $firstImage }}" height="250px" class="card-img-top" alt="{{ $blog->title }}">
-                            @else
-                                
-                                <img src="{{ asset('images/default-placeholder.jpg') }}" class="card-img-top"
-                                    alt="Default image">
-                            @endif
+                <div class="col">
+                    <div class="border-0 shadow-sm card h-100">
+                        @if ($firstImage)
+                        <img src="{{ $firstImage }}" height="250px" class="card-img-top" alt="{{ $blog->title }}">
+                        @else
 
-                            <div class="bg-white card-body">
-                                <h6 class="fw-semibold">{{ $blog->title }}</h6>
+                        <img src="{{ asset('images/default-placeholder.jpg') }}" class="card-img-top"
+                            alt="Default image">
+                        @endif
 
-                                <p class="mb-2 text-muted small">
-                                    {{ $blog->created_at->format('F j, Y') }} · FEATURED · 4
-                                </p>
+                        <div class="bg-white card-body">
+                            <h6 class="fw-semibold">{{ $blog->title }}</h6>
 
-                                <p class="text-secondary">
-                                    {{ Str::limit($blog->content, 100) }}...
-                                </p>
+                            <p class="mb-2 text-muted small">
+                                {{ $blog->created_at->format('F j, Y') }} · FEATURED · 4
+                            </p>
 
-                                <a class="read_more_link"
-                                    href="{{ route('blog.details', ['blog' => $blog->slug]) }}">
-                                    Read more <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
+                            <p class="text-secondary">
+                                {{ Str::words(strip_tags($blog->content), 20) }}
+                            </p>
+
+                            <a class="read_more_link" href="{{ route('blog.details', ['blog' => $blog->slug]) }}">
+                                Read more <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
+                </div>
                 @empty
-                    <p>No blog posts available!</p>
+                <p>No blog posts available!</p>
                 @endforelse
             </div>
 
-          <div class="my-5 d-flex justify-content-center">
-            {{ $blogs->onEachSide(5)->links() }}
+            <div class="my-5 d-flex justify-content-center">
+                {{ $blogs->onEachSide(5)->links() }}
 
-          </div>
+            </div>
 
 
         </div>
@@ -646,8 +644,7 @@
         <div class="row">
             <div class="text-center col-md-6 col-lg-4">
                 <h1 style="font-size: 18px;" class="">Monthly Payment</h1>
-                <img class="mt-2 img-fluid" src="{{ asset('assets/images/unsplash_Q59HmzK38eQ (1).png') }}"
-                    alt="">
+                <img class="mt-2 img-fluid" src="{{ asset('assets/images/unsplash_Q59HmzK38eQ (1).png') }}" alt="">
                 <p class="fs-5 fw-light">Monthly Payment, similar to a regular tutoring program</p>
             </div>
 
@@ -664,8 +661,7 @@
 
             <div class="text-center col-md-12 col-lg-4">
                 <h1 style="font-size: 18px;" class="">Weekend Classes</h1>
-                <img class="img-fluid" width="250px" src="{{ asset('assets/images/unsplash_HMJIGc8iIKs.png') }}"
-                    alt="">
+                <img class="img-fluid" width="250px" src="{{ asset('assets/images/unsplash_HMJIGc8iIKs.png') }}" alt="">
                 <p class="mt-2 fs-5 fw-light">The program is offered on weekends at your
                     convenience-morning,
                     afternoon, or evening- for a duration of three months</p>
@@ -697,7 +693,7 @@
                 </div>
                 {{-- <div class="mb-3 text-center col-6 col-md-4 col-lg-2">
                     <img class="img-fluid" src="{{ asset('assets/images/image 21.png') }}" alt="Partner 4">
-      </div> --}}
+                </div> --}}
                 <div class="mb-3 text-center col-6 col-md-4 col-lg-2">
                     <img class="img-fluid" src="{{ asset('assets/images/image 17.png') }}" alt="Partner 5">
                 </div>
@@ -752,8 +748,8 @@
                     <div class="d-flex">
                         <a href="http://wa.me/2348086478810" class="me-3 " target="_blank"><i
                                 class="bi bi-whatsapp fs-4 follow"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61566747027176&mibextid=LQQJ4d"
-                            target="blank" class="me-3 "><i class="bi bi-facebook fs-4 follow"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61566747027176&mibextid=LQQJ4d" target="blank"
+                            class="me-3 "><i class="bi bi-facebook fs-4 follow"></i></a>
                         <a href="https://x.com/techprongr?s=21" target="_blank"><i
                                 class="bi bi-twitter fs-4 follow"></i></a>
                     </div>

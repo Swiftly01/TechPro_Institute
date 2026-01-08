@@ -1,7 +1,12 @@
 <x-admin-layouts>
+
+
     <x-slot:title>
         Create :: Blog
     </x-slot:title>
+    <link rel="stylesheet" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+    <script src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
 
     <div class="container-fluid">
         <div class="mx-0 row page-titles">
@@ -75,12 +80,18 @@
                                 @enderror
                             </div>
 
+
+
                             <div class="mb-3 col-12">
                                 <label for="blog_content">Blog Content</label>
-                                <textarea name="blog_content" id="blog_content" rows="6"
-                                    class="form-control @error('blog_content') is-invalid @enderror">{{ old('blog_content') }}</textarea>
+
+                                <input id="blog_content" type="hidden" name="blog_content"
+                                    value="{{ old('blog_content') }}">
+
+                                <trix-editor input="blog_content"></trix-editor>
+
                                 @error('blog_content')
-                                <div class="invalid-feedback">{{ $message }}</div>
+                                <div class="invalid-feedback d-block">{{ $message }}</div>
                                 @enderror
                             </div>
                         </div>
