@@ -169,7 +169,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Front-End Development</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/frontend.jpeg') }}"
+                                <img height="180px" src="{{ asset('assets/images/front-end.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Master the art of building visually engaging and interactive
@@ -177,7 +177,7 @@
                                         comprehensive Front-End Development Course</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#170, 000</p>
+                                        <p>#200, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -223,7 +223,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">UI/UX Design</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img style="height: 180px" src="{{ asset('assets/images/ui-ux.jpeg') }}"
+                                <img style="height: 180px" src="{{ asset('assets/images/ui-design.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Design user-friendly interfaces with Figma and Adobe XD.
@@ -277,7 +277,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Full Stack Development</p>
                             <div style="margin-top: -5px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/fullstack.jpeg') }}"
+                                <img height="180px" src="{{ asset('assets/images/full-stack.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Build web apps with our full-stack program. Master both
@@ -285,7 +285,7 @@
                                         technologies for dynamic, responsive solutions.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#400, 000</p>
+                                        <p>#480, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -305,7 +305,7 @@
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
                             <p class="pt-2 text-center title">Data Analytics</p>
                             <div style="margin-top: -10px;" class="container">
-                                <img style="height: 180px" src="{{ asset('assets/images/data-analysis.jpeg') }}"
+                                <img style="height: 180px" src="{{ asset('assets/images/data-analytics.jpeg') }}"
                                     class="card-img-top" alt="...">
                                 <div>
                                     <p class="desc">Unlock the power of data with our analytics program. Master
@@ -313,7 +313,63 @@
                                         interpret, and turn data into actionable insights.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#250, 000</p>
+                                        <p>#280, 000</p>
+                                    </div>
+                                    <div class="duration">
+                                        <p class="ms-1">Duration</p>
+                                        <p class="me-2">3 Months</p>
+                                    </div>
+                                </div>
+                                <div class="reg">
+                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                            Now</button></a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                            <p class="pt-2 text-center title">Digital Marketing</p>
+                            <div style="margin-top: -10px;" class="container">
+                                <img style="height: 180px" src="{{ asset('assets/images/digital-marketer.jpeg') }}"
+                                    class="card-img-top" alt="...">
+                                <div>
+                                    <p class="desc">Boost your brand online with our digital marketing program. Learn
+                                        strategies to create, manage, and optimize campaigns that drive traffic,
+                                        engagement, and real results.</p>
+                                    <div class="pt-3 price">
+                                        <p class="me-2">Price</p>
+                                        <p>#150, 000</p>
+                                    </div>
+                                    <div class="duration">
+                                        <p class="ms-1">Duration</p>
+                                        <p class="me-2">3 Months</p>
+                                    </div>
+                                </div>
+                                <div class="reg">
+                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                            Now</button></a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                            <p class="pt-2 text-center title">Graphics Design</p>
+                            <div style="margin-top: -10px;" class="container">
+                                <img style="height: 180px" src="{{ asset('assets/images/graphics.jpeg') }}"
+                                    class="card-img-top" alt="...">
+                                <div>
+                                    <p class="desc">Unleash your creativity with our graphics design program. Learn
+                                        tools to create stunning visuals, build strong brand identities, and communicate
+                                        ideas effectively across digital platforms.</p>
+                                    <div class="pt-3 price">
+                                        <p class="me-2">Price</p>
+                                        <p>#180, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>

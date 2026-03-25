@@ -17,7 +17,7 @@ class Payment_ScheduleSeeder extends Seeder
 
         DB::table('payment_schedules')->insert([
             [ 'course_id'=>1,
-              'amount'=>170000.00,
+              'amount'=>200000.00,
               'purpose' =>'sch_fee',
               'type' => 'course',
               'desc' => 'School fees payment for front-end development',
@@ -25,21 +25,20 @@ class Payment_ScheduleSeeder extends Seeder
             [
              'course_id'=>2,
              'amount' => 250000.00,
-              'course_id'=>2,
               'purpose' => 'sch_fee',
               'type' => 'course',
               'desc' => 'School fees payment for Back-end Development',
             ],
             [
              'course_id'=>3,
-              'amount'=>400000.00,
+              'amount'=>480000.00,
               'purpose' => 'sch_fee',
               'type' => 'course',
               'desc' => 'School fees payment for full stack development',
             ],
             [
              'course_id'=>4,
-              'amount' => 250000.00,
+              'amount' => 280000.00,
               'purpose' => 'sch_fee',
               'type' => 'course',
               'desc' => 'School fees payment for Data Analytics',
@@ -60,7 +59,7 @@ class Payment_ScheduleSeeder extends Seeder
             ],
             [
              'course_id'=>7,
-              'amount' => 130000.00,
+              'amount' => 180000.00,
               'purpose' => 'sch_fee',
               'type' => 'course',
                'desc' => 'School fees payment for Graphics Design',
