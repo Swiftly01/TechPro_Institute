@@ -177,7 +177,7 @@
                                         comprehensive Front-End Development Course</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#200, 000</p>
+                                        <p>#250, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -203,7 +203,7 @@
                                         APIs, and logic for seamless user experiences.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#250, 000</p>
+                                        <p>#320, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -231,7 +231,7 @@
                                         appealing designs that enhance user experience.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#160, 000</p>
+                                        <p>#220, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -259,7 +259,7 @@
                                         vulnerabilities, prevent threats, and protect systems effectively.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#220, 000</p>
+                                        <p>#250, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -285,7 +285,7 @@
                                         technologies for dynamic, responsive solutions.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#480, 000</p>
+                                        <p>#520, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -341,7 +341,7 @@
                                         engagement, and real results.</p>
                                     <div class="pt-3 price">
                                         <p class="me-2">Price</p>
-                                        <p>#150, 000</p>
+                                        <p>#220, 000</p>
                                     </div>
                                     <div class="duration">
                                         <p class="ms-1">Duration</p>
@@ -385,6 +385,85 @@
                             </div>
                         </div>
                     </div>
+                     <div class="col">
+                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                            <p class="pt-2 text-center title">AI & Machine Learning</p>
+                            <div style="margin-top: -10px;" class="container">
+                                <img style="height: 180px" src="{{ asset('assets/images/ai.png') }}"
+                                    class="card-img-top" alt="...">
+                                <div>
+                                    <p class="desc">Unleash your potential with our AI and machine learning program. Learn tools to build intelligent systems, develop smart models, and solve real-world problems across digital environments.</p>
+                                    <div class="pt-3 price">
+                                        <p class="me-2">Price</p>
+                                        <p>#350, 000</p>
+                                    </div>
+                                    <div class="duration">
+                                        <p class="ms-1">Duration</p>
+                                        <p class="me-2">3 Months</p>
+                                    </div>
+                                </div>
+                                <div class="reg">
+                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                            Now</button></a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col">
+                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                            <p class="pt-2 text-center title">Product Management</p>
+                            <div style="margin-top: -10px;" class="container">
+                                <img style="height: 180px" src="{{ asset('assets/images/product-management.png') }}"
+                                    class="card-img-top" alt="...">
+                                <div>
+                                    <p class="desc">Unlock your potential with our product management program. Learn skills to build impactful products, manage development cycles, and solve real-world challenges effectively across digital environments.</p>
+                                    <div class="pt-3 price">
+                                        <p class="me-2">Price</p>
+                                        <p>#420, 000</p>
+                                    </div>
+                                    <div class="duration">
+                                        <p class="ms-1">Duration</p>
+                                        <p class="me-2">3 Months</p>
+                                    </div>
+                                </div>
+                                <div class="reg">
+                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                            Now</button></a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col">
+                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                            <p class="pt-2 text-center title">Business Analysis</p>
+                            <div style="margin-top: -10px;" class="container">
+                                <img style="height: 180px" src="{{ asset('assets/images/business-analysis.png') }}"
+                                    class="card-img-top" alt="...">
+                                <div>
+                                    <p class="desc">Unlock your potential with our business analysis program. Learn skills to evaluate processes, gather insights, and solve real-world challenges effectively across digital environments.</p>
+                                    <div class="pt-3 price">
+                                        <p class="me-2">Price</p>
+                                        <p>#420, 000</p>
+                                    </div>
+                                    <div class="duration">
+                                        <p class="ms-1">Duration</p>
+                                        <p class="me-2">3 Months</p>
+                                    </div>
+                                </div>
+                                <div class="reg">
+                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                            Now</button></a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

@@ -68,13 +68,30 @@ class CourseSeeder extends Seeder
       //       'duration'=>'Monthly', 
       //       'frequency'=>'Once a week', 
       //    ], 
-         [
-            'name'=>'Digital marketing',
-            'course_code'=>'DM',
+        //  [
+        //     'name'=>'Digital marketing',
+        //     'course_code'=>'DM',
+        //     'duration'=>'Monthly', 
+        //     'frequency'=>'Once a week', 
+        //  ], 
+           [
+            'name'=>'AI & Machine learning',
+            'course_code'=>'AM',
+            'duration'=>'Monthly', 
+            'frequency'=>'Thrice a week', 
+         ],
+          [
+            'name'=>'Product Managemet',
+            'course_code'=>'PM',
+            'duration'=>'Monthly', 
+            'frequency'=>'Thrice a week', 
+         ],
+          [
+            'name'=>'Business Analysis',
+            'course_code'=>'BA',
             'duration'=>'Monthly', 
             'frequency'=>'Once a week', 
-         ], 
-          
+         ],
         ]);
     }
 }
