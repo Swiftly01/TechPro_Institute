@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('assets/styles/courses.css') }}">
     {{--
-  <link rel="stylesheet" href="{{ asset('assets/styles/index.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('assets/styles/index.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('assets/styles/nav.css') }}">
 
     <style>
@@ -76,237 +76,320 @@
         <div class="row main">
             <div class="col">
                 <!-- <h1  class="text-danger home">Home/Services</h1> -->
-                <h1 class="text-danger"><a class=" text-danger" href="{{ url('/') }}">Home/</a><a
-                        class=" text-danger" href="{{ route('application.form') }}">Courses</a></h1>
+                <h1 class="text-danger"><a class=" text-danger" href="{{ url('/') }}">Home/</a><a class=" text-danger"
+                        href="{{ route('application.form') }}">Courses</a></h1>
             </div>
         </div>
     </div>
 
-
-    <div class="container mt-1 about">
+    <div class="container  about">
         <div class="row">
-             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4">
-                    <div class="col">
-                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
-                            <p class="pt-2 text-center title">Front-End Development</p>
-                            <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/front-end.jpeg') }}"
-                                    class="card-img-top" alt="...">
-                                <div>
-                                    <p class="desc">Master the art of building visually engaging and interactive
-                                        websites with our
-                                        comprehensive Front-End Development Course</p>
-                                    <div class="pt-3 price">
-                                        <p class="me-2">Price</p>
-                                        <p>#200, 000</p>
-                                    </div>
-                                    <div class="duration">
-                                        <p class="ms-1">Duration</p>
-                                        <p class="me-2">3 Months</p>
-                                    </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-4">
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">Front-End Development</p>
+                        <div style="margin-top: -10px;" class="container">
+                            <img height="180px" src="{{ asset('assets/images/front-end.jpeg') }}" class="card-img-top"
+                                alt="...">
+                            <div>
+                                <p class="desc">Master the art of building visually engaging and interactive
+                                    websites with our
+                                    comprehensive Front-End Development Course</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#250, 000</p>
                                 </div>
-                                <div class="reg">
-                                    <a href="{{ route('application.form') }}"><button class="register-card">Register
-                                            Now</button></a>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">3 Months</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
-                            <p class="pt-2 text-center title">Back-End Development</p>
-                            <div style="margin-top: -10px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/backend.jpeg') }}" class="card-img-top"
-                                    alt="...">
-                                <div>
-                                    <p class="desc">Master backend development by building robust server-side
-                                        apps. Manage databases,
-                                        APIs, and logic for seamless user experiences.</p>
-                                    <div class="pt-3 price">
-                                        <p class="me-2">Price</p>
-                                        <p>#250, 000</p>
-                                    </div>
-                                    <div class="duration">
-                                        <p class="ms-1">Duration</p>
-                                        <p class="me-2">3 Months</p>
-                                    </div>
-                                </div>
-                                <div class="reg">
-                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
-                                            Now</button></a>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
-                            <p class="pt-2 text-center title">UI/UX Design</p>
-                            <div style="margin-top: -10px;" class="container">
-                                <img style="height: 180px" src="{{ asset('assets/images/ui-design.jpeg') }}"
-                                    class="card-img-top" alt="...">
-                                <div>
-                                    <p class="desc">Design user-friendly interfaces with Figma and Adobe XD.
-                                        Create intuitive, visually
-                                        appealing designs that enhance user experience.</p>
-                                    <div class="pt-3 price">
-                                        <p class="me-2">Price</p>
-                                        <p>#160, 000</p>
-                                    </div>
-                                    <div class="duration">
-                                        <p class="ms-1">Duration</p>
-                                        <p class="me-2">3 Months</p>
-                                    </div>
-                                </div>
-                                <div class="reg">
-                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
-                                            Now</button></a>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
-                            <p class="pt-2 text-center title">Cyber Security</p>
-                            <div style="margin-top: -10px;" class="container">
-                                <img style="height: 180px" src="{{ asset('assets/images/cybersecurity.jpeg') }}"
-                                    class="card-img-top" alt="...">
-                                <div>
-                                    <p class="desc">Secure your digital assets with our cybersecurity program.
-                                        Learn to spot
-                                        vulnerabilities, prevent threats, and protect systems effectively.</p>
-                                    <div class="pt-3 price">
-                                        <p class="me-2">Price</p>
-                                        <p>#220, 000</p>
-                                    </div>
-                                    <div class="duration">
-                                        <p class="ms-1">Duration</p>
-                                        <p class="me-2">3 Months</p>
-                                    </div>
-                                </div>
-                                <div class="reg">
-                                    <a href="{{ route('application.form') }}"><button class="register-card">Register
-                                            Now</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
-                            <p class="pt-2 text-center title">Full Stack Development</p>
-                            <div style="margin-top: -5px;" class="container">
-                                <img height="180px" src="{{ asset('assets/images/full-stack.jpeg') }}"
-                                    class="card-img-top" alt="...">
-                                <div>
-                                    <p class="desc">Build web apps with our full-stack program. Master both
-                                        front-end and back-end
-                                        technologies for dynamic, responsive solutions.</p>
-                                    <div class="pt-3 price">
-                                        <p class="me-2">Price</p>
-                                        <p>#480, 000</p>
-                                    </div>
-                                    <div class="duration">
-                                        <p class="ms-1">Duration</p>
-                                        <p class="me-2">7 Months</p>
-                                    </div>
-                                </div>
-                                <div class="reg">
-                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
-                                            Now</button></a>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
-                            <p class="pt-2 text-center title">Data Analytics</p>
-                            <div style="margin-top: -10px;" class="container">
-                                <img style="height: 180px" src="{{ asset('assets/images/data-analytics.jpeg') }}"
-                                    class="card-img-top" alt="...">
-                                <div>
-                                    <p class="desc">Unlock the power of data with our analytics program. Master
-                                        tools to analyze,
-                                        interpret, and turn data into actionable insights.</p>
-                                    <div class="pt-3 price">
-                                        <p class="me-2">Price</p>
-                                        <p>#280, 000</p>
-                                    </div>
-                                    <div class="duration">
-                                        <p class="ms-1">Duration</p>
-                                        <p class="me-2">3 Months</p>
-                                    </div>
-                                </div>
-                                <div class="reg">
-                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
-                                            Now</button></a>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
-                            <p class="pt-2 text-center title">Digital Marketing</p>
-                            <div style="margin-top: -10px;" class="container">
-                                <img style="height: 180px" src="{{ asset('assets/images/digital-marketer.jpeg') }}"
-                                    class="card-img-top" alt="...">
-                                <div>
-                                    <p class="desc">Boost your brand online with our digital marketing program. Learn
-                                        strategies to create, manage, and optimize campaigns that drive traffic,
-                                        engagement, and real results.</p>
-                                    <div class="pt-3 price">
-                                        <p class="me-2">Price</p>
-                                        <p>#150, 000</p>
-                                    </div>
-                                    <div class="duration">
-                                        <p class="ms-1">Duration</p>
-                                        <p class="me-2">3 Months</p>
-                                    </div>
-                                </div>
-                                <div class="reg">
-                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
-                                            Now</button></a>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="border rounded-lg shadow-lg card card-rad card_custom">
-                            <p class="pt-2 text-center title">Graphics Design</p>
-                            <div style="margin-top: -10px;" class="container">
-                                <img style="height: 180px" src="{{ asset('assets/images/graphics.jpeg') }}"
-                                    class="card-img-top" alt="...">
-                                <div>
-                                    <p class="desc">Unleash your creativity with our graphics design program. Learn
-                                        tools to create stunning visuals, build strong brand identities, and communicate
-                                        ideas effectively across digital platforms.</p>
-                                    <div class="pt-3 price">
-                                        <p class="me-2">Price</p>
-                                        <p>#180, 000</p>
-                                    </div>
-                                    <div class="duration">
-                                        <p class="ms-1">Duration</p>
-                                        <p class="me-2">3 Months</p>
-                                    </div>
-                                </div>
-                                <div class="reg">
-                                    <a href="{{ route('application.form') }}"> <button class="register-card">Register
-                                            Now</button></a>
-
-                                </div>
-
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"><button class="register-card">Register
+                                        Now</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">Back-End Development</p>
+                        <div style="margin-top: -10px;" class="container">
+                            <img height="180px" src="{{ asset('assets/images/backend.jpeg') }}" class="card-img-top"
+                                alt="...">
+                            <div>
+                                <p class="desc">Master backend development by building robust server-side
+                                    apps. Manage databases,
+                                    APIs, and logic for seamless user experiences.</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#320, 000</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">3 Months</p>
+                                </div>
+                            </div>
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">UI/UX Design</p>
+                        <div style="margin-top: -10px;" class="container">
+                            <img style="height: 180px" src="{{ asset('assets/images/ui-design.jpeg') }}"
+                                class="card-img-top" alt="...">
+                            <div>
+                                <p class="desc">Design user-friendly interfaces with Figma and Adobe XD.
+                                    Create intuitive, visually
+                                    appealing designs that enhance user experience.</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#220, 000</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">3 Months</p>
+                                </div>
+                            </div>
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">Cyber Security</p>
+                        <div style="margin-top: -10px;" class="container">
+                            <img style="height: 180px" src="{{ asset('assets/images/cybersecurity.jpeg') }}"
+                                class="card-img-top" alt="...">
+                            <div>
+                                <p class="desc">Secure your digital assets with our cybersecurity program.
+                                    Learn to spot
+                                    vulnerabilities, prevent threats, and protect systems effectively.</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#250, 000</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">3 Months</p>
+                                </div>
+                            </div>
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"><button class="register-card">Register
+                                        Now</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">Full Stack Development</p>
+                        <div style="margin-top: -5px;" class="container">
+                            <img height="180px" src="{{ asset('assets/images/full-stack.jpeg') }}" class="card-img-top"
+                                alt="...">
+                            <div>
+                                <p class="desc">Build web apps with our full-stack program. Master both
+                                    front-end and back-end
+                                    technologies for dynamic, responsive solutions.</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#520, 000</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">7 Months</p>
+                                </div>
+                            </div>
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">Data Analytics</p>
+                        <div style="margin-top: -10px;" class="container">
+                            <img style="height: 180px" src="{{ asset('assets/images/data-analytics.jpeg') }}"
+                                class="card-img-top" alt="...">
+                            <div>
+                                <p class="desc">Unlock the power of data with our analytics program. Master
+                                    tools to analyze,
+                                    interpret, and turn data into actionable insights.</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#280, 000</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">3 Months</p>
+                                </div>
+                            </div>
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">Digital Marketing</p>
+                        <div style="margin-top: -10px;" class="container">
+                            <img style="height: 180px" src="{{ asset('assets/images/digital-marketer.jpeg') }}"
+                                class="card-img-top" alt="...">
+                            <div>
+                                <p class="desc">Boost your brand online with our digital marketing program. Learn
+                                    strategies to create, manage, and optimize campaigns that drive traffic,
+                                    engagement, and real results.</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#220, 000</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">3 Months</p>
+                                </div>
+                            </div>
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">Graphics Design</p>
+                        <div style="margin-top: -10px;" class="container">
+                            <img style="height: 180px" src="{{ asset('assets/images/graphics.jpeg') }}"
+                                class="card-img-top" alt="...">
+                            <div>
+                                <p class="desc">Unleash your creativity with our graphics design program. Learn
+                                    tools to create stunning visuals, build strong brand identities, and communicate
+                                    ideas effectively across digital platforms.</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#180, 000</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">3 Months</p>
+                                </div>
+                            </div>
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">AI & Machine Learning</p>
+                        <div style="margin-top: -10px;" class="container">
+                            <img style="height: 180px" src="{{ asset('assets/images/ai.png') }}" class="card-img-top"
+                                alt="...">
+                            <div>
+                                <p class="desc">Unleash your potential with our AI and machine learning program. Learn
+                                    tools to build intelligent systems, develop smart models, and solve real-world
+                                    problems across digital environments.</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#350, 000</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">3 Months</p>
+                                </div>
+                            </div>
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">Product Management</p>
+                        <div style="margin-top: -10px;" class="container">
+                            <img style="height: 180px" src="{{ asset('assets/images/product-management.png') }}"
+                                class="card-img-top" alt="...">
+                            <div>
+                                <p class="desc">Unlock your potential with our product management program. Learn skills
+                                    to build impactful products, manage development cycles, and solve real-world
+                                    challenges effectively across digital environments.</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#420, 000</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">3 Months</p>
+                                </div>
+                            </div>
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border rounded-lg shadow-lg card card-rad card_custom">
+                        <p class="pt-2 text-center title">Business Analysis</p>
+                        <div style="margin-top: -10px;" class="container">
+                            <img style="height: 180px" src="{{ asset('assets/images/business-analysis.png') }}"
+                                class="card-img-top" alt="...">
+                            <div>
+                                <p class="desc">Unlock your potential with our business analysis program. Learn skills
+                                    to evaluate processes, gather insights, and solve real-world challenges effectively
+                                    across digital environments.</p>
+                                <div class="pt-3 price">
+                                    <p class="me-2">Price</p>
+                                    <p>#420, 000</p>
+                                </div>
+                                <div class="duration">
+                                    <p class="ms-1">Duration</p>
+                                    <p class="me-2">3 Months</p>
+                                </div>
+                            </div>
+                            <div class="reg">
+                                <a href="{{ route('application.form') }}"> <button class="register-card">Register
+                                        Now</button></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -336,8 +419,8 @@
                     <div class="d-flex">
                         <a href="http://wa.me/2348086478810" class="me-3 " target="_blank"><i
                                 class="bi bi-whatsapp fs-4 follow"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61566747027176&mibextid=LQQJ4d"
-                            target="blank" class="me-3 "><i class="bi bi-facebook fs-4 follow"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61566747027176&mibextid=LQQJ4d" target="blank"
+                            class="me-3 "><i class="bi bi-facebook fs-4 follow"></i></a>
                         <a href="https://x.com/techprongr?s=21" target="_blank"><i
                                 class="bi bi-twitter fs-4 follow"></i></a>
                     </div>
