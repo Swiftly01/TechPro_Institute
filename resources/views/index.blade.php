@@ -413,7 +413,7 @@
                     </div>
                      <div class="col">
                         <div class="border rounded-lg shadow-lg card card-rad card_custom">
-                            <p class="pt-2 text-center title">Product Management</p>
+                            <p class="pt-2 text-center title">Product/Project Management</p>
                             <div style="margin-top: -10px;" class="container">
                                 <img style="height: 180px" src="{{ asset('assets/images/product-management.png') }}"
                                     class="card-img-top" alt="...">
