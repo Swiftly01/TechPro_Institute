@@ -16,7 +16,8 @@ use Throwable;
 
 class BlogService
 {
-    public function __construct(protected BlogRepository $blogRepository
+    public function __construct(
+        protected BlogRepository $blogRepository
     ) {}
 
     public function getAllBlogs(): LengthAwarePaginator
@@ -37,7 +38,6 @@ class BlogService
             });
 
             return $blogData;
-
         } catch (MediaProcessingException $e) {
             // Spatie media-specific issue
             Log::error('Media upload failed', ['error' => $e->getMessage()]);
@@ -62,11 +62,9 @@ class BlogService
 
             $blogData = DB::transaction(function () use ($dto, $request, $blog) {
                 return $this->updateBlog(dto: $dto, request: $request, blog: $blog);
-
             });
 
             return $blogData;
-
         } catch (MediaProcessingException $e) {
 
             Log::error('Media upload failed', ['error' => $e->getMessage()]);
@@ -79,7 +77,6 @@ class BlogService
 
             throw $th;
         }
-
     }
 
     public function mapRequestDataToDto(array $validatedData)
@@ -87,7 +84,6 @@ class BlogService
         $payload = BlogDto::convertToJson($validatedData);
 
         return BlogDto::fromRequest(payload: $payload);
-
     }
 
     public function updateBlog(BlogDto $dto, UpdateBlogRequest $request, Blog $blog)
@@ -96,7 +92,6 @@ class BlogService
         $this->attachMedia(request: $request, blog: $blogData);
 
         return $blogData;
-
     }
 
     public function createBlogWithMedia(BlogDto $dto, StoreBlogRequest $request): Blog
@@ -119,24 +114,26 @@ class BlogService
                     $files = $request->file('featured_image');
                     $files = is_array($files) ? $files : [$files];
 
-                    foreach ($files as $file) {
+                    // Sort files by name naturally
+                    usort($files, function ($a, $b) {
+                        return strnatcmp($a->getClientOriginalName(), $b->getClientOriginalName());
+                    });
+
+
+                    foreach ($files as  $file) {
                         if ($file->isValid()) {
                             $blog->addMedia($file)->toMediaCollection('featured_image');
                         }
                     }
-
                 }
-
             });
-
         } catch (Exception $e) {
-            throw new MediaProcessingException("Failed to upload image files for model ID {$blog->id}".$e->getMessage());
+            throw new MediaProcessingException("Failed to upload image files for model ID {$blog->id}" . $e->getMessage());
         }
-
     }
 
     public function handleDelete(Blog $blog)
     {
-       return $this->blogRepository->delete(blog: $blog);
+        return $this->blogRepository->delete(blog: $blog);
     }
 }
